@@ -32,7 +32,7 @@ namespace UmbrellaToolsKit.Sprite
                 {
                     if (this.tiles[x][y][0] != -1)
                     {
-                        this.Body = new Rectangle(this.tiles[x][y][0] * this.Scene.CellSize, this.tiles[x][y][1] * this.Scene.CellSize, this.Scene.CellSize, this.Scene.CellSize);
+                        this.Body = new Rectangle(this.tiles[x][y][0], this.tiles[x][y][1], this.Scene.CellSize, this.Scene.CellSize);
                         this.Position = new Vector2((y * this.Scene.CellSize) + (this.Origin.X * 2), x * this.Scene.CellSize + (this.Origin.Y * 2));
                         DrawSprite(spriteBatch);
                     }

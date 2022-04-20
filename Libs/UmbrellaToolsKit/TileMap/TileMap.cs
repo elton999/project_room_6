@@ -147,8 +147,12 @@ namespace UmbrellaToolsKit.TileMap
                 var tile = layer.AutoLayerTiles[i];
                 int x = (int)tile.Px[0] / 8;
                 int y = (int)tile.Px[1] / 8;
-                layerTiles.tiles[y][x][0] = (int)tile.Src[0] / 8;
-                layerTiles.tiles[y][x].Add((int)(tile.Src[1] / 8));
+
+                layerTiles.tiles[y][x][0] = (int)tile.Src[0];
+                if (layerTiles.tiles[y][x].Count == 1)
+                    layerTiles.tiles[y][x].Add((int)tile.Src[1]);
+                else
+                    layerTiles.tiles[y][x][1] = (int)tile.Src[1];
             }
         }
 

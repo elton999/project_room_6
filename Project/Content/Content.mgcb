@@ -15,6 +15,40 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin Maps/Tilemap.ldtk
+/importer:LdtkImporter
+/processor:LdtkProcessor
+/build:Maps/Tilemap.ldtk
+
 #begin new.cdb
 /copy:new.cdb
+
+#begin Sprites/Player/player.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/Player/player.png
+
+#begin Sprites/Player/player_animation.json
+/importer:AsepriteImporter
+/processor:AsepriteProcessor
+/build:Sprites/Player/player_animation.json
+
+#begin Sprites/Tilemap/tilemap.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/Tilemap/tilemap.png
 

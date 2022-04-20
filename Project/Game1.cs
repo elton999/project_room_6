@@ -28,8 +28,10 @@ namespace Project
             _gameManagement.Start();
 
             _assetManagement = new AssetManagement();
+            _assetManagement.Set<Entities.Player>("Player", "PLAYER");
 
-            // TODO: Add your initialization logic here
+            _gameManagement.SceneManagement.Start();
+
             base.Initialize();
         }
 

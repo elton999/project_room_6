@@ -83,8 +83,8 @@ namespace UmbrellaToolsKit
         public GameManagement GameManagement;
 
         public string MapLevelPath = "Maps/level_";
-        public string MapLevelLdtkPath = "Maps/TileMap";
-        public string TileMapPath = "Sprites/tilemap";
+        public string MapLevelLdtkPath = "Maps/Tilemap";
+        public string TileMapPath = "Sprites/Tilemap/tilemap";
 
         public Vector2 LevelSize;
 
@@ -107,11 +107,15 @@ namespace UmbrellaToolsKit
         public void SetLevelLdtk(int level)
         {
             System.Console.WriteLine($"Level: {MapLevelLdtkPath}");
+
+            CreateCamera();
+            CreateBackBuffer();
+
             Texture2D _tilemapSprite = Content.Load<Texture2D>(TileMapPath);
-
             var tileMap = Content.Load<ldtk.LdtkJson>(MapLevelLdtkPath);
-
             TileMap.TileMap.Create(this, tileMap, "Level_" + level, _tilemapSprite);
+
+            System.Console.WriteLine("\nDone");
         }
 
         public void CreateCamera()
@@ -236,7 +240,7 @@ namespace UmbrellaToolsKit
         {
             for (int i = layers.Count - 1; i >= 0; i--)
                 for (int e = layers[i].Count - 1; e >= 0; e--)
-                    if (!layers[i][e].RemoveFromScene) 
+                    if (!layers[i][e].RemoveFromScene)
                         layers[i][e].Draw(spriteBatch);
         }
 
@@ -244,7 +248,7 @@ namespace UmbrellaToolsKit
         {
             for (int i = layers.Count - 1; i >= 0; i--)
                 for (int e = layers[i].Count - 1; e >= 0; e--)
-                    if (!layers[i][e].RemoveFromScene) 
+                    if (!layers[i][e].RemoveFromScene)
                         layers[i][e].DrawBeforeScene(spriteBatch);
         }
 
