@@ -23,12 +23,16 @@ namespace Project
 
         protected override void Initialize()
         {
+            _graphics.PreferredBackBufferWidth = 426 * 3;
+            _graphics.PreferredBackBufferHeight = 240 * 3;
+            _graphics.ApplyChanges();
+
             _gameManagement = new GameManagement();
             _gameManagement.Game = this;
             _gameManagement.Start();
 
             _assetManagement = new AssetManagement();
-            _assetManagement.Set<Entities.Player>("Player", "PLAYER");
+            _assetManagement.Set<Entities.Player.Player>("Player", "PLAYER");
 
             _gameManagement.SceneManagement.Start();
 
