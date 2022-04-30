@@ -19,6 +19,7 @@ namespace Project.Entities.Player
             Animation = new AsepriteAnimation(Content.Load<AsepriteDefinitions>("Sprites/Player/player_animation"));
             Sprite = Content.Load<Texture2D>("Sprites/Player/player");
             size = new Point(16, 16);
+            Origin = new Vector2(24, 35);
 
             CurrentState = new PlayerStateIdle(this);
             base.Start();

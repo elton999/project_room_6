@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using UmbrellaToolsKit.Sprite;
 
@@ -24,6 +25,10 @@ namespace Project.Entities.Player.State
         public override void LogicUpdate(GameTime gametime)
         {
             _animation.Play(gametime, "run", AsepriteAnimation.AnimationDirection.LOOP);
+
+            if (_direction.X != 0)
+                _player.spriteEffect = _direction.X > 0 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
+
         }
 
         public override void PhysicsUpdate(GameTime gametime)
