@@ -23,6 +23,7 @@ namespace UmbrellaToolsKit
 
         public ContentManager Content;
         public Scene Scene;
+        public Component Components = new Component();
         public Dictionary<string, string> Values;
         public List<Vector2> Nodes;
         public bool RemoveFromScene = false;
@@ -33,8 +34,8 @@ namespace UmbrellaToolsKit
         public virtual void Start() { }
         public virtual void OnVisible() { }
         public virtual void OnInvisible() { }
-        public virtual void Update(GameTime gameTime) { }
-        public virtual void UpdateData(GameTime gameTime) { }
+        public virtual void Update(GameTime gameTime) => Components.Update(gameTime);
+        public virtual void UpdateData(GameTime gameTime) => Components.UpdateData(gameTime);
         public virtual void Draw(SpriteBatch spriteBatch)
         {
             BeginDraw(spriteBatch, true);
@@ -42,9 +43,7 @@ namespace UmbrellaToolsKit
             EndDraw(spriteBatch);
         }
 
-        public virtual void DrawBeforeScene(SpriteBatch spriteBatch){}
-
-
+        public virtual void DrawBeforeScene(SpriteBatch spriteBatch) { }
 
         public Vector2 _bodySize;
         public float Density = 0f;

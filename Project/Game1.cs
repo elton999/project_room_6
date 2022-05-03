@@ -33,8 +33,10 @@ namespace Project
 
             _assetManagement = new AssetManagement();
             _assetManagement.Set<Entities.Player.Player>("Player", "PLAYER");
+            _assetManagement.Set<Entities.Door>("Door", "MIDDLEGROUND");
 
             _gameManagement.SceneManagement.Start();
+            _gameManagement.SceneManagement.MainScene.SetBackgroundColor = new Color((new Vector3(139, 147, 175)) / 255.0f);
 
             base.Initialize();
         }

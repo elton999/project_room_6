@@ -10,7 +10,8 @@ namespace Project.Entities.Player
     {
         public AsepriteAnimation Animation;
         public PlayerState CurrentState;
-        public float Speed = 0.2f;
+
+        public float Speed = 0.25f;
 
         public override void Start()
         {
@@ -22,6 +23,8 @@ namespace Project.Entities.Player
             Origin = new Vector2(24, 35);
 
             CurrentState = new PlayerStateIdle(this);
+
+            Scene.AllActors.Add(this);
             base.Start();
         }
 

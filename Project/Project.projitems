@@ -21,5 +21,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Player\Player.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Player\States\PlayerStateIdle.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Player\States\PlayerStateRun.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Door.cs" />
+    <Folder Include="$(MSBuildThisFileDirectory)Components\" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\ICommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Commands\ChangeLevelCommand.cs" />
   </ItemGroup>
 </Project>
