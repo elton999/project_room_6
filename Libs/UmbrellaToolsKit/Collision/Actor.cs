@@ -64,7 +64,7 @@ namespace UmbrellaToolsKit.Collision
         public float velocityDecrecentX = 200;
         private void gravity(float DeltaTime)
         {
-            float maxVelocity = 0.5f;
+            float maxVelocity = 1f;
             this.velocity = Vector2.Add(velocity, Vector2.Multiply(Vector2.Multiply(gravity2D, this.gravityScale), DeltaTime));
             float v = (float)Math.Sqrt(Math.Pow(velocity.X, 2) + Math.Pow(velocity.Y, 2));
             if (v > maxVelocity)

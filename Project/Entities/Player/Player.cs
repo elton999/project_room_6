@@ -12,6 +12,7 @@ namespace Project.Entities.Player
         public PlayerState CurrentState;
 
         public float Speed = 0.25f;
+        public float SpeedDash = 4.5f;
 
         public override void Start()
         {
