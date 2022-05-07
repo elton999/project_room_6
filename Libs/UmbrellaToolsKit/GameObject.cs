@@ -24,7 +24,7 @@ namespace UmbrellaToolsKit
         public ContentManager Content;
         public Scene Scene;
         public Component Components = new Component();
-        public Dictionary<string, string> Values;
+        public dynamic Values;
         public List<Vector2> Nodes;
         public bool RemoveFromScene = false;
 

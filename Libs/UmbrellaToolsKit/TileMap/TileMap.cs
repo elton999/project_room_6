@@ -70,11 +70,12 @@ namespace UmbrellaToolsKit.TileMap
                 Console.Write(".");
                 // TODO: values and nodes
                 var entity = layer.EntityInstances[i];
-                AssetManagement.Instance.addEntityOnScene(
+                var gameObject = AssetManagement.Instance.addEntityOnScene(
                         entity.Identifier,
+                        entity.Iid,
                         new Vector2(entity.Px[0] + scene.ScreenOffset.X, entity.Px[1] + scene.ScreenOffset.Y),
                         new Point((int)entity.Width, (int)entity.Height),
-                        null,
+                        entity.FieldInstances,
                         null,
                         scene
                     );
@@ -91,6 +92,7 @@ namespace UmbrellaToolsKit.TileMap
                 {
                     AssetManagement.Instance.addEntityOnScene(
                         entity.name,
+                        "gameobject",
                         new Vector2(entity.x + scene.ScreenOffset.X, entity.y + scene.ScreenOffset.Y),
                         new Point(entity.width, entity.height),
                         entity.values,

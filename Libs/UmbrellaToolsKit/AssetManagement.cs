@@ -10,7 +10,7 @@ namespace UmbrellaToolsKit
         public static AssetManagement Instance;
         public List<AssetObject> AssetsList = new List<AssetObject>();
         public List<AssetObject> LevelAssetsList = new List<AssetObject>();
-        
+
         public AssetManagement() => Instance = this;
 
         public void Set<T>(string tag, string layer) where T : GameObject
@@ -45,11 +45,12 @@ namespace UmbrellaToolsKit
         }
 
 
-        public void addEntityOnScene(string name, Vector2 position, Point size, Dictionary<string, string> values, List<Vector2> nodes, Scene scene)
+        public GameObject addEntityOnScene(string name, string tag, Vector2 position, Point size, dynamic values, List<Vector2> nodes, Scene scene)
         { // ? values:Dynamic, ? nodes:Array<Vector2>, ? flipx:Bool):Void{
             GameObject gameObject = this.GetObject(name);
             string layer = this.GetLayer(name);
 
+            gameObject.tag = tag;
             gameObject.Position = position;
             gameObject.size = size;
             gameObject.Values = values;
@@ -70,6 +71,7 @@ namespace UmbrellaToolsKit
             gameObject.Scene = scene;
 
             gameObject.Start();
+            return gameObject;
         }
 
 

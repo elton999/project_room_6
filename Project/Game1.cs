@@ -34,6 +34,9 @@ namespace Project
             _assetManagement = new AssetManagement();
             _assetManagement.Set<Entities.Player.Player>("Player", "PLAYER");
             _assetManagement.Set<Entities.Door>("Door", "MIDDLEGROUND");
+            _assetManagement.Set<GameObject>("PlayerSpawn", "MIDDLEGROUND");
+
+            _assetManagement.Set<Entities.Solids.Box>("Box", "MIDDLEGROUND");
 
             _gameManagement.SceneManagement.Start();
             _gameManagement.SceneManagement.MainScene.SetBackgroundColor = new Color((new Vector3(139, 147, 175)) / 255.0f);

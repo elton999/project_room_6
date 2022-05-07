@@ -32,7 +32,15 @@ namespace Project.Entities
         public void CheckCollisionWithPlayer()
         {
             if (overlapCheck(Scene.AllActors[0]))
-                Command = new ChangeLevelCommand(Scene.GameManagement.SceneManagement, 2);
+            {
+                var values = (ldtk.FieldInstance[])Values;
+
+                Command = new ChangeLevelCommand(
+                    Scene.GameManagement.SceneManagement,
+                    (int)values[0].Value,
+                    (string)values[1].Value["entityIid"]
+                );
+            }
         }
 
         public override void Draw(SpriteBatch spriteBatch)

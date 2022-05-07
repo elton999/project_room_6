@@ -26,5 +26,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Commands\ICommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\ChangeLevelCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Player\States\PlayerStateDash.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Solids\Box.cs" />
   </ItemGroup>
 </Project>
