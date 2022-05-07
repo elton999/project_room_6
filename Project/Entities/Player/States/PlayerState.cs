@@ -9,7 +9,8 @@ namespace Project.Entities.Player.State
         protected Player _player;
         protected AsepriteAnimation _animation;
 
-        protected bool _dashButtonDown { get => Keyboard.GetState().IsKeyDown(Keys.X); }
+        protected bool _dashButtonDown { get => Keyboard.GetState().IsKeyDown(Keys.Z); }
+        protected bool _kickButtonDown { get => Keyboard.GetState().IsKeyDown(Keys.X); }
         protected Vector2 _direction = Vector2.Zero;
 
         public PlayerState(Player player)

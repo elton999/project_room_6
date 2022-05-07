@@ -16,7 +16,7 @@ namespace Project.Entities.Player
 
         public override void Start()
         {
-            gravity2D = Vector2.Zero;
+            Gravity2D = Vector2.Zero;
 
             Animation = new AsepriteAnimation(Content.Load<AsepriteDefinitions>("Sprites/Player/player_animation"));
             Sprite = Content.Load<Texture2D>("Sprites/Player/player");

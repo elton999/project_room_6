@@ -7,10 +7,12 @@ namespace UmbrellaToolsKit.Collision
     public class Actor : GameObject
     {
         public bool active = true;
+        public event EventHandler OnCollisionEvent;
+
         public override void UpdateData(GameTime gameTime)
         {
             base.UpdateData(gameTime);
-            this.gravity((float)gameTime.ElapsedGameTime.TotalMilliseconds);
+            this.Gravity((float)gameTime.ElapsedGameTime.TotalMilliseconds);
         }
 
         public int Right
@@ -57,24 +59,24 @@ namespace UmbrellaToolsKit.Collision
                 this.EdgesIsCollision[EDGES.BOTTOM_RIGHT];
         }
 
-        public Vector2 gravity2D = new Vector2(0, 8);
-        public Vector2 velocity = new Vector2(0, 0);
-        public float gravityScale = 1;
+        public Vector2 Gravity2D = new Vector2(0, 8);
+        public Vector2 Velocity = new Vector2(0, 0);
+        public float GravityScale = 1;
         public float velocityDecrecentY = 200;
         public float velocityDecrecentX = 200;
-        private void gravity(float DeltaTime)
+        private void Gravity(float DeltaTime)
         {
             float maxVelocity = 1f;
-            this.velocity = Vector2.Add(velocity, Vector2.Multiply(Vector2.Multiply(gravity2D, this.gravityScale), DeltaTime));
-            float v = (float)Math.Sqrt(Math.Pow(velocity.X, 2) + Math.Pow(velocity.Y, 2));
+            Velocity = Vector2.Add(Velocity, Vector2.Multiply(Vector2.Multiply(Gravity2D, GravityScale), DeltaTime));
+            float v = (float)Math.Sqrt(Math.Pow(Velocity.X, 2) + Math.Pow(Velocity.Y, 2));
             if (v > maxVelocity)
             {
                 float vs = maxVelocity / v;
-                this.velocity.X = this.velocity.X * vs;
-                this.velocity.Y = this.velocity.Y * vs;
+                Velocity.X = Velocity.X * vs;
+                Velocity.Y = Velocity.Y * vs;
             }
-            moveX(this.velocity.X * DeltaTime);
-            moveY(this.velocity.Y * DeltaTime);
+            moveX(Velocity.X * DeltaTime);
+            moveY(Velocity.Y * DeltaTime);
         }
 
         float xRemainder = 0;
@@ -92,10 +94,10 @@ namespace UmbrellaToolsKit.Collision
                     Vector2 _position = new Vector2(this.Position.X + sign, this.Position.Y);
                     if (!collideAt(this.Scene.AllSolids, _position) || AnyCollisionRamps())
                     {
-                        if (this.EdgesIsCollision[EDGES.BOTTOM_RIGHT] && (sign > 0 || gravity2D.Y == 0))
+                        if (this.EdgesIsCollision[EDGES.BOTTOM_RIGHT] && (sign > 0 || Gravity2D.Y == 0))
                             this.Position.Y -= sign;
 
-                        if (this.EdgesIsCollision[EDGES.BOTTOM_LEFT] && (sign < 0 || gravity2D.Y == 0))
+                        if (this.EdgesIsCollision[EDGES.BOTTOM_LEFT] && (sign < 0 || Gravity2D.Y == 0))
                             this.Position.Y += sign;
 
                         this.Position.X += sign;
@@ -103,6 +105,7 @@ namespace UmbrellaToolsKit.Collision
                     }
                     else
                     {
+                        OnCollisionEvent?.Invoke(this, null);
                         if (onCollideFunction != null)
                             onCollideFunction(null);
                         break;
@@ -131,6 +134,7 @@ namespace UmbrellaToolsKit.Collision
                     }
                     else
                     {
+                        OnCollisionEvent?.Invoke(this, null);
                         if (onCollideFunction != null)
                             onCollideFunction(null);
                         break;

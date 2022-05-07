@@ -22,10 +22,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Player\States\PlayerStateIdle.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Player\States\PlayerStateRun.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Door.cs" />
-    <Folder Include="$(MSBuildThisFileDirectory)Components\" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\ICommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\ChangeLevelCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Player\States\PlayerStateDash.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Solids\Box.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Components\MoveSolidsComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Player\States\PlayerStateKick.cs" />
   </ItemGroup>
 </Project>

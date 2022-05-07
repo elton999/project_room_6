@@ -1393,7 +1393,7 @@
 									"entityIid": "e3ecd8e0-b4d0-11ec-b85c-079b326e29e7",
 									"layerIid": "8e602d71-b4d0-11ec-afd0-95f015e98655",
 									"levelIid": "8e600660-b4d0-11ec-afd0-b50211eda528",
-									"worldIid": "ad97e280-b4d0-11ec-a520-d1c181b72cba"
+									"worldIid": "52fdc1f0-b4d0-11ec-badb-95c1c057706d"
 								}, "__type": "EntityRef", "__tile": null, "defUid": 106, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["e3ecd8e0-b4d0-11ec-b85c-079b326e29e7"]
@@ -1428,7 +1428,7 @@
 					"entityInstances": [
 						{
 							"__identifier": "Box",
-							"__grid": [22,13],
+							"__grid": [26,22],
 							"__pivot": [0,0],
 							"__tags": ["puzzle"],
 							"__tile": { "tilesetUid": 2, "x": 144, "y": 8, "w": 16, "h": 16 },
@@ -1437,7 +1437,7 @@
 							"width": 16,
 							"height": 16,
 							"defUid": 108,
-							"px": [176,104],
+							"px": [208,176],
 							"fieldInstances": []
 						}
 					]

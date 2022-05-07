@@ -21,9 +21,9 @@ namespace Project.Entities.Player.State
 
         public override void PhysicsUpdate(GameTime gametime)
         {
-            _player.velocity = _direction * _player.SpeedDash * (float)gametime.ElapsedGameTime.Milliseconds;
+            _player.Velocity = _direction * _player.SpeedDash * (float)gametime.ElapsedGameTime.Milliseconds;
         }
 
-        public override void Exit() => _player.gravity2D = Vector2.Zero;
+        public override void Exit() => _player.Gravity2D = Vector2.Zero;
     }
 }
