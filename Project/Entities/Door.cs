@@ -9,20 +9,10 @@ namespace Project.Entities
 {
     public class Door : Actor
     {
-        public Square Square = new Square();
         public ICommand Command;
-
-        public override void Start()
-        {
-            Square.Scene = Scene;
-            Square.size = new Point(30, 60);
-            Square.SquareColor = Color.Green;
-            Square.Start();
-        }
 
         public override void Update(GameTime gameTime)
         {
-            Square.Position = Position;
             Command?.Execute();
             base.Update(gameTime);
         }
@@ -41,13 +31,6 @@ namespace Project.Entities
                     (string)values[1].Value["entityIid"]
                 );
             }
-        }
-
-        public override void Draw(SpriteBatch spriteBatch)
-        {
-            BeginDraw(spriteBatch);
-            Square.DrawSprite(spriteBatch);
-            EndDraw(spriteBatch);
         }
     }
 }
