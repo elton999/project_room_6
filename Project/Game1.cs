@@ -37,6 +37,7 @@ namespace Project
             _assetManagement.Set<GameObject>("PlayerSpawn", "MIDDLEGROUND");
 
             _assetManagement.Set<Entities.Solids.Box>("Box", "MIDDLEGROUND");
+            _assetManagement.Set<Entities.Actors.Items.Key>("Key", "FOREGROUND");
 
             _gameManagement.SceneManagement.Start();
             _gameManagement.SceneManagement.MainScene.SetBackgroundColor = new Color((new Vector3(139, 147, 175)) / 255.0f);
@@ -44,10 +45,7 @@ namespace Project
             base.Initialize();
         }
 
-        protected override void LoadContent()
-        {
-            _spriteBatch = new SpriteBatch(GraphicsDevice);
-        }
+        protected override void LoadContent() => _spriteBatch = new SpriteBatch(GraphicsDevice);
 
         protected override void Update(GameTime gameTime)
         {

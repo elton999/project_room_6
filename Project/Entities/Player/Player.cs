@@ -23,7 +23,7 @@ namespace Project.Entities.Player
             size = new Point(16, 16);
             Origin = new Vector2(24, 35);
 
-            CurrentState = new PlayerStateIdle(this);
+            CurrentState = new PlayerStateIdle(this, new Vector2(0, 1f));
 
             Scene.AllActors.Add(this);
             base.Start();

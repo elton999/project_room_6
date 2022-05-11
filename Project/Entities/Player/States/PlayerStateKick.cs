@@ -17,7 +17,7 @@ namespace Project.Entities.Player.State
                 if (solid.overlapCheck(boxCollision))
                 {
                     solid.Components.Add(new Components.MoveSolidsComponent(solid, _direction));
-                    _player.SwitchState(new PlayerStateIdle(_player));
+                    _player.SwitchState(new PlayerStateIdle(_player, _direction));
                     break;
                 }
             }

@@ -16,7 +16,7 @@ namespace Project.Entities.Player.State
             _timer -= (float)gametime.ElapsedGameTime.TotalSeconds;
 
             if (_timer <= 0)
-                _player.SwitchState(new PlayerStateIdle(_player));
+                _player.SwitchState(new PlayerStateIdle(_player, _direction));
         }
 
         public override void PhysicsUpdate(GameTime gametime)

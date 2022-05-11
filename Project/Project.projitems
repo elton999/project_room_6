@@ -28,5 +28,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Solids\Box.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Components\MoveSolidsComponent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Player\States\PlayerStateKick.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Actors\Items\Key.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Components\FollowerComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Components\FloatingAnimationComponent.cs" />
   </ItemGroup>
 </Project>
