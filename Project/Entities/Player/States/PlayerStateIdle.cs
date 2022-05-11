@@ -15,7 +15,13 @@ namespace Project.Entities.Player.State
 
         public override void Enter() => _player.Velocity = new Vector2(0, 0);
 
-        public override void InputUpdate(GameTime gameTime) => SetDirection();
+        public override void InputUpdate(GameTime gameTime)
+        {
+            SetDirection();
+
+            if (_kickButtonDown)
+                _player.SwitchState(new PlayerStateKick(_player, _directionIdle));
+        }
 
         public override void LogicUpdate(GameTime gameTime)
         {

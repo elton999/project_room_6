@@ -19,9 +19,6 @@ namespace Project.Entities.Player.State
             if (_dashButtonDown)
                 _player.SwitchState(new PlayerStateDash(_player));
 
-            if (_kickButtonDown)
-                _player.SwitchState(new PlayerStateKick(_player));
-
             if (_direction.X != 0)
                 _player.spriteEffect = _direction.X > 0 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
         }
