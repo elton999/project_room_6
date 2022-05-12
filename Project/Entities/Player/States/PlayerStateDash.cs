@@ -1,6 +1,4 @@
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Input;
-using UmbrellaToolsKit.Sprite;
 
 namespace Project.Entities.Player.State
 {

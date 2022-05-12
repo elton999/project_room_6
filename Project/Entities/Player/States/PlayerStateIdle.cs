@@ -6,12 +6,7 @@ namespace Project.Entities.Player.State
 {
     public class PlayerStateIdle : PlayerState
     {
-        private Vector2 _directionIdle = new Vector2(1, 0);
-
-        public PlayerStateIdle(Player player, Vector2 direction) : base(player)
-        {
-            _directionIdle = direction;
-        }
+        public PlayerStateIdle(Player player, Vector2 direction) : base(player) => _directionIdle = direction;
 
         public override void Enter() => _player.Velocity = new Vector2(0, 0);
 

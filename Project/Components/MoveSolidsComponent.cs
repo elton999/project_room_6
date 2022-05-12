@@ -12,7 +12,6 @@ namespace Project.Components
 
         private Actor _actorBox;
         private float _speed = 0.2f;
-        private bool _isMoving = false;
 
         public MoveSolidsComponent(Solid solid, Vector2 direction)
         {
@@ -25,6 +24,7 @@ namespace Project.Components
         {
             _actorBox.UpdateData(gameTime);
             _solid.Position = _actorBox.Position;
+
             base.UpdateData(gameTime);
         }
 
@@ -40,7 +40,7 @@ namespace Project.Components
         {
             _solid.Scene.AllSolids.Add(_solid);
             _actorBox.Velocity = Vector2.Zero;
-            _solid.Components.Next = null;
+            _solid.Components.Remove(this);
         }
     }
 }

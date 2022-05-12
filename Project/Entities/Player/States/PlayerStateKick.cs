@@ -1,16 +1,12 @@
 using Microsoft.Xna.Framework;
 using UmbrellaToolsKit.Collision;
+using Project.Components;
 
 namespace Project.Entities.Player.State
 {
     public class PlayerStateKick : PlayerState
     {
-        private Vector2 _directionIdle = new Vector2(1, 0);
-
-        public PlayerStateKick(Player player, Vector2 direction) : base(player)
-        {
-            _directionIdle = direction;
-        }
+        public PlayerStateKick(Player player, Vector2 direction) : base(player) => _directionIdle = direction;
 
         public override void Enter() => SetDirection();
 
@@ -21,7 +17,7 @@ namespace Project.Entities.Player.State
             {
                 if (solid.overlapCheck(boxCollision))
                 {
-                    solid.Components.Add(new Components.MoveSolidsComponent(solid, _directionIdle));
+                    solid.Components.Add(new MoveSolidsComponent(solid, _directionIdle));
                     _player.SwitchState(new PlayerStateIdle(_player, _directionIdle));
                     break;
                 }

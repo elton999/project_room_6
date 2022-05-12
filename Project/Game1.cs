@@ -37,6 +37,7 @@ namespace Project
             _assetManagement.Set<GameObject>("PlayerSpawn", "MIDDLEGROUND");
 
             _assetManagement.Set<Entities.Solids.Box>("Box", "MIDDLEGROUND");
+            _assetManagement.Set<Entities.Actors.GroundButton>("GroundButton", "BACKGROUND");
             _assetManagement.Set<Entities.Actors.Items.Key>("Key", "FOREGROUND");
 
             _gameManagement.SceneManagement.Start();
