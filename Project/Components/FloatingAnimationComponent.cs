@@ -1,3 +1,4 @@
+using System;
 using UmbrellaToolsKit;
 using Microsoft.Xna.Framework;
 
@@ -5,14 +6,17 @@ namespace Project.Components
 {
     public class FloatingAnimationComponent : Component
     {
-        public FloatingAnimationComponent()
-        {
+        private GameObject _gameObject;
+        private float _speed = 5f;
 
-        }
+        public FloatingAnimationComponent(GameObject gameobject) => _gameObject = gameobject;
 
-        public override void UpdateData(GameTime gameTime)
+        public override Status Tick(GameTime gameTime)
         {
-            base.UpdateData(gameTime);
+            float timer = (float)gameTime.TotalGameTime.TotalSeconds;
+            _gameObject.Origin.Y = MathF.Cos(timer * _speed) * 10f;
+
+            return Status.SUCCESS;
         }
     }
 

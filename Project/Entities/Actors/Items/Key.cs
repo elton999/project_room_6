@@ -17,6 +17,8 @@ namespace Project.Entities.Actors.Items
             Body = new Rectangle(new Point(192, 32), new Point(16, 16));
             Gravity2D = Vector2.Zero;
 
+            Components.Add(new FloatingAnimationComponent(this));
+            Components.Add(new CheckDistanceComponent(Scene.AllActors[0], this));
             Components.Add(new FollowerComponent(Scene.AllActors[0], this));
         }
 

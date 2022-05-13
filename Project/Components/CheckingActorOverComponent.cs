@@ -10,18 +10,13 @@ namespace Project.Components
 
         public CheckingActorOverComponent(Actor actor) => _actor = actor;
 
-        public override void UpdateData(GameTime gameTime)
+        public override Status Tick(GameTime gameTime)
         {
             foreach (var solidItem in _actor.Scene.AllSolids)
-            {
                 if (solidItem.overlapCheck(_actor))
-                {
-                    Next[0]?.UpdateData(gameTime);
-                    break;
-                }
-            }
+                    return Node[0].Tick(gameTime);
 
-            Next[1]?.UpdateData(gameTime);
+            return Node[1].Tick(gameTime);
         }
     }
 }

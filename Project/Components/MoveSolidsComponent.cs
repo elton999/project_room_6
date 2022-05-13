@@ -10,8 +10,10 @@ namespace Project.Components
         private Vector2 _direction;
         private Solid _solid;
 
-        private Actor _actorBox;
+        private Actor _actorHitBox;
         private float _speed = 0.2f;
+
+        private bool _isMoving = true;
 
         public MoveSolidsComponent(Solid solid, Vector2 direction)
         {
@@ -20,27 +22,27 @@ namespace Project.Components
             StartMoving();
         }
 
-        public override void UpdateData(GameTime gameTime)
+        public override Status Tick(GameTime gameTime)
         {
-            _actorBox.UpdateData(gameTime);
-            _solid.Position = _actorBox.Position;
+            _actorHitBox.UpdateData(gameTime);
+            _solid.Position = _actorHitBox.Position;
 
-            base.UpdateData(gameTime);
+            return _isMoving ? Status.RUNNING : Status.SUCCESS;
         }
 
         public void StartMoving()
         {
             _solid.Scene.AllSolids.Remove(_solid);
-            _actorBox = new Actor() { size = _solid.size, Position = _solid.Position, Gravity2D = Vector2.Zero, Scene = _solid.Scene };
-            _actorBox.OnCollisionEvent += OnBoxCollide;
-            _actorBox.Velocity = _direction * _speed;
+            _actorHitBox = new Actor() { size = _solid.size, Position = _solid.Position, Gravity2D = Vector2.Zero, Scene = _solid.Scene };
+            _actorHitBox.OnCollisionEvent += OnBoxCollide;
+            _actorHitBox.Velocity = _direction * _speed;
         }
 
         public void OnBoxCollide(object sender, EventArgs e)
         {
             _solid.Scene.AllSolids.Add(_solid);
-            _actorBox.Velocity = Vector2.Zero;
-            _solid.Components.Remove(this);
+            _actorHitBox.Velocity = Vector2.Zero;
+            _isMoving = false;
         }
     }
 }

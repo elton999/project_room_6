@@ -19,7 +19,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonoGame.ContentPipeline.Um
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		Project\Project.projitems*{5a50a631-f7c4-447e-a14d-4fc3a1aaaf38}*SharedItemsImports = 4
 		Project\Project.projitems*{9dce1dcf-a6e7-4d39-8f9b-6b527615c38e}*SharedItemsImports = 5
 		Project\Project.projitems*{a0cdbd0e-3a41-42b7-9425-a838bc2c7383}*SharedItemsImports = 13
 		Project\Project.projitems*{b1f3f0e5-4d6c-45e6-9c71-b89b2809590b}*SharedItemsImports = 5

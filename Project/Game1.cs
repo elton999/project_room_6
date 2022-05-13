@@ -40,6 +40,8 @@ namespace Project
             _assetManagement.Set<Entities.Actors.GroundButton>("GroundButton", "BACKGROUND");
             _assetManagement.Set<Entities.Actors.Items.Key>("Key", "FOREGROUND");
 
+            _assetManagement.Set<GamePlay.PuzzleButtons>("PuzzleButtons", "BACKGROUND");
+
             _gameManagement.SceneManagement.Start();
             _gameManagement.SceneManagement.MainScene.SetBackgroundColor = new Color((new Vector3(139, 147, 175)) / 255.0f);
 

@@ -16,10 +16,10 @@ namespace Project.Components
             _actor = actor;
         }
 
-        public override void UpdateData(GameTime gameTime)
+        public override Status Tick(GameTime gameTime)
         {
             _active?.Invoke(_actor, EventArgs.Empty);
-            base.UpdateData(gameTime);
+            return base.Tick(gameTime);
         }
     }
 }
