@@ -7,16 +7,17 @@ namespace Project.GamePlay.Components.Puzzle
     public class SearchButtonsComponent : Component
     {
         private PuzzleButtons _puzzleButtons;
-        private bool _done = false;
+        private Status _status = Status.RUNNING;
 
         public SearchButtonsComponent(PuzzleButtons puzzleButtons) => _puzzleButtons = puzzleButtons;
 
         public override Status Tick(GameTime gameTime)
         {
-            if (!_done)
+            if (_status == Status.RUNNING)
             {
                 var _buttonTags = new List<string>();
                 ldtk.FieldInstance[] fields = _puzzleButtons.Values;
+                _puzzleButtons.Buttons.Clear();
 
                 for (int i = 0; i < fields.Length; i++)
                     if (fields[i].Identifier == "buttons")
@@ -26,11 +27,11 @@ namespace Project.GamePlay.Components.Puzzle
                 foreach (var actor in _puzzleButtons.Scene.AllActors)
                     if (_buttonTags.Contains(actor.tag))
                         _puzzleButtons.Buttons.Add(actor);
-
-                _done = true;
+                    
+                return _status = _puzzleButtons.Buttons.Count == _buttonTags.Count ? Status.SUCCESS : Status.RUNNING;
             }
 
-            return Status.SUCCESS;
+            return _puzzleButtons.Buttons.Count > 0 ? Status.SUCCESS : Status.FAILURE;
         }
     }
 }

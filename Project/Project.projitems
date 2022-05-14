@@ -8,6 +8,10 @@
     <Import_RootNamespace>Project</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Components\ChangeLevelComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Components\CheckingActorOverActor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Door\Components\CloseDoorComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Door\Components\OpenDoorComponent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Game1.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GamePlay\Components\Puzzle\SearchButtonsComponent.cs" />
   </ItemGroup>
@@ -24,8 +28,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Player\States\PlayerStateIdle.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Player\States\PlayerStateRun.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Door.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Commands\ICommand.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Commands\ChangeLevelCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Player\States\PlayerStateDash.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Solids\Box.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Components\MoveSolidsComponent.cs" />
@@ -35,7 +37,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Components\FloatingAnimationComponent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Actors\GroundButton.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Components\CheckingActorOverComponent.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Components\ActiveButtonComponent.cs" />
     <Compile Include="..\Project\Components\CheckDistanceComponent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GamePlay\PuzzleButtons.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GamePlay\Components\Puzzle\SearchDoorComponent.cs" />

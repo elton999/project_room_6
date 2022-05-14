@@ -7,30 +7,29 @@ namespace Project.GamePlay.Components.Puzzle
     public class SearchDoorComponent : Component
     {
         private PuzzleButtons _puzzleButtons;
-        private bool _done = false;
+        private Status _status = Status.RUNNING;
 
         public SearchDoorComponent(PuzzleButtons puzzleButtons) => _puzzleButtons = puzzleButtons;
 
         public override Status Tick(GameTime gameTime)
         {
-            if (!_done)
+            if (_status == Status.RUNNING)
             {
-                var _buttonTags = new List<string>();
+                string _doorTag = "tag";
                 ldtk.FieldInstance[] fields = _puzzleButtons.Values;
 
                 for (int i = 0; i < fields.Length; i++)
                     if (fields[i].Identifier == "door")
-                        for (int j = 0; j < fields[i].Value.Count; j++)
-                            _buttonTags.Add((string)fields[i].Value[j].entityIid);
+                        _doorTag = (string)fields[i].Value.entityIid;
 
                 foreach (var actor in _puzzleButtons.Scene.AllActors)
-                    if (_buttonTags.Contains(actor.tag))
+                    if (_doorTag.Equals(actor.tag))
                         _puzzleButtons.Door = actor;
 
-                _done = true;
+                return _status = _puzzleButtons.Door != null ? Status.SUCCESS : Status.RUNNING;
             }
 
-            return Status.SUCCESS;
+            return _puzzleButtons.Door != null ? Status.SUCCESS : Status.FAILURE;
         }
     }
 

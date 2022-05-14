@@ -1,29 +1,33 @@
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
+using System;
 using UmbrellaToolsKit;
 
-namespace Project.Commands
+namespace Project.Components
 {
-    public class ChangeLevelCommand : ICommand
+    public class ChangeLevelComponent : Component
     {
         private SceneManagement _sceneManagement;
         private string _tagPlayerSpawn;
         private int _level = 1;
         private bool done = false;
 
-        public ChangeLevelCommand(SceneManagement sceneManagement, int level, string tagPlayerSpawn)
+        public ChangeLevelComponent(SceneManagement sceneManagement, int level, string tagPlayerSpawn)
         {
             _sceneManagement = sceneManagement;
             _level = level;
             _tagPlayerSpawn = tagPlayerSpawn;
         }
 
-        public void Execute()
+        public override Status Tick(GameTime gameTime)
         {
             if (done)
-                return;
+                return Status.RUNNING;
+            
             _setNewLevel();
             _setPlayerOnNewPosition();
             done = true;
+
+            return Status.SUCCESS;
         }
 
         private void _setNewLevel()
