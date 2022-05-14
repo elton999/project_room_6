@@ -16,14 +16,8 @@ namespace Project.Entities.Actors
             Body = new Rectangle(new Point(0, 56), size);
 
             Scene.AllActors.Add(this);
-
-            //_setAllComponents();
         }
 
-        private void _setAllComponents()
-        {
-            CheckingActorOverComponent checkingActor;
-            Components.Add(checkingActor = new CheckingActorOverComponent(this));
-        }
+        private void _setAllComponents() => Components.Add(new CheckingActorOverComponent(this));
     }
 }
