@@ -28,10 +28,10 @@ namespace Project.Entities.Player.State
             var keyboard = Keyboard.GetState();
 
             if (keyboard.IsKeyDown(Keys.Left)) _direction.X = -1;
-            else if (keyboard.IsKeyDown(Keys.Right)) _direction.X = 1;
+            if (keyboard.IsKeyDown(Keys.Right)) _direction.X = 1;
 
             if (keyboard.IsKeyDown(Keys.Up)) _direction.Y = -1;
-            else if (keyboard.IsKeyDown(Keys.Down)) _direction.Y = 1;
+            if (keyboard.IsKeyDown(Keys.Down)) _direction.Y = 1;
         }
     }
 }

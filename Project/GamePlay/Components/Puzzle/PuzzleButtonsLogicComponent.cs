@@ -17,8 +17,8 @@ namespace Project.GamePlay.Components.Puzzle
 
             if (_getActiveButtonsCount() == _puzzleButtons.Buttons.Count)
                 return Node[0].Tick(gameTime);
-            else
-                return Node[1].Tick(gameTime);
+
+            return Node[1].Tick(gameTime);
         }
 
         private int _getActiveButtonsCount()
@@ -29,6 +29,7 @@ namespace Project.GamePlay.Components.Puzzle
                 foreach (var box in _puzzleButtons.Buttons)
                     if (solid.overlapCheck(box))
                         activeButtons++;
+
             return activeButtons;
         }
 
@@ -50,7 +51,11 @@ namespace Project.GamePlay.Components.Puzzle
 
             var component = new Component();
             var checkOverlapComponent = new CheckingActorOverActor(door, door.Scene.AllActors[0]);
-            var changeLevelComponent = new ChangeLevelComponent(sceneManagement, (int)door.Values[0].Value, (string)door.Values[1].Value["entityIid"]);
+            var changeLevelComponent = new ChangeLevelComponent(
+                sceneManagement,
+                (int)door.Values[0].Value,
+                (string)door.Values[1].Value["entityIid"]
+            );
 
             component.Add(checkOverlapComponent);
             component.Add(changeLevelComponent);

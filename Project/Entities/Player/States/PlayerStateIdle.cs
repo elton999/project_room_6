@@ -29,12 +29,13 @@ namespace Project.Entities.Player.State
         private void _Animation(GameTime gameTime)
         {
             if (_directionIdle.X != 0)
+            {
                 _player.spriteEffect = _directionIdle.X > 0 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
-
-            if (_directionIdle.X != 0)
                 _animation.Play(gameTime, "side-idle", AsepriteAnimation.AnimationDirection.LOOP);
-            else
-                _animation.Play(gameTime, _directionIdle.Y > 0 ? "front" : "back", AsepriteAnimation.AnimationDirection.LOOP);
+                return;
+            }
+
+            _animation.Play(gameTime, _directionIdle.Y > 0 ? "front" : "back", AsepriteAnimation.AnimationDirection.LOOP);
         }
     }
 }

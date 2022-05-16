@@ -36,9 +36,12 @@ namespace Project.Entities.Player.State
         private void _Animation(GameTime gameTime)
         {
             if (_direction.X != 0)
+            {
                 _animation.Play(gameTime, "side-run", AsepriteAnimation.AnimationDirection.LOOP);
-            else
-                _animation.Play(gameTime, _direction.Y > 0 ? "front" : "back", AsepriteAnimation.AnimationDirection.LOOP);
+                return;
+            }
+
+            _animation.Play(gameTime, _direction.Y > 0 ? "front" : "back", AsepriteAnimation.AnimationDirection.LOOP);
         }
     }
 }
