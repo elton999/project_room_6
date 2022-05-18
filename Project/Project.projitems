@@ -41,5 +41,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)GamePlay\PuzzleButtons.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GamePlay\Components\Puzzle\SearchDoorComponent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GamePlay\Components\Puzzle\PuzzleButtonsLogicComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Components\SwitchSpriteComponent.cs" />
   </ItemGroup>
 </Project>

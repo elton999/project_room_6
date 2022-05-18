@@ -13,6 +13,9 @@ namespace Project.Entities.DoorComponents
 
         public override Status Tick(GameTime gameTime)
         {
+            if (_actor.Components.Node.Count == 0)
+                return base.Tick(gameTime);
+
             _actor.Components.Node.Clear();
             return Status.RUNNING;
         }

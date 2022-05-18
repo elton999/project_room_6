@@ -26,7 +26,7 @@ namespace Project.Entities.DoorComponents
         public override Status Tick(GameTime gameTime)
         {
             if (_door.Components.Node.Count > 0)
-                return Status.SUCCESS;
+                return base.Tick(gameTime);
 
             OpenDoor();
             return Status.RUNNING;

@@ -1,6 +1,8 @@
 using Microsoft.Xna.Framework;
 using UmbrellaToolsKit;
+using UmbrellaToolsKit.Collision;
 using Project.Entities.DoorComponents;
+using Project.Components;
 
 namespace Project.GamePlay.Components.Puzzle
 {
@@ -40,20 +42,27 @@ namespace Project.GamePlay.Components.Puzzle
 
             _addDoorLogicComponents = true;
 
-            _setOpenDoorSequence();
-            _setCloseDoorSequence();
-        }
-
-        private void _setOpenDoorSequence()
-        {
             var door = _puzzleButtons.Door;
-            var sceneManagement = door.Scene.GameManagement.SceneManagement;
 
-            Add(new OpenDoorComponent(_puzzleButtons.Door));
-
-            System.Console.WriteLine("teste");
+            _setOpenDoorSequence(door);
+            _setCloseDoorSequence(door);
         }
 
-        private void _setCloseDoorSequence() => Add(new Entities.DoorComponents.CloseDoorComponent(_puzzleButtons.Door));
+        private void _setOpenDoorSequence(Actor door)
+        {
+            var sceneManagement = door.Scene.GameManagement.SceneManagement;
+            var openDoorComponent = new OpenDoorComponent(_puzzleButtons.Door);
+
+            openDoorComponent.Add(new SwitchSpriteComponent(door, door.Sprite, new Rectangle(144, 24, 24, 32)));
+            Add(openDoorComponent);
+        }
+
+        private void _setCloseDoorSequence(Actor door)
+        {
+            var closeDoorComponent = new Entities.DoorComponents.CloseDoorComponent(_puzzleButtons.Door);
+
+            closeDoorComponent.Add(new SwitchSpriteComponent(door, door.Sprite, new Rectangle(168, 24, 24, 32)));
+            Add(closeDoorComponent);
+        }
     }
 }
