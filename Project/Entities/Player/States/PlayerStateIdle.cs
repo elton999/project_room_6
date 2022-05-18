@@ -8,7 +8,7 @@ namespace Project.Entities.Player.State
     {
         public PlayerStateIdle(Player player, Vector2 direction) : base(player) => _directionIdle = direction;
 
-        public override void Enter() => _player.Velocity = new Vector2(0, 0);
+        public override void Enter() => _player.Velocity = Vector2.Zero;
 
         public override void InputUpdate(GameTime gameTime)
         {

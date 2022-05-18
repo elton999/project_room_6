@@ -5,7 +5,7 @@ using Project.Components;
 
 namespace Project.Entities.Actors
 {
-    public class GroundButton : Actor
+    public class GroundButton : UmbrellaToolsKit.Collision.Actor
     {
         public override void Start()
         {

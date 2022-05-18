@@ -6,7 +6,7 @@ using Project.Entities.Player.State;
 
 namespace Project.Entities.Player
 {
-    public class Player : Actor
+    public class Player : UmbrellaToolsKit.Collision.Actor
     {
         public AsepriteAnimation Animation;
         public PlayerState CurrentState;

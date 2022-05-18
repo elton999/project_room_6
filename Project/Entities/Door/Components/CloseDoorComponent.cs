@@ -7,9 +7,9 @@ namespace Project.Entities.DoorComponents
 {
     public class CloseDoorComponent : Component
     {
-        private Actor _actor;
+        private UmbrellaToolsKit.Collision.Actor _actor;
 
-        public CloseDoorComponent(Actor actor) => _actor = actor;
+        public CloseDoorComponent(UmbrellaToolsKit.Collision.Actor actor) => _actor = actor;
 
         public override Status Tick(GameTime gameTime)
         {

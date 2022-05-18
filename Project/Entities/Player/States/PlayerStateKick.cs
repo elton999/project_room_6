@@ -10,9 +10,9 @@ namespace Project.Entities.Player.State
 
         public override void Enter() => SetDirection();
 
-        public override void PhysicsUpdate(GameTime gametime)
+        public override void PhysicsUpdate(GameTime gameTime)
         {
-            var boxCollision = new Actor() { size = _player.size, Position = _player.Position + _directionIdle };
+            var boxCollision = new UmbrellaToolsKit.Collision.Actor() { size = _player.size, Position = _player.Position + _directionIdle };
             foreach (var solid in _player.Scene.AllSolids)
             {
                 if (solid.overlapCheck(boxCollision))

@@ -42,6 +42,7 @@ namespace Project.GamePlay.Components.Puzzle
                 if (fields[i].Identifier == "buttons")
                     for (int j = 0; j < fields[i].Value.Count; j++)
                         _buttonTags.Add((string)fields[i].Value[j].entityIid);
+                        
             return _buttonTags;
         }
     }

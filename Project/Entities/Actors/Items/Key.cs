@@ -7,7 +7,7 @@ using Project.Components;
 
 namespace Project.Entities.Actors.Items
 {
-    public class Key : Actor
+    public class Key : UmbrellaToolsKit.Collision.Actor
     {
         public override void Start()
         {

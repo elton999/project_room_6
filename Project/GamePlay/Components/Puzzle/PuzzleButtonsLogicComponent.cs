@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework;
 using UmbrellaToolsKit;
-using Project.Components;
+using Project.Entities.DoorComponents;
 
 namespace Project.GamePlay.Components.Puzzle
 {
@@ -49,18 +49,9 @@ namespace Project.GamePlay.Components.Puzzle
             var door = _puzzleButtons.Door;
             var sceneManagement = door.Scene.GameManagement.SceneManagement;
 
-            var component = new Component();
-            var checkOverlapComponent = new CheckingActorOverActor(door, door.Scene.AllActors[0]);
-            var changeLevelComponent = new ChangeLevelComponent(
-                sceneManagement,
-                (int)door.Values[0].Value,
-                (string)door.Values[1].Value["entityIid"]
-            );
+            Add(new OpenDoorComponent(_puzzleButtons.Door));
 
-            component.Add(checkOverlapComponent);
-            component.Add(changeLevelComponent);
-
-            Add(component);
+            System.Console.WriteLine("teste");
         }
 
         private void _setCloseDoorSequence() => Add(new Entities.DoorComponents.CloseDoorComponent(_puzzleButtons.Door));

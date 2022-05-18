@@ -1,6 +1,8 @@
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using UmbrellaToolsKit;
-using UmbrellaToolsKit.Sprite;
 using UmbrellaToolsKit.Collision;
+using Project.Components;
 
 namespace Project.Entities
 {
@@ -10,6 +12,23 @@ namespace Project.Entities
         {
             base.Start();
             Scene.AllActors.Add(this);
+
+            Sprite = Scene.Content.Load<Texture2D>("Sprites/Tilemap/tilemap");
+            Body = new Rectangle(144, 24, 24, 32);
+
+            if ((bool)Values[2].Value)
+                OpenDoor();
+
+        }
+
+        public void OpenDoor()
+        {
+            Components.Add(new CheckingActorOverActor(this, Scene.AllActors[0]));
+            Components.Add(new ChangeLevelComponent(
+                Scene.GameManagement.SceneManagement,
+                (int)Values[0].Value,
+                (string)Values[1].Value["entityIid"])
+            );
         }
     }
 }
