@@ -8,6 +8,7 @@
 #endif
 
 Texture2D SpriteTexture;
+int BlurFactor = 8;
 
 sampler2D SpriteTextureSampler = sampler_state
 {
@@ -23,11 +24,20 @@ struct VertexShaderOutput
 
 float4 MainPS(VertexShaderOutput input) : COLOR
 {
-    //float pixel = 1 / 100;
-    //float2 upColor = tex2D(SpriteTextureSampler, float2(input.TextureCoordinates.x, input.TextureCoordinates.y - pixel));
-    // float2 downColor = tex2D(SpriteTextureSampler, float2(input.TextureCoordinates.x, input.TextureCoordinates.y + pixel));
-    // float4 color = (upColor + downColor) / 2; //tex2D(SpriteTextureSampler, upColor) * input.Color;
-	return float4(1,1,1,1);
+	int Size = BlurFactor;
+    float pixel = 0.01;
+    float4 color = float4(0,0,0,0);
+
+	for(int e = 0 ; e < (Size * Size) * 2; e++)
+	{
+		int i = e / Size - Size;
+		int j = e % Size - Size;
+
+		if(i != 0 && j != 0)
+			color = color + tex2D(SpriteTextureSampler, input.TextureCoordinates + (float2(i, j) * pixel));
+	}
+
+	return color / (Size * Size * 8 - 1);
 }
 
 technique SpriteDrawing
