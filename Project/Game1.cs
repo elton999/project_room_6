@@ -45,6 +45,11 @@ namespace Project
             _gameManagement.SceneManagement.Start();
             _gameManagement.SceneManagement.MainScene.SetBackgroundColor = new Color((new Vector3(139, 147, 175)) / 255.0f);
 
+
+            blurSprite = new RenderTarget2D(_graphics.GraphicsDevice, 100, 100);
+            sprite = Content.Load<Texture2D>("Sprites/Tilemap/tilemap");
+            //effect = Content.Load<Effect>("Shaders/TransitionScene");
+
             base.Initialize();
         }
 
@@ -60,9 +65,27 @@ namespace Project
             base.Update(gameTime);
         }
 
+        private RenderTarget2D blurSprite;
+        private Texture2D sprite;
+        private Effect effect;
+
         protected override void Draw(GameTime gameTime)
         {
+            // GraphicsDevice.SetRenderTarget(blurSprite);
+
+            // _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
+            // _spriteBatch.Draw(sprite, new Vector2(0, 0), Color.White);
+            // _spriteBatch.End();
+
+            // GraphicsDevice.SetRenderTarget(null);
+
+            // _spriteBatch.Begin(samplerState: SamplerState.PointClamp, effect: effect);
+            // _spriteBatch.Draw(blurSprite, new Vector2(0, 0), Color.White);
+            // _spriteBatch.End();
+
+
             _gameManagement.Draw(_spriteBatch);
+
             base.Draw(gameTime);
         }
     }

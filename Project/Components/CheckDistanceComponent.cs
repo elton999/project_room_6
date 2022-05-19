@@ -10,6 +10,8 @@ namespace Project.Components
 
         private float _maxDistance = 20f;
 
+        public float MaxDistance { get => _maxDistance; set => _maxDistance = value; }
+
         public CheckDistanceComponent(GameObject gameObjectA, GameObject gameObjectB)
         {
             _gameObjectA = gameObjectA;

@@ -18,14 +18,8 @@ namespace Project.Entities.Actors.Items
             Gravity2D = Vector2.Zero;
 
             Components.Add(new FloatingAnimationComponent(this));
-            Components.Add(new CheckDistanceComponent(Scene.AllActors[0], this));
-            Components.Add(new FollowerComponent(Scene.AllActors[0], this));
+            Components.Add(new CheckingActorOverActor(this, Scene.AllActors[0]));
+            Components.Add(new KeyComponents.StartFollowActor(this));
         }
-
-        public override void UpdateData(GameTime gameTime)
-        {
-            base.UpdateData(gameTime);
-        }
-
     }
 }

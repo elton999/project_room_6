@@ -23,6 +23,12 @@
 #begin new.cdb
 /copy:new.cdb
 
+#begin Shaders/TransitionScene.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:Shaders/TransitionScene.fx
+
 #begin Sprites/Player/player.png
 /importer:TextureImporter
 /processor:TextureProcessor
