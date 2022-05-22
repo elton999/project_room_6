@@ -1,8 +1,6 @@
-using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using UmbrellaToolsKit;
-using UmbrellaToolsKit.Collision;
 using Project.Components;
 
 namespace Project.Entities.Actors.Items

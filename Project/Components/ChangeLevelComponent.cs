@@ -4,14 +4,14 @@ using UmbrellaToolsKit;
 
 namespace Project.Components
 {
-    public class ChangeLevelComponent : Component
+    public class SwitchLevelComponent : Component
     {
         private SceneManagement _sceneManagement;
         private string _tagPlayerSpawn;
         private int _level = 1;
         private bool done = false;
 
-        public ChangeLevelComponent(SceneManagement sceneManagement, int level, string tagPlayerSpawn)
+        public SwitchLevelComponent(SceneManagement sceneManagement, int level, string tagPlayerSpawn)
         {
             _sceneManagement = sceneManagement;
             _level = level;
@@ -22,7 +22,7 @@ namespace Project.Components
         {
             if (done)
                 return Status.RUNNING;
-            
+
             _setNewLevel();
             _setPlayerOnNewPosition();
             done = true;

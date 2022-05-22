@@ -16,7 +16,7 @@ namespace Project.Entities.DoorComponents
         {
             _door.Components.Add(new CheckingActorOverActor(_door, _door.Scene.AllActors[0]));
 
-            _door.Components.Add(new ChangeLevelComponent(
+            _door.Components.Add(new SwitchLevelComponent(
                 _door.Scene.GameManagement.SceneManagement,
                 (int)_door.Values[0].Value,
                 (string)_door.Values[1].Value["entityIid"])

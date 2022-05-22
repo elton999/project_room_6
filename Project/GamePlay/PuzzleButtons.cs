@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UmbrellaToolsKit;
 using UmbrellaToolsKit.Collision;
-using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Project.GamePlay.Components.Puzzle;
 
