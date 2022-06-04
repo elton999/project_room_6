@@ -2,7 +2,8 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using UmbrellaToolsKit;
 using UmbrellaToolsKit.Collision;
-using Project.Components;
+using UmbrellaToolsKit.BehaviorTrees;
+using Project.Entities.DoorNodes;
 
 namespace Project.Entities
 {
@@ -14,22 +15,19 @@ namespace Project.Entities
             Scene.AllActors.Add(this);
 
             Sprite = Scene.Content.Load<Texture2D>("Sprites/Tilemap/tilemap");
-            Body = new Rectangle(144, 24, 24, 47);
-
-            if ((bool)Values[2].Value)
-                OpenDoor();
 
             Gravity2D = Vector2.Zero;
+
+            SetDoorAI();
         }
 
-        public void OpenDoor()
+        public void SetDoorAI()
         {
-            Components.Add(new CheckingActorOverActor(this, Scene.AllActors[0]));
-            Components.Add(new SwitchLevelComponent(
-                Scene.GameManagement.SceneManagement,
-                (int)Values[0].Value,
-                (string)Values[1].Value["entityIid"])
-            );
+            Node = new SequenceNode();
+            if ((bool)Values[2].Value)
+                Node.Add(new OpenDoorNode(this));
+            else
+                Node.Add(new CloseDoorNode(this));
         }
     }
 }

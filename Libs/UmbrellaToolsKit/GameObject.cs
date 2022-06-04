@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using UmbrellaToolsKit.UI;
+using UmbrellaToolsKit.BehaviorTrees;
 
 namespace UmbrellaToolsKit
 {
@@ -23,7 +24,7 @@ namespace UmbrellaToolsKit
 
         public ContentManager Content;
         public Scene Scene;
-        public Component Components = new Component();
+        public Node Node;
         public dynamic Values;
         public List<Vector2> Nodes;
         public bool RemoveFromScene = false;
@@ -35,7 +36,7 @@ namespace UmbrellaToolsKit
         public virtual void OnVisible() { }
         public virtual void OnInvisible() { }
         public virtual void Update(GameTime gameTime) { }
-        public virtual void UpdateData(GameTime gameTime) => Components.Tick(gameTime);
+        public virtual void UpdateData(GameTime gameTime) => Node?.Tick(gameTime);
         public virtual void Draw(SpriteBatch spriteBatch)
         {
             BeginDraw(spriteBatch, true);

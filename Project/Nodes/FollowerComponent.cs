@@ -1,18 +1,19 @@
 using System;
 using Microsoft.Xna.Framework;
 using UmbrellaToolsKit;
+using UmbrellaToolsKit;
 using UmbrellaToolsKit.Collision;
 
 namespace Project.Components
 {
-    public class FollowerComponent : Component
+    public class FollowerNode : Node
     {
         private Actor _target;
         private Actor _follower;
         private float _speed = 5f;
         private Vector2 _oldPosition;
 
-        public FollowerComponent(Actor target, Actor follower)
+        public FollowerNode(Actor target, Actor follower)
         {
             _target = target;
             _follower = follower;

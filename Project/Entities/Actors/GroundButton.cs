@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Project.Components;
+using Project.Nodes;
+using UmbrellaToolsKit.BehaviorTrees;
 
 namespace Project.Entities.Actors
 {
@@ -17,8 +18,14 @@ namespace Project.Entities.Actors
             Gravity2D = Vector2.Zero;
 
             Scene.AllActors.Add(this);
+
+            _setAllComponents();
         }
 
-        private void _setAllComponents() => Components.Add(new CheckingActorOverComponent(this));
+        private void _setAllComponents()
+        {
+            Node = new SequenceNode();
+            Node.Add(new ActorOverAnyActorNode(this));
+        }
     }
 }

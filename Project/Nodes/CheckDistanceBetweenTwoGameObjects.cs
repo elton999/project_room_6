@@ -1,9 +1,10 @@
 using Microsoft.Xna.Framework;
 using UmbrellaToolsKit;
+using UmbrellaToolsKit.BehaviorTrees;
 
-namespace Project.Components
+namespace Project.Nodes
 {
-    public class CheckDistanceComponent : Component
+    public class CheckDistanceBetweenTwoGameObjects : Node
     {
         private GameObject _gameObjectA;
         private GameObject _gameObjectB;
@@ -12,20 +13,20 @@ namespace Project.Components
 
         public float MaxDistance { get => _maxDistance; set => _maxDistance = value; }
 
-        public CheckDistanceComponent(GameObject gameObjectA, GameObject gameObjectB)
+        public CheckDistanceBetweenTwoGameObjects(GameObject gameObjectA, GameObject gameObjectB)
         {
             _gameObjectA = gameObjectA;
             _gameObjectB = gameObjectB;
         }
 
-        public override Status Tick(GameTime gameTime)
+        public override NodeStatus Tick(GameTime gameTime)
         {
             var direction = _gameObjectA.Position - _gameObjectB.Position;
 
             if (direction.Length() < _maxDistance)
-                return Status.FAILURE;
+                return NodeStatus.SUCCESS;
 
-            return Status.SUCCESS;
+            return NodeStatus.FAILURE;
         }
     }
 }

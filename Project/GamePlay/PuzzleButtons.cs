@@ -1,8 +1,10 @@
 using System.Collections.Generic;
 using UmbrellaToolsKit;
+using UmbrellaToolsKit.BehaviorTrees;
 using UmbrellaToolsKit.Collision;
 using Microsoft.Xna.Framework.Graphics;
-using Project.GamePlay.Components.Puzzle;
+using Project.Nodes;
+using Project.GamePlay.Nodes.Puzzle;
 
 namespace Project.GamePlay
 {
@@ -15,11 +17,16 @@ namespace Project.GamePlay
         {
             base.Start();
 
-            Components.Add(new SearchButtonsComponent(this));
-            Components.Add(new SearchDoorComponent(this));
+            Node = new SequenceNode();
+            Node.Add(new SearchButtonsNode(this));
+            Node.Add(new SearchDoorNode(this));
 
-            var puzzleLogic = new PuzzleButtonsLogicComponent(this);
-            Components.Add(puzzleLogic);
+            var OpenDoorSequence = new SequenceNode();
+            OpenDoorSequence.Add(new AllButtonsAreActiveNode(this));
+            OpenDoorSequence.Add(new OpenDoorNode(this));
+            Node.Add(new InverterNode(OpenDoorSequence));
+
+            Node.Add(new CloseDoorNode(this));
         }
 
         public override void Draw(SpriteBatch spriteBatch) { }

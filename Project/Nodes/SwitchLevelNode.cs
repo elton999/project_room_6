@@ -1,33 +1,34 @@
 ﻿using Microsoft.Xna.Framework;
 using System;
 using UmbrellaToolsKit;
+using UmbrellaToolsKit.BehaviorTrees;
 
-namespace Project.Components
+namespace Project.Nodes
 {
-    public class SwitchLevelComponent : Component
+    public class SwitchLevelNode : Node
     {
         private SceneManagement _sceneManagement;
         private string _tagPlayerSpawn;
         private int _level = 1;
         private bool done = false;
 
-        public SwitchLevelComponent(SceneManagement sceneManagement, int level, string tagPlayerSpawn)
+        public SwitchLevelNode(SceneManagement sceneManagement, int level, string tagPlayerSpawn)
         {
             _sceneManagement = sceneManagement;
             _level = level;
             _tagPlayerSpawn = tagPlayerSpawn;
         }
 
-        public override Status Tick(GameTime gameTime)
+        public override NodeStatus Tick(GameTime gameTime)
         {
             if (done)
-                return Status.RUNNING;
+                return NodeStatus.SUCCESS;
 
             _setNewLevel();
             _setPlayerOnNewPosition();
             done = true;
 
-            return Status.SUCCESS;
+            return NodeStatus.FAILURE;
         }
 
         private void _setNewLevel()

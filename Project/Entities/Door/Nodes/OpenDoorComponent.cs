@@ -3,20 +3,20 @@ using UmbrellaToolsKit;
 using UmbrellaToolsKit.Collision;
 using Project.Components;
 
-namespace Project.Entities.DoorComponents
+namespace Project.Entities.Door.Nodes
 {
 
-    public class OpenDoorComponent : Component
+    public class OpenDoorNode : Node
     {
         public Actor _door;
 
-        public OpenDoorComponent(Actor door) => _door = door;
+        public OpenDoorNode(Actor door) => _door = door;
 
         public void OpenDoor()
         {
             _door.Components.Add(new CheckingActorOverActor(_door, _door.Scene.AllActors[0]));
 
-            _door.Components.Add(new SwitchLevelComponent(
+            _door.Components.Add(new SwitchLevelNode(
                 _door.Scene.GameManagement.SceneManagement,
                 (int)_door.Values[0].Value,
                 (string)_door.Values[1].Value["entityIid"])

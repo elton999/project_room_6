@@ -1,11 +1,11 @@
 using System;
-using UmbrellaToolsKit;
+using UmbrellaToolsKit.BehaviorTrees;
 using UmbrellaToolsKit.Collision;
 using Microsoft.Xna.Framework;
 
-namespace Project.Components
+namespace Project.Nodes
 {
-    public class MoveSolidsComponent : Component
+    public class MoveSolidsAsActorNode : Node
     {
         private Vector2 _direction;
         private Solid _solid;
@@ -15,19 +15,19 @@ namespace Project.Components
 
         private bool _isMoving = true;
 
-        public MoveSolidsComponent(Solid solid, Vector2 direction)
+        public MoveSolidsAsActorNode(Solid solid, Vector2 direction)
         {
             _solid = solid;
             _direction = direction;
             StartMoving();
         }
 
-        public override Status Tick(GameTime gameTime)
+        public override NodeStatus Tick(GameTime gameTime)
         {
             _actorHitBox.UpdateData(gameTime);
             _solid.Position = _actorHitBox.Position;
 
-            return _isMoving ? Status.RUNNING : Status.SUCCESS;
+            return _isMoving ? NodeStatus.RUNNING : NodeStatus.SUCCESS;
         }
 
         public void StartMoving()

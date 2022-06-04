@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using UmbrellaToolsKit.Collision;
-using Project.Components;
+using Project.Nodes;
+using UmbrellaToolsKit.BehaviorTrees;
 
 namespace Project.Entities.Player.State
 {
@@ -12,12 +13,13 @@ namespace Project.Entities.Player.State
 
         public override void PhysicsUpdate(GameTime gameTime)
         {
-            var boxCollision = new UmbrellaToolsKit.Collision.Actor() { size = _player.size, Position = _player.Position + _directionIdle };
+            var boxCollision = new Actor() { size = _player.size, Position = _player.Position + _directionIdle };
             foreach (var solid in _player.Scene.AllSolids)
             {
                 if (solid.overlapCheck(boxCollision))
                 {
-                    solid.Components.Add(new MoveSolidsComponent(solid, _directionIdle));
+                    solid.Node = new SequenceNode();
+                    solid.Node.Add(new MoveSolidsAsActorNode(solid, _directionIdle));
                     _player.SwitchState(new PlayerStateIdle(_player, _directionIdle));
                     break;
                 }

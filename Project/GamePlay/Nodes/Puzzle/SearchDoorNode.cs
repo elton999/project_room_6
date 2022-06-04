@@ -1,27 +1,27 @@
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
-using UmbrellaToolsKit;
+using UmbrellaToolsKit.BehaviorTrees;
 
-namespace Project.GamePlay.Components.Puzzle
+namespace Project.GamePlay.Nodes.Puzzle
 {
-    public class SearchDoorComponent : Component
+    public class SearchDoorNode : Node
     {
         private PuzzleButtons _puzzleButtons;
-        private Status _status = Status.RUNNING;
+        private NodeStatus _status = NodeStatus.RUNNING;
 
-        public SearchDoorComponent(PuzzleButtons puzzleButtons) => _puzzleButtons = puzzleButtons;
+        public SearchDoorNode(PuzzleButtons puzzleButtons) => _puzzleButtons = puzzleButtons;
 
-        public override Status Tick(GameTime gameTime)
+        public override NodeStatus Tick(GameTime gameTime)
         {
-            if (_status == Status.RUNNING)
+            if (_status == NodeStatus.RUNNING)
             {
                 string _doorTag = _getDoorTag();
                 _setDoor(_doorTag);
 
-                return _status = _puzzleButtons.Door != null ? Status.SUCCESS : Status.RUNNING;
+                return _status = _puzzleButtons.Door != null ? NodeStatus.SUCCESS : NodeStatus.RUNNING;
             }
 
-            return _puzzleButtons.Door != null ? Status.SUCCESS : Status.FAILURE;
+            return _puzzleButtons.Door != null ? NodeStatus.SUCCESS : NodeStatus.FAILURE;
         }
 
         private void _setDoor(string _doorTag)

@@ -4,11 +4,11 @@ using Microsoft.Xna.Framework;
 
 namespace Project.Components
 {
-    public class CheckingActorOverComponent : Component
+    public class ActorOverAnyActor : Node
     {
         private Actor _actor;
 
-        public CheckingActorOverComponent(Actor actor) => _actor = actor;
+        public ActorOverAnyActor(Actor actor) => _actor = actor;
 
         public override Status Tick(GameTime gameTime)
         {

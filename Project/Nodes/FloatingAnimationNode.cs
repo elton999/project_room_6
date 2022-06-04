@@ -1,22 +1,23 @@
 using System;
 using UmbrellaToolsKit;
+using UmbrellaToolsKit.BehaviorTrees;
 using Microsoft.Xna.Framework;
 
-namespace Project.Components
+namespace Project.Nodes
 {
-    public class FloatingAnimationComponent : Component
+    public class FloatingAnimationNode : Node
     {
         private GameObject _gameObject;
         private float _speed = 5f;
 
-        public FloatingAnimationComponent(GameObject gameObject) => _gameObject = gameObject;
+        public FloatingAnimationNode(GameObject gameObject) => _gameObject = gameObject;
 
-        public override Status Tick(GameTime gameTime)
+        public override NodeStatus Tick(GameTime gameTime)
         {
             float timer = (float)gameTime.TotalGameTime.TotalSeconds;
             _gameObject.Origin.Y = MathF.Cos(timer * _speed) * 10f;
 
-            return base.Tick(gameTime);
+            return NodeStatus.RUNNING;
         }
     }
 

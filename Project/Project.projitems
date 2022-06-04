@@ -8,16 +8,18 @@
     <Import_RootNamespace>Project</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Components\ChangeLevelComponent.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Components\CheckingActorOverActor.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Entities\Door\Components\CloseDoorComponent.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Entities\Door\Components\OpenDoorComponent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GamePlay\Nodes\Puzzle\CloseDoorNode.cs" />
+    <Compile Include="..\Project\GamePlay\Nodes\Puzzle\OpenDoorNode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Nodes\ClearBehaviorTreeNode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Nodes\SwitchLevelNode.cs" />
+    <Compile Include="..\Project\Nodes\CheckingActorOverActorNode.cs" />
+    <Compile Include="..\Project\Entities\Door\Nodes\CloseDoorNode.cs" />
+    <Compile Include="..\Project\Entities\Door\Nodes\OpenDoorNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Game1.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)GamePlay\Components\Puzzle\SearchButtonsComponent.cs" />
+    <Compile Include="..\Project\GamePlay\Nodes\Puzzle\SearchButtonsNode.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Content\" />
-    <Folder Include="$(MSBuildThisFileDirectory)GamePlay\Components\Puzzle\" />
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
@@ -30,18 +32,18 @@
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Door.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Player\States\PlayerStateDash.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Solids\Box.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Components\MoveSolidsComponent.cs" />
+    <Compile Include="..\Project\Nodes\MoveSolidsAsActorNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Player\States\PlayerStateKick.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Actors\Items\Key.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Components\FollowerComponent.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Components\FloatingAnimationComponent.cs" />
+    <Compile Include="..\Project\Nodes\FollowerNode.cs" />
+    <Compile Include="..\Project\Nodes\FloatingAnimationNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Actors\GroundButton.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Components\CheckingActorOverComponent.cs" />
-    <Compile Include="..\Project\Components\CheckDistanceComponent.cs" />
+    <Compile Include="..\Project\Nodes\ActorOverAnyActorNode.cs" />
+    <Compile Include="..\Project\Nodes\CheckDistanceBetweenTwoGameObjects.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GamePlay\PuzzleButtons.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)GamePlay\Components\Puzzle\SearchDoorComponent.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)GamePlay\Components\Puzzle\PuzzleButtonsLogicComponent.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Components\SwitchSpriteComponent.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Entities\Actors\Items\KeyComponents\StartFollowActor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GamePlay\Nodes\Puzzle\SearchDoorNode.cs" />
+    <Compile Include="..\Project\GamePlay\Nodes\Puzzle\AllButtonsAreActiveNode.cs" />
+    <Compile Include="..\Project\Nodes\SwitchSpriteNode.cs" />
+    <Compile Include="..\Project\Entities\Actors\Items\Nodes\StartFollowPlayerNode.cs" />
   </ItemGroup>
 </Project>

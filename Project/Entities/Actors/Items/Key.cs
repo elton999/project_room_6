@@ -1,7 +1,8 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using UmbrellaToolsKit;
-using Project.Components;
+using UmbrellaToolsKit.BehaviorTrees;
+using Project.Nodes;
 
 namespace Project.Entities.Actors.Items
 {
@@ -15,9 +16,10 @@ namespace Project.Entities.Actors.Items
             Body = new Rectangle(new Point(192, 32), new Point(16, 16));
             Gravity2D = Vector2.Zero;
 
-            Components.Add(new FloatingAnimationComponent(this));
-            Components.Add(new CheckingActorOverActor(this, Scene.AllActors[0]));
-            Components.Add(new KeyComponents.StartFollowActor(this));
+            Node = new SequenceNode();
+            Node.Add(new FloatingAnimationNode(this));
+            Node.Add(new CheckingActorOverActorNode(this, Scene.AllActors[0]));
+            Node.Add(new Nodes.StartFollowPlayerNode(this));
         }
     }
 }
