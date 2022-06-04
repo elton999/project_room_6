@@ -41,7 +41,7 @@ namespace Project.Entities.Player.State
                 return;
             }
 
-            _animation.Play(gameTime, _direction.Y > 0 ? "front" : "back", AsepriteAnimation.AnimationDirection.LOOP);
+            _animation.Play(gameTime, _direction.Y > 0 ? "front-run" : "back-run", AsepriteAnimation.AnimationDirection.LOOP);
         }
     }
 }

@@ -35,7 +35,7 @@ namespace Project.Entities.Player.State
                 return;
             }
 
-            _animation.Play(gameTime, _directionIdle.Y > 0 ? "front" : "back", AsepriteAnimation.AnimationDirection.LOOP);
+            _animation.Play(gameTime, _directionIdle.Y > 0 ? "front-idle" : "back-idle", AsepriteAnimation.AnimationDirection.LOOP);
         }
     }
 }
