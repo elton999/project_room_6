@@ -11,7 +11,7 @@ namespace Project.Nodes
         private Solid _solid;
 
         private Actor _actorHitBox;
-        private float _speed = 0.2f;
+        private float _speed = 0.02f;
 
         private bool _isMoving = true;
 
@@ -27,7 +27,7 @@ namespace Project.Nodes
             _actorHitBox.UpdateData(gameTime);
             _solid.Position = _actorHitBox.Position;
 
-            return _isMoving ? NodeStatus.RUNNING : NodeStatus.SUCCESS;
+            return _isMoving ? NodeStatus.SUCCESS : NodeStatus.FAILURE;
         }
 
         public void StartMoving()

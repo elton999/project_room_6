@@ -2226,27 +2226,13 @@
 									"entityIid": "e3ecd8e0-b4d0-11ec-b85c-079b326e29e7",
 									"layerIid": "8e602d71-b4d0-11ec-afd0-95f015e98655",
 									"levelIid": "8e600660-b4d0-11ec-afd0-b50211eda528",
-									"worldIid": "943a7410-dbe0-11ec-9435-8fca1fb92066"
+									"worldIid": "e5cf4280-dbe0-11ec-a509-5fedd9f5da04"
 								}, "__type": "EntityRef", "__tile": null, "defUid": 106, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["e3ecd8e0-b4d0-11ec-b85c-079b326e29e7"]
 								}] },
 								{ "__identifier": "IsOpened", "__value": true, "__type": "Bool", "__tile": null, "defUid": 150, "realEditorValues": [null] }
 							]
-						},
-						{
-							"__identifier": "Key",
-							"__grid": [24,21],
-							"__pivot": [0,0],
-							"__tags": ["item"],
-							"__tile": { "tilesetUid": 109, "x": 80, "y": 352, "w": 16, "h": 16 },
-							"__smartColor": "#FFE000",
-							"iid": "169ec960-dbe0-11ec-9435-a9929a1a424b",
-							"width": 16,
-							"height": 16,
-							"defUid": 145,
-							"px": [192,168],
-							"fieldInstances": []
 						}
 					]
 				},
@@ -2273,7 +2259,22 @@
 					"seed": 9884378,
 					"overrideTilesetUid": null,
 					"gridTiles": [],
-					"entityInstances": []
+					"entityInstances": [
+						{
+							"__identifier": "Box",
+							"__grid": [22,22],
+							"__pivot": [0,0],
+							"__tags": ["puzzle"],
+							"__tile": { "tilesetUid": 2, "x": 144, "y": 8, "w": 16, "h": 16 },
+							"__smartColor": "#DE9174",
+							"iid": "ea8fb0c0-dbe0-11ec-a509-b9174c2dedb4",
+							"width": 16,
+							"height": 16,
+							"defUid": 108,
+							"px": [176,176],
+							"fieldInstances": []
+						}
+					]
 				},
 				{
 					"__identifier": "IntGrid",
@@ -11970,7 +11971,7 @@
 					"entityInstances": [
 						{
 							"__identifier": "Door",
-							"__grid": [26,46],
+							"__grid": [25,46],
 							"__pivot": [0,0],
 							"__tags": ["hitbox"],
 							"__tile": null,
@@ -11979,7 +11980,7 @@
 							"width": 24,
 							"height": 35,
 							"defUid": 91,
-							"px": [208,368],
+							"px": [200,368],
 							"fieldInstances": [
 								{ "__identifier": "GoToLevel", "__value": 5, "__type": "Int", "__tile": null, "defUid": 93, "realEditorValues": [{ "id": "V_Int", "params": [5] }] },
 								{ "__identifier": "PlayerSpwan", "__value": {
@@ -12051,7 +12052,7 @@
 						},
 						{
 							"__identifier": "PlayerSpawn",
-							"__grid": [26,43],
+							"__grid": [25,43],
 							"__pivot": [0,0],
 							"__tags": ["spawns"],
 							"__tile": null,
@@ -12060,7 +12061,7 @@
 							"width": 16,
 							"height": 16,
 							"defUid": 105,
-							"px": [208,344],
+							"px": [200,344],
 							"fieldInstances": []
 						},
 						{
@@ -19641,7 +19642,7 @@
 					"entityInstances": [
 						{
 							"__identifier": "PlayerSpawn",
-							"__grid": [27,9],
+							"__grid": [25,9],
 							"__pivot": [0,0],
 							"__tags": ["spawns"],
 							"__tile": null,
@@ -19650,12 +19651,12 @@
 							"width": 16,
 							"height": 16,
 							"defUid": 105,
-							"px": [216,72],
+							"px": [200,72],
 							"fieldInstances": []
 						},
 						{
 							"__identifier": "Door",
-							"__grid": [26,3],
+							"__grid": [24,3],
 							"__pivot": [0,0],
 							"__tags": ["hitbox"],
 							"__tile": null,
@@ -19664,7 +19665,7 @@
 							"width": 24,
 							"height": 35,
 							"defUid": 91,
-							"px": [208,24],
+							"px": [192,24],
 							"fieldInstances": [
 								{ "__identifier": "GoToLevel", "__value": 3, "__type": "Int", "__tile": null, "defUid": 93, "realEditorValues": [{ "id": "V_Int", "params": [3] }] },
 								{ "__identifier": "PlayerSpwan", "__value": {

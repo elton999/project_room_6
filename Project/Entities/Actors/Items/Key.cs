@@ -61,5 +61,6 @@ namespace Project.Entities.Actors.Items
             DrawSprite(spriteBatch);
             EndDraw(spriteBatch);
         }
+
     }
 }

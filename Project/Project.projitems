@@ -46,5 +46,8 @@
     <Compile Include="..\Project\Nodes\SwitchSpriteNode.cs" />
     <Compile Include="..\Project\Entities\Actors\Items\Nodes\StartFollowPlayerNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Solids\SolidBox.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Nodes\ParticlesNode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Nodes\RemoveGameObjectFromScene.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Effects\Particles\BoxParticles.cs" />
   </ItemGroup>
 </Project>

@@ -1,7 +1,8 @@
 using Microsoft.Xna.Framework;
 using UmbrellaToolsKit.Collision;
-using Project.Nodes;
 using UmbrellaToolsKit.BehaviorTrees;
+using Project.Nodes;
+using Project.Effects.Particles;
 
 namespace Project.Entities.Player.State
 {
@@ -16,17 +17,34 @@ namespace Project.Entities.Player.State
             var boxCollision = new Actor() { size = _player.size, Position = _player.Position + _directionIdle };
             foreach (var solid in _player.Scene.AllSolids)
             {
-                if (solid.overlapCheck(boxCollision) && solid.tag == "Box")
-                {
-                    solid.Node = new SequenceNode();
-                    solid.Node.Add(new MoveSolidsAsActorNode(solid, _directionIdle));
-                    _player.SwitchState(new PlayerStateIdle(_player, _directionIdle));
-                    break;
-                }
+                if (!solid.overlapCheck(boxCollision) || solid.tag != "Box")
+                    continue;
+                _setMoveBehavior(solid);
+                break;
             }
             _player.SwitchState(new PlayerStateRun(_player));
         }
 
         public override void Exit() => _player.Gravity2D = Vector2.Zero;
+
+        private void _setMoveBehavior(Solid solid)
+        {
+            solid.Node = new SequenceNode();
+
+            var collideOnWallSelector = new SelectorNode();
+
+            var moveBoxNode = new MoveSolidsAsActorNode(solid, _directionIdle);
+            collideOnWallSelector.Add(new InverterNode(moveBoxNode));
+
+            var particles = new BoxParticles(_player.Scene.ScreenGraphicsDevice, solid);
+            var particlesNode = new ParticlesNode(particles, _player.Scene);
+            collideOnWallSelector.Add(new InverterNode(particlesNode));
+
+            solid.Node.Add(collideOnWallSelector);
+            solid.Node.Add(new RemoveGameObjectFromScene(particles));
+            solid.Node.Add(new ClearBehaviorTreeNode(solid));
+
+            _player.SwitchState(new PlayerStateIdle(_player, _directionIdle));
+        }
     }
 }

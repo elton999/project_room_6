@@ -1,4 +1,3 @@
-using UmbrellaToolsKit;
 using UmbrellaToolsKit.BehaviorTrees;
 using UmbrellaToolsKit.Collision;
 using Microsoft.Xna.Framework;
