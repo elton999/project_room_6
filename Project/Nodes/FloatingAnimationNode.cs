@@ -8,7 +8,7 @@ namespace Project.Nodes
     public class FloatingAnimationNode : Node
     {
         private GameObject _gameObject;
-        private float _speed = 5f;
+        private float _speed = 3f;
 
         public FloatingAnimationNode(GameObject gameObject) => _gameObject = gameObject;
 
