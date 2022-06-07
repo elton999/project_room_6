@@ -16,7 +16,7 @@ namespace Project.Entities.Player.State
             var boxCollision = new Actor() { size = _player.size, Position = _player.Position + _directionIdle };
             foreach (var solid in _player.Scene.AllSolids)
             {
-                if (solid.overlapCheck(boxCollision))
+                if (solid.overlapCheck(boxCollision) && solid.tag == "Box")
                 {
                     solid.Node = new SequenceNode();
                     solid.Node.Add(new MoveSolidsAsActorNode(solid, _directionIdle));

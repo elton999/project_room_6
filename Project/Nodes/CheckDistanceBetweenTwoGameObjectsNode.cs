@@ -4,7 +4,7 @@ using UmbrellaToolsKit.BehaviorTrees;
 
 namespace Project.Nodes
 {
-    public class CheckDistanceBetweenTwoGameObjects : Node
+    public class CheckDistanceBetweenTwoGameObjectsNode : Node
     {
         private GameObject _gameObjectA;
         private GameObject _gameObjectB;
@@ -13,7 +13,7 @@ namespace Project.Nodes
 
         public float MaxDistance { get => _maxDistance; set => _maxDistance = value; }
 
-        public CheckDistanceBetweenTwoGameObjects(GameObject gameObjectA, GameObject gameObjectB)
+        public CheckDistanceBetweenTwoGameObjectsNode(GameObject gameObjectA, GameObject gameObjectB)
         {
             _gameObjectA = gameObjectA;
             _gameObjectB = gameObjectB;

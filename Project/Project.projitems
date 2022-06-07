@@ -39,11 +39,12 @@
     <Compile Include="..\Project\Nodes\FloatingAnimationNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Actors\GroundButton.cs" />
     <Compile Include="..\Project\Nodes\ActorOverAnyActorNode.cs" />
-    <Compile Include="..\Project\Nodes\CheckDistanceBetweenTwoGameObjects.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Nodes\CheckDistanceBetweenTwoGameObjectsNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GamePlay\PuzzleButtons.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GamePlay\Nodes\Puzzle\SearchDoorNode.cs" />
     <Compile Include="..\Project\GamePlay\Nodes\Puzzle\AllButtonsAreActiveNode.cs" />
     <Compile Include="..\Project\Nodes\SwitchSpriteNode.cs" />
     <Compile Include="..\Project\Entities\Actors\Items\Nodes\StartFollowPlayerNode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Solids\SolidBox.cs" />
   </ItemGroup>
 </Project>
