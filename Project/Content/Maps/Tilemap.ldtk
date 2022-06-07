@@ -2233,6 +2233,20 @@
 								}] },
 								{ "__identifier": "IsOpened", "__value": true, "__type": "Bool", "__tile": null, "defUid": 150, "realEditorValues": [null] }
 							]
+						},
+						{
+							"__identifier": "Key",
+							"__grid": [24,21],
+							"__pivot": [0,0],
+							"__tags": ["item"],
+							"__tile": { "tilesetUid": 109, "x": 80, "y": 352, "w": 16, "h": 16 },
+							"__smartColor": "#FFE000",
+							"iid": "169ec960-dbe0-11ec-9435-a9929a1a424b",
+							"width": 16,
+							"height": 16,
+							"defUid": 145,
+							"px": [192,168],
+							"fieldInstances": []
 						}
 					]
 				},

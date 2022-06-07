@@ -1,12 +1,13 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using UmbrellaToolsKit;
+using UmbrellaToolsKit.Collision;
 using UmbrellaToolsKit.BehaviorTrees;
 using Project.Nodes;
 
 namespace Project.Entities.Actors.Items
 {
-    public class Key : UmbrellaToolsKit.Collision.Actor
+    public class Key : Actor
     {
         public override void Start()
         {
@@ -18,7 +19,7 @@ namespace Project.Entities.Actors.Items
 
             Node = new SequenceNode();
             Node.Add(new FloatingAnimationNode(this));
-            Node.Add(new CheckingActorOverActorNode(this, Scene.AllActors[0]));
+            Node.Add(new CheckingActorOverActorNode(Scene.AllActors[0], this));
             Node.Add(new Nodes.StartFollowPlayerNode(this));
         }
     }

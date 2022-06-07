@@ -17,7 +17,7 @@ namespace Project.Nodes
             float timer = (float)gameTime.TotalGameTime.TotalSeconds;
             _gameObject.Origin.Y = MathF.Cos(timer * _speed) * 10f;
 
-            return NodeStatus.RUNNING;
+            return NodeStatus.SUCCESS;
         }
     }
 

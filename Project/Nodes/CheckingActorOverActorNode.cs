@@ -1,5 +1,4 @@
 ﻿using Microsoft.Xna.Framework;
-using System;
 using UmbrellaToolsKit.BehaviorTrees;
 using UmbrellaToolsKit.Collision;
 
