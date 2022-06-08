@@ -49,5 +49,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Nodes\ParticlesNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Nodes\RemoveGameObjectFromScene.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Effects\Particles\BoxParticles.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Nodes\AddSequenceToGameObjectNode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Effects\Particles\ImpactParticles.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Nodes\DelayNode.cs" />
   </ItemGroup>
 </Project>

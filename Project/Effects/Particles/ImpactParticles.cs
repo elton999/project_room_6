@@ -5,12 +5,13 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Project.Effects.Particles
 {
-    public class BoxParticles : ParticlesSystem
+    public class ImpactParticles : ParticlesSystem
     {
         private GameObject _target;
 
-        public BoxParticles(GraphicsDevice graphicsDevice, GameObject target) : base()
+        public ImpactParticles(GraphicsDevice graphicsDevice, GameObject target)
         {
+            tag = "ImpactParticles";
             Sprite = new Texture2D(graphicsDevice, 1, 1);
             Color[] data = new Color[1];
             data[0] = Color.White;
@@ -19,15 +20,20 @@ namespace Project.Effects.Particles
 
             _target = target;
 
-            ParticleMaxScale = 5;
+            ParticleMaxScale = 2;
             ParticleAngleRotation = 20f;
             ParticleVelocityAngle = 360;
-            ParticleVelocity = 7f;
+            ParticleVelocity = 20;
             MaxParticles = 5;
             ParticleAngleEmitter = 360;
             ParticleTransparent = 0.7f;
-            ParticleLifeTime = 1000f;
-            ParticleRadiusSpawn = 5f;
+            ParticleLifeTime = 1000f * 1000f;
+            ParticleRadiusSpawn = 14;
+
+            EmitsFor = TypeEmitter.FOR_TIME;
+            EmitterTime = 30f * 8;
+
+            Restart();
         }
 
         public override void Update(GameTime gameTime)

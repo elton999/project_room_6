@@ -36,13 +36,22 @@ namespace Project.Entities.Player.State
             var moveBoxNode = new MoveSolidsAsActorNode(solid, _directionIdle);
             collideOnWallSelector.Add(new InverterNode(moveBoxNode));
 
-            var particles = new BoxParticles(_player.Scene.ScreenGraphicsDevice, solid);
-            var particlesNode = new ParticlesNode(particles, _player.Scene);
+            var particles = new BoxParticles(solid.Scene.ScreenGraphicsDevice, solid);
+            var particlesNode = new ParticlesNode(particles, solid.Scene);
             collideOnWallSelector.Add(new InverterNode(particlesNode));
 
             solid.Node.Add(collideOnWallSelector);
             solid.Node.Add(new RemoveGameObjectFromScene(particles));
-            solid.Node.Add(new ClearBehaviorTreeNode(solid));
+
+            var sequenceOnCollide = new SequenceNode();
+            var impactParticles = new ImpactParticles(solid.Scene.ScreenGraphicsDevice, solid);
+            var impactParticlesNode = new InverterNode(new ParticlesNode(impactParticles, solid.Scene));
+
+            sequenceOnCollide.Add(impactParticlesNode);
+            sequenceOnCollide.Add(new RemoveGameObjectFromScene(impactParticles));
+            sequenceOnCollide.Add(new ClearBehaviorTreeNode(solid));
+
+            solid.Node.Add(new AddSequenceToGameObjectNode(solid, sequenceOnCollide));
 
             _player.SwitchState(new PlayerStateIdle(_player, _directionIdle));
         }

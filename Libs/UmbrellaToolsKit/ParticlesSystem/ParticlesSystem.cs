@@ -9,6 +9,10 @@ namespace UmbrellaToolsKit.ParticlesSystem
     {
         private float _timer = 0.0f;
 
+        public bool IsPlaying { get => (IsOnTime && Particles.Count > 0) || EmitsFor == TypeEmitter.INFINITE; }
+
+        private bool IsOnTime { get => EmitsFor == TypeEmitter.FOR_TIME && _timer >= 0; }
+
         public enum TypeEmitter { FOR_TIME, INFINITE }
 
         public List<Particle> Particles = new List<Particle>();
@@ -28,14 +32,15 @@ namespace UmbrellaToolsKit.ParticlesSystem
         public float ParticleAngleRotation = 90f;
         public float ParticleRadiusSpawn = 10f;
 
+        public void Restart() => _timer = EmitterTime;
+
         public override void Update(GameTime gameTime)
         {
-            if (EmitsFor == TypeEmitter.FOR_TIME && _timer <= 0)
-                return;
-
             _timer -= (float)gameTime.ElapsedGameTime.TotalMilliseconds;
 
-            ImitParticles();
+            if (IsOnTime || EmitsFor == TypeEmitter.INFINITE)
+                ImitParticles();
+
             CheckLifeTimeParticles(gameTime);
         }
 

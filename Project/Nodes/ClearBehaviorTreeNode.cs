@@ -12,7 +12,7 @@ namespace Project.Nodes
 
         public override NodeStatus Tick(GameTime gameTime)
         {
-            //_gameObject.Node = new SequenceNode();
+            _gameObject.Node = null;
             return NodeStatus.SUCCESS;
         }
     }

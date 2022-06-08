@@ -38,13 +38,20 @@ namespace Project.Entities.Actors.Items
             ParticlesSystem.Sprite.SetData(data);
             ParticlesSystem.Sprites.Add(ParticlesSystem.Sprite);
 
-            ParticlesSystem.ParticleMaxScale = 2;
+            ParticlesSystem.Sprite = new Texture2D(Scene.ScreenGraphicsDevice, 1, 1);
+            data = new Color[1];
+            data[0] = new Color(new Vector4(255f, 255f, 165f, 255f) / 255f);
+            ParticlesSystem.Sprite.SetData(data);
+            ParticlesSystem.Sprites.Add(ParticlesSystem.Sprite);
+            ParticlesSystem.Sprites.Add(ParticlesSystem.Sprite);
+
+            ParticlesSystem.ParticleMaxScale = 1.5f;
             ParticlesSystem.ParticleVelocityAngle = 360;
-            ParticlesSystem.ParticleVelocity = 4;
+            ParticlesSystem.ParticleVelocity = 3;
             ParticlesSystem.MaxParticles = 1;
             ParticlesSystem.ParticleAngleEmitter = 360;
             ParticlesSystem.ParticleAngleRotation = 0f;
-            ParticlesSystem.ParticleTransparent = 1;
+            ParticlesSystem.ParticleTransparent = 1f;
         }
 
         public override void Update(GameTime gameTime)

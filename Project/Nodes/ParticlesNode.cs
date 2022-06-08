@@ -21,13 +21,14 @@ namespace Project.Nodes
 
         public override NodeStatus Tick(GameTime gameTime)
         {
-            if (_done)
+            if (!_done)
+            {
+                _scene.Backgrounds.Insert(0, _particlesSystem);
+                _done = true;
                 return NodeStatus.SUCCESS;
-            _done = true;
+            }
 
-            _scene.Backgrounds.Insert(0, _particlesSystem);
-
-            return NodeStatus.SUCCESS;
+            return _particlesSystem.IsPlaying ? NodeStatus.SUCCESS : NodeStatus.FAILURE;
         }
     }
 }
