@@ -47,7 +47,9 @@ namespace Project.Entities.Player.State
             var impactParticles = new ImpactParticles(solid.Scene.ScreenGraphicsDevice, solid);
             var impactParticlesNode = new InverterNode(new ParticlesNode(impactParticles, solid.Scene));
 
+            sequenceOnCollide.Add(new ShakeSpriteNode(solid, 1f));
             sequenceOnCollide.Add(impactParticlesNode);
+            sequenceOnCollide.Add(new ResetShakeSpriteNode(solid));
             sequenceOnCollide.Add(new RemoveGameObjectFromScene(impactParticles));
             sequenceOnCollide.Add(new ClearBehaviorTreeNode(solid));
 

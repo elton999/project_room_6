@@ -52,5 +52,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Nodes\AddSequenceToGameObjectNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Effects\Particles\ImpactParticles.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Nodes\DelayNode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Nodes\ShakeSpriteNode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Nodes\ResetShakeSpriteNode.cs" />
   </ItemGroup>
 </Project>
