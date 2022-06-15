@@ -54,5 +54,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Nodes\DelayNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Nodes\ShakeSpriteNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Nodes\ResetShakeSpriteNode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Actors\Items\KeyParticles.cs" />
   </ItemGroup>
 </Project>

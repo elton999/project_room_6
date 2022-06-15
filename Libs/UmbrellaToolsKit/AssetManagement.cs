@@ -5,6 +5,14 @@ using Microsoft.Xna.Framework;
 
 namespace UmbrellaToolsKit
 {
+    public struct AssetObject
+    {
+        public string Layer;
+        public string Name;
+        public Vector2 Position;
+        public Type GameObject;
+    }
+
     public class AssetManagement
     {
         public static AssetManagement Instance;
@@ -38,24 +46,38 @@ namespace UmbrellaToolsKit
         {
             IEnumerable<AssetObject> assetObjects = this.AssetsList.Where(asset => asset.Name == name);
             if (assetObjects.Count() > 0)
-            {
                 return assetObjects.ToList()[0].Layer;
-            }
             return "";
         }
 
-
         public GameObject addEntityOnScene(string name, string tag, Vector2 position, Point size, dynamic values, List<Vector2> nodes, Scene scene)
         { // ? values:Dynamic, ? nodes:Array<Vector2>, ? flipx:Bool):Void{
-            GameObject gameObject = this.GetObject(name);
-            string layer = this.GetLayer(name);
+            var gameObject = SetGameObjectInfos(name, tag, position, size, values, nodes, scene);
+
+            string layer = GetLayer(name);
+            SetLayer(scene, gameObject, layer);
+
+            gameObject.Start();
+            return gameObject;
+        }
+
+        public GameObject SetGameObjectInfos(string name, string tag, Vector2 position, Point size, dynamic values, List<Vector2> nodes, Scene scene)
+        {
+            GameObject gameObject = GetObject(name);
 
             gameObject.tag = tag;
             gameObject.Position = position;
             gameObject.size = size;
             gameObject.Values = values;
             gameObject.Nodes = nodes;
+            gameObject.Content = scene.Content;
+            gameObject.Scene = scene;
 
+            return gameObject;
+        }
+
+        public static void SetLayer(Scene scene, GameObject gameObject, string layer)
+        {
             if (layer == "PLAYER")
                 scene.Players.Add(gameObject);
             else if (layer == "ENEMIES")
@@ -66,18 +88,8 @@ namespace UmbrellaToolsKit
                 scene.Middleground.Add(gameObject);
             else if (layer == "BACKGROUND")
                 scene.Backgrounds.Add(gameObject);
-
-            gameObject.Content = scene.Content;
-            gameObject.Scene = scene;
-
-            gameObject.Start();
-            return gameObject;
         }
 
-
-        public void ClearAll()
-        {
-            this.LevelAssetsList.Clear();
-        }
+        public void ClearAll() => LevelAssetsList.Clear();
     }
 }

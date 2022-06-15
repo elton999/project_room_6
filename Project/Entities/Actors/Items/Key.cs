@@ -25,33 +25,7 @@ namespace Project.Entities.Actors.Items
             Node.Add(new CheckingActorOverActorNode(Scene.AllActors[0], this));
             Node.Add(new Nodes.StartFollowPlayerNode(this));
 
-            _setParticle();
-        }
-
-        private void _setParticle()
-        {
-            ParticlesSystem = new ParticlesSystem();
-
-            ParticlesSystem.Sprite = new Texture2D(Scene.ScreenGraphicsDevice, 1, 1);
-            Color[] data = new Color[1];
-            data[0] = Color.White;
-            ParticlesSystem.Sprite.SetData(data);
-            ParticlesSystem.Sprites.Add(ParticlesSystem.Sprite);
-
-            ParticlesSystem.Sprite = new Texture2D(Scene.ScreenGraphicsDevice, 1, 1);
-            data = new Color[1];
-            data[0] = new Color(new Vector4(255f, 255f, 165f, 255f) / 255f);
-            ParticlesSystem.Sprite.SetData(data);
-            ParticlesSystem.Sprites.Add(ParticlesSystem.Sprite);
-            ParticlesSystem.Sprites.Add(ParticlesSystem.Sprite);
-
-            ParticlesSystem.ParticleMaxScale = 1.5f;
-            ParticlesSystem.ParticleVelocityAngle = 360;
-            ParticlesSystem.ParticleVelocity = 3;
-            ParticlesSystem.MaxParticles = 1;
-            ParticlesSystem.ParticleAngleEmitter = 360;
-            ParticlesSystem.ParticleAngleRotation = 0f;
-            ParticlesSystem.ParticleTransparent = 1f;
+            ParticlesSystem = new KeyParticles(Scene.ScreenGraphicsDevice);
         }
 
         public override void Update(GameTime gameTime)
