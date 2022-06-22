@@ -3,7 +3,6 @@ using UmbrellaToolsKit;
 using UmbrellaToolsKit.BehaviorTrees;
 using UmbrellaToolsKit.Collision;
 using Microsoft.Xna.Framework.Graphics;
-using Project.Nodes;
 using Project.GamePlay.Nodes.Puzzle;
 
 namespace Project.GamePlay

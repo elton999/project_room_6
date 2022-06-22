@@ -25,9 +25,11 @@ namespace Project.Entities
         {
             Node = new SequenceNode();
             if ((bool)Values[2].Value)
+            {
                 Node.Add(new OpenDoorNode(this));
-            else
-                Node.Add(new CloseDoorNode(this));
+                return;
+            }
+            Node.Add(new CloseDoorNode(this));
         }
     }
 }

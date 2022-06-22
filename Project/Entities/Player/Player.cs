@@ -1,5 +1,4 @@
 ﻿using UmbrellaToolsKit.Sprite;
-using UmbrellaToolsKit.Collision;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Project.Entities.Player.State;
@@ -27,6 +26,7 @@ namespace Project.Entities.Player
 
             Scene.AllActors.Add(this);
             base.Start();
+            Scene.Camera.Target = this;
         }
 
         public void SwitchState(PlayerState state)
@@ -43,7 +43,6 @@ namespace Project.Entities.Player
             CurrentState.InputUpdate(gametime);
             CurrentState.LogicUpdate(gametime);
 
-            Scene.Camera.Target = Position;
         }
 
         public override void UpdateData(GameTime gametime)
