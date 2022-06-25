@@ -26,7 +26,10 @@ namespace Project.Entities.Player
 
             Scene.AllActors.Add(this);
             base.Start();
+
             Scene.Camera.Target = this;
+            if (!Scene.GameManagement.Values.ContainsKey("canPlay"))
+                Scene.GameManagement.Values.Add("canPlay", true);
         }
 
         public void SwitchState(PlayerState state)
@@ -36,19 +39,20 @@ namespace Project.Entities.Player
             CurrentState.Enter();
         }
 
-        public override void Update(GameTime gametime)
+        public override void Update(GameTime gameTime)
         {
             Body = Animation.Body;
 
-            CurrentState.InputUpdate(gametime);
-            CurrentState.LogicUpdate(gametime);
-
+            if (!(bool)Scene.GameManagement.Values["canPlay"])
+                return;
+            CurrentState.InputUpdate(gameTime);
+            CurrentState.LogicUpdate(gameTime);
         }
 
-        public override void UpdateData(GameTime gametime)
+        public override void UpdateData(GameTime gameTime)
         {
-            CurrentState.PhysicsUpdate(gametime);
-            base.UpdateData(gametime);
+            CurrentState.PhysicsUpdate(gameTime);
+            base.UpdateData(gameTime);
         }
     }
 }

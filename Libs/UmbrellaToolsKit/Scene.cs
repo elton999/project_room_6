@@ -147,7 +147,6 @@ namespace UmbrellaToolsKit
                 {
                     for (int e = layers[i].Count - 1; e >= 0; e--)
                     {
-                        layers[i][e].processWait(gameTime);
                         layers[i][e].UpdateData(gameTime);
 
                         if (Camera != null)

@@ -4,21 +4,16 @@ using Microsoft.Xna.Framework;
 
 namespace Project.Nodes
 {
-    public class DelayNode : Node
+    public class DelayNode : DecoratorNode
     {
         private float _timer = 0f;
-        private Node _node;
 
-        public DelayNode(Node node, float delayTime)
-        {
-            _node = node;
-            _timer = delayTime;
-        }
+        public DelayNode(Node node, float delayTime) : base(node) => _timer = delayTime;
 
         public override NodeStatus Tick(GameTime gameTime)
         {
-            _timer -= (float)gameTime.ElapsedGameTime.TotalMilliseconds;
-            return _timer <= 0f ? _node.Tick(gameTime) : NodeStatus.FAILURE;
+            _timer -= (float)gameTime.ElapsedGameTime.TotalSeconds;
+            return _timer <= 0f ? _node.Tick(gameTime) : NodeStatus.RUNNING;
         }
     }
 }

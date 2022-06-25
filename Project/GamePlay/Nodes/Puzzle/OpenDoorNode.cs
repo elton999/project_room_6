@@ -15,6 +15,9 @@ namespace Project.GamePlay.Nodes.Puzzle
             door.Node = new SequenceNode();
             door.Node.Add(new Entities.DoorNodes.OpenDoorNode(door));
 
+            var player = door.Scene.AllActors[0];
+            AddData("target", player);
+
             return NodeStatus.SUCCESS;
         }
     }

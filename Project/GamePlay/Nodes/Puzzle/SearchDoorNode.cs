@@ -29,6 +29,8 @@ namespace Project.GamePlay.Nodes.Puzzle
             foreach (var actor in _puzzleButtons.Scene.AllActors)
                 if (_doorTag.Equals(actor.tag))
                     _puzzleButtons.Door = actor;
+
+            AddData("targetDoor", _puzzleButtons.Door);
         }
 
         private string _getDoorTag()

@@ -7,7 +7,7 @@ namespace UmbrellaToolsKit
 {
     public class GameManagement : GameObject
     {
-        public Dictionary<String, dynamic> Values = new Dictionary<string, dynamic>();
+        public Dictionary<string, object> Values = new Dictionary<string, object>();
 
         public enum Status { LOADING, CREDITS, MENU, PAUSE, STOP, PLAYING };
         public Status CurrentStatus;
@@ -28,7 +28,6 @@ namespace UmbrellaToolsKit
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
-            processWait(gameTime);
             SceneManagement.Update(gameTime);
         }
 
