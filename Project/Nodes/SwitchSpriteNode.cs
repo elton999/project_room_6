@@ -28,8 +28,5 @@ namespace Project.Nodes
 
             return NodeStatus.RUNNING;
         }
-
     }
-
 }
-

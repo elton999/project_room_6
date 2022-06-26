@@ -1,3 +1,4 @@
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using UmbrellaToolsKit;
@@ -18,7 +19,27 @@ namespace Project.Entities
 
             Gravity2D = Vector2.Zero;
 
+            SetRotationSprite();
             SetDoorAI();
+        }
+
+        public void SetRotationSprite()
+        {
+            float degToRand = MathF.PI / 180f;
+            Origin = new Vector2(24, 32) * 0.5f;
+
+            switch ((string)Values[3].Value)
+            {
+                case "Down":
+                    Rotation = 180f * degToRand;
+                    break;
+                case "Right":
+                    Rotation = 90f * degToRand;
+                    break;
+                case "Left":
+                    Rotation = -90f * degToRand;
+                    break;
+            }
         }
 
         public void SetDoorAI()
