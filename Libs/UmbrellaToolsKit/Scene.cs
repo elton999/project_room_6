@@ -19,7 +19,6 @@ namespace UmbrellaToolsKit
         #region Layers
         public List<List<GameObject>> SortLayers = new List<List<GameObject>>();
 
-
         // UI
         public List<GameObject> UI = new List<GameObject>();
         // Layers

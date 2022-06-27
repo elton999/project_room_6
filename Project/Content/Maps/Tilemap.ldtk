@@ -1761,11 +1761,11 @@
 			"fieldDefs": []
 		},
 		{
-			"identifier": "Door_Up",
+			"identifier": "Door",
 			"uid": 91,
 			"tags": ["hitbox"],
 			"width": 24,
-			"height": 35,
+			"height": 24,
 			"resizableX": false,
 			"resizableY": false,
 			"keepAspectRatio": false,
@@ -1784,8 +1784,8 @@
 			"maxCount": 0,
 			"limitScope": "PerLevel",
 			"limitBehavior": "MoveLastOne",
-			"pivotX": 0.5,
-			"pivotY": 0.5,
+			"pivotX": 0,
+			"pivotY": 0,
 			"fieldDefs": [
 				{
 					"identifier": "GoToLevel",
@@ -1881,450 +1881,6 @@
 					"identifier": "Rotation",
 					"__type": "LocalEnum.Rotation",
 					"uid": 181,
-					"type": "F_Enum(180)",
-					"isArray": false,
-					"canBeNull": false,
-					"arrayMinLength": null,
-					"arrayMaxLength": null,
-					"editorDisplayMode": "Hidden",
-					"editorDisplayPos": "Above",
-					"editorAlwaysShow": false,
-					"editorCutLongValues": true,
-					"editorTextSuffix": null,
-					"editorTextPrefix": null,
-					"useForSmartColor": false,
-					"min": null,
-					"max": null,
-					"regex": null,
-					"acceptFileTypes": null,
-					"defaultOverride": null,
-					"textLanguageMode": null,
-					"symmetricalRef": false,
-					"autoChainRef": true,
-					"allowOutOfLevelRef": true,
-					"allowedRefs": "OnlySame",
-					"allowedRefTags": [],
-					"tilesetUid": null
-				}
-			]
-		},
-		{
-			"identifier": "Door_Down",
-			"uid": 166,
-			"tags": ["hitbox"],
-			"width": 24,
-			"height": 35,
-			"resizableX": false,
-			"resizableY": false,
-			"keepAspectRatio": false,
-			"tileOpacity": 1,
-			"fillOpacity": 1,
-			"lineOpacity": 1,
-			"hollow": true,
-			"color": "#00FF73",
-			"renderMode": "Rectangle",
-			"showName": true,
-			"tilesetId": null,
-			"tileId": null,
-			"tileRenderMode": "FullSizeUncropped",
-			"tileRect": null,
-			"nineSliceBorders": [],
-			"maxCount": 0,
-			"limitScope": "PerLevel",
-			"limitBehavior": "MoveLastOne",
-			"pivotX": 0.5,
-			"pivotY": 0.5,
-			"fieldDefs": [
-				{
-					"identifier": "GoToLevel",
-					"__type": "Int",
-					"uid": 167,
-					"type": "F_Int",
-					"isArray": false,
-					"canBeNull": false,
-					"arrayMinLength": null,
-					"arrayMaxLength": null,
-					"editorDisplayMode": "NameAndValue",
-					"editorDisplayPos": "Center",
-					"editorAlwaysShow": true,
-					"editorCutLongValues": true,
-					"editorTextSuffix": null,
-					"editorTextPrefix": null,
-					"useForSmartColor": false,
-					"min": null,
-					"max": null,
-					"regex": null,
-					"acceptFileTypes": null,
-					"defaultOverride": { "id": "V_Int", "params": [1] },
-					"textLanguageMode": null,
-					"symmetricalRef": false,
-					"autoChainRef": true,
-					"allowOutOfLevelRef": true,
-					"allowedRefs": "OnlySame",
-					"allowedRefTags": [],
-					"tilesetUid": null
-				},
-				{
-					"identifier": "PlayerSpwan",
-					"__type": "EntityRef",
-					"uid": 168,
-					"type": "F_EntityRef",
-					"isArray": false,
-					"canBeNull": false,
-					"arrayMinLength": null,
-					"arrayMaxLength": null,
-					"editorDisplayMode": "RefLinkBetweenPivots",
-					"editorDisplayPos": "Above",
-					"editorAlwaysShow": false,
-					"editorCutLongValues": true,
-					"editorTextSuffix": null,
-					"editorTextPrefix": null,
-					"useForSmartColor": false,
-					"min": null,
-					"max": null,
-					"regex": null,
-					"acceptFileTypes": null,
-					"defaultOverride": null,
-					"textLanguageMode": null,
-					"symmetricalRef": false,
-					"autoChainRef": true,
-					"allowOutOfLevelRef": true,
-					"allowedRefs": "OnlyTags",
-					"allowedRefTags": ["spawns"],
-					"tilesetUid": null
-				},
-				{
-					"identifier": "IsOpened",
-					"__type": "Bool",
-					"uid": 169,
-					"type": "F_Bool",
-					"isArray": false,
-					"canBeNull": false,
-					"arrayMinLength": null,
-					"arrayMaxLength": null,
-					"editorDisplayMode": "Hidden",
-					"editorDisplayPos": "Above",
-					"editorAlwaysShow": false,
-					"editorCutLongValues": true,
-					"editorTextSuffix": null,
-					"editorTextPrefix": null,
-					"useForSmartColor": false,
-					"min": null,
-					"max": null,
-					"regex": null,
-					"acceptFileTypes": null,
-					"defaultOverride": {
-						"id": "V_Bool",
-						"params": [ true ]
-					},
-					"textLanguageMode": null,
-					"symmetricalRef": false,
-					"autoChainRef": true,
-					"allowOutOfLevelRef": true,
-					"allowedRefs": "OnlySame",
-					"allowedRefTags": [],
-					"tilesetUid": null
-				},
-				{
-					"identifier": "Rotation",
-					"__type": "LocalEnum.Rotation",
-					"uid": 182,
-					"type": "F_Enum(180)",
-					"isArray": false,
-					"canBeNull": false,
-					"arrayMinLength": null,
-					"arrayMaxLength": null,
-					"editorDisplayMode": "Hidden",
-					"editorDisplayPos": "Above",
-					"editorAlwaysShow": false,
-					"editorCutLongValues": true,
-					"editorTextSuffix": null,
-					"editorTextPrefix": null,
-					"useForSmartColor": false,
-					"min": null,
-					"max": null,
-					"regex": null,
-					"acceptFileTypes": null,
-					"defaultOverride": null,
-					"textLanguageMode": null,
-					"symmetricalRef": false,
-					"autoChainRef": true,
-					"allowOutOfLevelRef": true,
-					"allowedRefs": "OnlySame",
-					"allowedRefTags": [],
-					"tilesetUid": null
-				}
-			]
-		},
-		{
-			"identifier": "Door_Left",
-			"uid": 170,
-			"tags": ["hitbox"],
-			"width": 35,
-			"height": 24,
-			"resizableX": false,
-			"resizableY": false,
-			"keepAspectRatio": false,
-			"tileOpacity": 1,
-			"fillOpacity": 1,
-			"lineOpacity": 1,
-			"hollow": true,
-			"color": "#00FF73",
-			"renderMode": "Rectangle",
-			"showName": true,
-			"tilesetId": null,
-			"tileId": null,
-			"tileRenderMode": "FullSizeUncropped",
-			"tileRect": null,
-			"nineSliceBorders": [],
-			"maxCount": 0,
-			"limitScope": "PerLevel",
-			"limitBehavior": "MoveLastOne",
-			"pivotX": 0.5,
-			"pivotY": 0.5,
-			"fieldDefs": [
-				{
-					"identifier": "GoToLevel",
-					"__type": "Int",
-					"uid": 171,
-					"type": "F_Int",
-					"isArray": false,
-					"canBeNull": false,
-					"arrayMinLength": null,
-					"arrayMaxLength": null,
-					"editorDisplayMode": "NameAndValue",
-					"editorDisplayPos": "Center",
-					"editorAlwaysShow": true,
-					"editorCutLongValues": true,
-					"editorTextSuffix": null,
-					"editorTextPrefix": null,
-					"useForSmartColor": false,
-					"min": null,
-					"max": null,
-					"regex": null,
-					"acceptFileTypes": null,
-					"defaultOverride": { "id": "V_Int", "params": [1] },
-					"textLanguageMode": null,
-					"symmetricalRef": false,
-					"autoChainRef": true,
-					"allowOutOfLevelRef": true,
-					"allowedRefs": "OnlySame",
-					"allowedRefTags": [],
-					"tilesetUid": null
-				},
-				{
-					"identifier": "PlayerSpwan",
-					"__type": "EntityRef",
-					"uid": 172,
-					"type": "F_EntityRef",
-					"isArray": false,
-					"canBeNull": false,
-					"arrayMinLength": null,
-					"arrayMaxLength": null,
-					"editorDisplayMode": "RefLinkBetweenPivots",
-					"editorDisplayPos": "Above",
-					"editorAlwaysShow": false,
-					"editorCutLongValues": true,
-					"editorTextSuffix": null,
-					"editorTextPrefix": null,
-					"useForSmartColor": false,
-					"min": null,
-					"max": null,
-					"regex": null,
-					"acceptFileTypes": null,
-					"defaultOverride": null,
-					"textLanguageMode": null,
-					"symmetricalRef": false,
-					"autoChainRef": true,
-					"allowOutOfLevelRef": true,
-					"allowedRefs": "OnlyTags",
-					"allowedRefTags": ["spawns"],
-					"tilesetUid": null
-				},
-				{
-					"identifier": "IsOpened",
-					"__type": "Bool",
-					"uid": 173,
-					"type": "F_Bool",
-					"isArray": false,
-					"canBeNull": false,
-					"arrayMinLength": null,
-					"arrayMaxLength": null,
-					"editorDisplayMode": "Hidden",
-					"editorDisplayPos": "Above",
-					"editorAlwaysShow": false,
-					"editorCutLongValues": true,
-					"editorTextSuffix": null,
-					"editorTextPrefix": null,
-					"useForSmartColor": false,
-					"min": null,
-					"max": null,
-					"regex": null,
-					"acceptFileTypes": null,
-					"defaultOverride": {
-						"id": "V_Bool",
-						"params": [ true ]
-					},
-					"textLanguageMode": null,
-					"symmetricalRef": false,
-					"autoChainRef": true,
-					"allowOutOfLevelRef": true,
-					"allowedRefs": "OnlySame",
-					"allowedRefTags": [],
-					"tilesetUid": null
-				},
-				{
-					"identifier": "Rotation",
-					"__type": "LocalEnum.Rotation",
-					"uid": 183,
-					"type": "F_Enum(180)",
-					"isArray": false,
-					"canBeNull": false,
-					"arrayMinLength": null,
-					"arrayMaxLength": null,
-					"editorDisplayMode": "Hidden",
-					"editorDisplayPos": "Above",
-					"editorAlwaysShow": false,
-					"editorCutLongValues": true,
-					"editorTextSuffix": null,
-					"editorTextPrefix": null,
-					"useForSmartColor": false,
-					"min": null,
-					"max": null,
-					"regex": null,
-					"acceptFileTypes": null,
-					"defaultOverride": null,
-					"textLanguageMode": null,
-					"symmetricalRef": false,
-					"autoChainRef": true,
-					"allowOutOfLevelRef": true,
-					"allowedRefs": "OnlySame",
-					"allowedRefTags": [],
-					"tilesetUid": null
-				}
-			]
-		},
-		{
-			"identifier": "Door_Right",
-			"uid": 174,
-			"tags": ["hitbox"],
-			"width": 35,
-			"height": 24,
-			"resizableX": false,
-			"resizableY": false,
-			"keepAspectRatio": false,
-			"tileOpacity": 1,
-			"fillOpacity": 1,
-			"lineOpacity": 1,
-			"hollow": true,
-			"color": "#00FF73",
-			"renderMode": "Rectangle",
-			"showName": true,
-			"tilesetId": null,
-			"tileId": null,
-			"tileRenderMode": "FullSizeUncropped",
-			"tileRect": null,
-			"nineSliceBorders": [],
-			"maxCount": 0,
-			"limitScope": "PerLevel",
-			"limitBehavior": "MoveLastOne",
-			"pivotX": 0.5,
-			"pivotY": 0.5,
-			"fieldDefs": [
-				{
-					"identifier": "GoToLevel",
-					"__type": "Int",
-					"uid": 175,
-					"type": "F_Int",
-					"isArray": false,
-					"canBeNull": false,
-					"arrayMinLength": null,
-					"arrayMaxLength": null,
-					"editorDisplayMode": "NameAndValue",
-					"editorDisplayPos": "Center",
-					"editorAlwaysShow": true,
-					"editorCutLongValues": true,
-					"editorTextSuffix": null,
-					"editorTextPrefix": null,
-					"useForSmartColor": false,
-					"min": null,
-					"max": null,
-					"regex": null,
-					"acceptFileTypes": null,
-					"defaultOverride": { "id": "V_Int", "params": [1] },
-					"textLanguageMode": null,
-					"symmetricalRef": false,
-					"autoChainRef": true,
-					"allowOutOfLevelRef": true,
-					"allowedRefs": "OnlySame",
-					"allowedRefTags": [],
-					"tilesetUid": null
-				},
-				{
-					"identifier": "PlayerSpwan",
-					"__type": "EntityRef",
-					"uid": 176,
-					"type": "F_EntityRef",
-					"isArray": false,
-					"canBeNull": false,
-					"arrayMinLength": null,
-					"arrayMaxLength": null,
-					"editorDisplayMode": "RefLinkBetweenPivots",
-					"editorDisplayPos": "Above",
-					"editorAlwaysShow": false,
-					"editorCutLongValues": true,
-					"editorTextSuffix": null,
-					"editorTextPrefix": null,
-					"useForSmartColor": false,
-					"min": null,
-					"max": null,
-					"regex": null,
-					"acceptFileTypes": null,
-					"defaultOverride": null,
-					"textLanguageMode": null,
-					"symmetricalRef": false,
-					"autoChainRef": true,
-					"allowOutOfLevelRef": true,
-					"allowedRefs": "OnlyTags",
-					"allowedRefTags": ["spawns"],
-					"tilesetUid": null
-				},
-				{
-					"identifier": "IsOpened",
-					"__type": "Bool",
-					"uid": 177,
-					"type": "F_Bool",
-					"isArray": false,
-					"canBeNull": false,
-					"arrayMinLength": null,
-					"arrayMaxLength": null,
-					"editorDisplayMode": "Hidden",
-					"editorDisplayPos": "Above",
-					"editorAlwaysShow": false,
-					"editorCutLongValues": true,
-					"editorTextSuffix": null,
-					"editorTextPrefix": null,
-					"useForSmartColor": false,
-					"min": null,
-					"max": null,
-					"regex": null,
-					"acceptFileTypes": null,
-					"defaultOverride": {
-						"id": "V_Bool",
-						"params": [ true ]
-					},
-					"textLanguageMode": null,
-					"symmetricalRef": false,
-					"autoChainRef": true,
-					"allowOutOfLevelRef": true,
-					"allowedRefs": "OnlySame",
-					"allowedRefTags": [],
-					"tilesetUid": null
-				},
-				{
-					"identifier": "Rotation",
-					"__type": "LocalEnum.Rotation",
-					"uid": 184,
 					"type": "F_Enum(180)",
 					"isArray": false,
 					"canBeNull": false,
@@ -2738,24 +2294,24 @@
 					"gridTiles": [],
 					"entityInstances": [
 						{
-							"__identifier": "Door_Up",
-							"__grid": [24,5],
-							"__pivot": [0.5,0.5],
+							"__identifier": "Door",
+							"__grid": [22,7],
+							"__pivot": [0,0],
 							"__tags": ["hitbox"],
 							"__tile": null,
 							"__smartColor": "#00FF73",
 							"iid": "de4b3260-b4d0-11ec-b85c-493cad3a4226",
 							"width": 24,
-							"height": 35,
+							"height": 24,
 							"defUid": 91,
-							"px": [192,40],
+							"px": [176,56],
 							"fieldInstances": [
 								{ "__identifier": "GoToLevel", "__value": 2, "__type": "Int", "__tile": null, "defUid": 93, "realEditorValues": [{ "id": "V_Int", "params": [2] }] },
 								{ "__identifier": "PlayerSpwan", "__value": {
 									"entityIid": "e3ecd8e0-b4d0-11ec-b85c-079b326e29e7",
 									"layerIid": "8e602d71-b4d0-11ec-afd0-95f015e98655",
 									"levelIid": "8e600660-b4d0-11ec-afd0-b50211eda528",
-									"worldIid": "8a7677a0-dbe0-11ec-96b4-4d0ee7d15f38"
+									"worldIid": "cc964c90-dbe0-11ec-9cc8-ef10740352ec"
 								}, "__type": "EntityRef", "__tile": null, "defUid": 106, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["e3ecd8e0-b4d0-11ec-b85c-079b326e29e7"]
@@ -2768,92 +2324,92 @@
 							]
 						},
 						{
-							"__identifier": "Door_Down",
-							"__grid": [26,39],
-							"__pivot": [0.5,0.5],
+							"__identifier": "Door",
+							"__grid": [6,8],
+							"__pivot": [0,0],
 							"__tags": ["hitbox"],
 							"__tile": null,
 							"__smartColor": "#00FF73",
-							"iid": "bfc3ab20-dbe0-11ec-b371-274aabb8df8f",
+							"iid": "6e835930-dbe0-11ec-9cc8-73b5193a1609",
 							"width": 24,
-							"height": 35,
-							"defUid": 166,
-							"px": [209,317],
-							"fieldInstances": [
-								{ "__identifier": "GoToLevel", "__value": 1, "__type": "Int", "__tile": null, "defUid": 167, "realEditorValues": [] },
-								{ "__identifier": "PlayerSpwan", "__value": {
-									"entityIid": "e3ecd8e0-b4d0-11ec-b85c-079b326e29e7",
-									"layerIid": "8e602d71-b4d0-11ec-afd0-95f015e98655",
-									"levelIid": "8e600660-b4d0-11ec-afd0-b50211eda528",
-									"worldIid": "8a7677a0-dbe0-11ec-96b4-4d0ee7d15f38"
-								}, "__type": "EntityRef", "__tile": null, "defUid": 168, "realEditorValues": [{
-									"id": "V_String",
-									"params": ["e3ecd8e0-b4d0-11ec-b85c-079b326e29e7"]
-								}] },
-								{ "__identifier": "IsOpened", "__value": true, "__type": "Bool", "__tile": null, "defUid": 169, "realEditorValues": [] },
-								{ "__identifier": "Rotation", "__value": "Down", "__type": "LocalEnum.Rotation", "__tile": null, "defUid": 182, "realEditorValues": [{
-									"id": "V_String",
-									"params": ["Down"]
-								}] }
-							]
-						},
-						{
-							"__identifier": "Door_Left",
-							"__grid": [5,9],
-							"__pivot": [0.5,0.5],
-							"__tags": ["hitbox"],
-							"__tile": null,
-							"__smartColor": "#00FF73",
-							"iid": "c80a0bd0-dbe0-11ec-b371-0fb17ec46fb2",
-							"width": 35,
 							"height": 24,
-							"defUid": 170,
-							"px": [40,74],
+							"defUid": 91,
+							"px": [55,70],
 							"fieldInstances": [
-								{ "__identifier": "GoToLevel", "__value": 1, "__type": "Int", "__tile": null, "defUid": 171, "realEditorValues": [] },
+								{ "__identifier": "GoToLevel", "__value": 1, "__type": "Int", "__tile": null, "defUid": 93, "realEditorValues": [] },
 								{ "__identifier": "PlayerSpwan", "__value": {
 									"entityIid": "e3ecd8e0-b4d0-11ec-b85c-079b326e29e7",
 									"layerIid": "8e602d71-b4d0-11ec-afd0-95f015e98655",
 									"levelIid": "8e600660-b4d0-11ec-afd0-b50211eda528",
-									"worldIid": "8a7677a0-dbe0-11ec-96b4-4d0ee7d15f38"
-								}, "__type": "EntityRef", "__tile": null, "defUid": 172, "realEditorValues": [{
+									"worldIid": "cc964c90-dbe0-11ec-9cc8-ef10740352ec"
+								}, "__type": "EntityRef", "__tile": null, "defUid": 106, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["e3ecd8e0-b4d0-11ec-b85c-079b326e29e7"]
 								}] },
-								{ "__identifier": "IsOpened", "__value": true, "__type": "Bool", "__tile": null, "defUid": 173, "realEditorValues": [] },
-								{ "__identifier": "Rotation", "__value": "Left", "__type": "LocalEnum.Rotation", "__tile": null, "defUid": 183, "realEditorValues": [{
+								{ "__identifier": "IsOpened", "__value": true, "__type": "Bool", "__tile": null, "defUid": 150, "realEditorValues": [] },
+								{ "__identifier": "Rotation", "__value": "Left", "__type": "LocalEnum.Rotation", "__tile": null, "defUid": 181, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["Left"]
 								}] }
 							]
 						},
 						{
-							"__identifier": "Door_Right",
-							"__grid": [46,9],
-							"__pivot": [0.5,0.5],
+							"__identifier": "Door",
+							"__grid": [42,10],
+							"__pivot": [0,0],
 							"__tags": ["hitbox"],
 							"__tile": null,
 							"__smartColor": "#00FF73",
-							"iid": "cb5396d0-dbe0-11ec-96b4-ef71707b74d6",
-							"width": 35,
+							"iid": "7839c4a0-dbe0-11ec-9cc8-eddc69a2afe4",
+							"width": 24,
 							"height": 24,
-							"defUid": 174,
-							"px": [373,75],
+							"defUid": 91,
+							"px": [336,82],
 							"fieldInstances": [
-								{ "__identifier": "GoToLevel", "__value": 1, "__type": "Int", "__tile": null, "defUid": 175, "realEditorValues": [] },
+								{ "__identifier": "GoToLevel", "__value": 1, "__type": "Int", "__tile": null, "defUid": 93, "realEditorValues": [] },
 								{ "__identifier": "PlayerSpwan", "__value": {
 									"entityIid": "e3ecd8e0-b4d0-11ec-b85c-079b326e29e7",
 									"layerIid": "8e602d71-b4d0-11ec-afd0-95f015e98655",
 									"levelIid": "8e600660-b4d0-11ec-afd0-b50211eda528",
-									"worldIid": "8a7677a0-dbe0-11ec-96b4-4d0ee7d15f38"
-								}, "__type": "EntityRef", "__tile": null, "defUid": 176, "realEditorValues": [{
+									"worldIid": "cc964c90-dbe0-11ec-9cc8-ef10740352ec"
+								}, "__type": "EntityRef", "__tile": null, "defUid": 106, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["e3ecd8e0-b4d0-11ec-b85c-079b326e29e7"]
 								}] },
-								{ "__identifier": "IsOpened", "__value": true, "__type": "Bool", "__tile": null, "defUid": 177, "realEditorValues": [] },
-								{ "__identifier": "Rotation", "__value": "Right", "__type": "LocalEnum.Rotation", "__tile": null, "defUid": 184, "realEditorValues": [{
+								{ "__identifier": "IsOpened", "__value": true, "__type": "Bool", "__tile": null, "defUid": 150, "realEditorValues": [] },
+								{ "__identifier": "Rotation", "__value": "Right", "__type": "LocalEnum.Rotation", "__tile": null, "defUid": 181, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["Right"]
+								}] }
+							]
+						},
+						{
+							"__identifier": "Door",
+							"__grid": [22,35],
+							"__pivot": [0,0],
+							"__tags": ["hitbox"],
+							"__tile": null,
+							"__smartColor": "#00FF73",
+							"iid": "85ec63f0-dbe0-11ec-9cc8-3f382cd20672",
+							"width": 24,
+							"height": 24,
+							"defUid": 91,
+							"px": [180,281],
+							"fieldInstances": [
+								{ "__identifier": "GoToLevel", "__value": 1, "__type": "Int", "__tile": null, "defUid": 93, "realEditorValues": [] },
+								{ "__identifier": "PlayerSpwan", "__value": {
+									"entityIid": "e3ecd8e0-b4d0-11ec-b85c-079b326e29e7",
+									"layerIid": "8e602d71-b4d0-11ec-afd0-95f015e98655",
+									"levelIid": "8e600660-b4d0-11ec-afd0-b50211eda528",
+									"worldIid": "cc964c90-dbe0-11ec-9cc8-ef10740352ec"
+								}, "__type": "EntityRef", "__tile": null, "defUid": 106, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["e3ecd8e0-b4d0-11ec-b85c-079b326e29e7"]
+								}] },
+								{ "__identifier": "IsOpened", "__value": true, "__type": "Bool", "__tile": null, "defUid": 150, "realEditorValues": [] },
+								{ "__identifier": "Rotation", "__value": "Down", "__type": "LocalEnum.Rotation", "__tile": null, "defUid": 181, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Down"]
 								}] }
 							]
 						}
@@ -5618,7 +5174,7 @@
 						},
 						{
 							"__identifier": "PlayerSpawn",
-							"__grid": [55,28],
+							"__grid": [54,26],
 							"__pivot": [0,0],
 							"__tags": ["spawns"],
 							"__tile": null,
@@ -5627,28 +5183,28 @@
 							"width": 16,
 							"height": 16,
 							"defUid": 105,
-							"px": [440,224],
+							"px": [432,208],
 							"fieldInstances": []
 						},
 						{
-							"__identifier": "Door_Up",
-							"__grid": [54,32],
-							"__pivot": [0.5,0.5],
+							"__identifier": "Door",
+							"__grid": [54,30],
+							"__pivot": [0,0],
 							"__tags": ["hitbox"],
 							"__tile": null,
 							"__smartColor": "#00FF73",
 							"iid": "aceaae00-b4d0-11ec-8337-7f8461941952",
 							"width": 24,
-							"height": 35,
+							"height": 24,
 							"defUid": 91,
-							"px": [432,256],
+							"px": [432,240],
 							"fieldInstances": [
 								{ "__identifier": "GoToLevel", "__value": 3, "__type": "Int", "__tile": null, "defUid": 93, "realEditorValues": [{ "id": "V_Int", "params": [3] }] },
 								{ "__identifier": "PlayerSpwan", "__value": {
 									"entityIid": "7cec4d80-b4d0-11ec-8337-d1b4dfaf302c",
 									"layerIid": "1c9534a1-b4d0-11ec-8735-41d835809717",
 									"levelIid": "1c950d90-b4d0-11ec-8735-cd2b734279be",
-									"worldIid": "8a7677a0-dbe0-11ec-96b4-4d0ee7d15f38"
+									"worldIid": "cc964c90-dbe0-11ec-9cc8-ef10740352ec"
 								}, "__type": "EntityRef", "__tile": null, "defUid": 106, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["7cec4d80-b4d0-11ec-8337-d1b4dfaf302c"]
@@ -5818,12 +5374,12 @@
 									"entityIid": "105cdd20-b4d0-11ec-8337-5fcec3ee2209",
 									"layerIid": "50962720-b4d0-11ec-a520-59e69810343f",
 									"levelIid": "8e600660-b4d0-11ec-afd0-b50211eda528",
-									"worldIid": "8a7677a0-dbe0-11ec-96b4-4d0ee7d15f38"
+									"worldIid": "cc964c90-dbe0-11ec-9cc8-ef10740352ec"
 								}, {
 									"entityIid": "0ef13f30-b4d0-11ec-8337-1d825600fe46",
 									"layerIid": "50962720-b4d0-11ec-a520-59e69810343f",
 									"levelIid": "8e600660-b4d0-11ec-afd0-b50211eda528",
-									"worldIid": "8a7677a0-dbe0-11ec-96b4-4d0ee7d15f38"
+									"worldIid": "cc964c90-dbe0-11ec-9cc8-ef10740352ec"
 								} ], "__type": "Array<EntityRef>", "__tile": null, "defUid": 148, "realEditorValues": [ {
 									"id": "V_String",
 									"params": ["105cdd20-b4d0-11ec-8337-5fcec3ee2209"]
@@ -5835,7 +5391,7 @@
 									"entityIid": "aceaae00-b4d0-11ec-8337-7f8461941952",
 									"layerIid": "8e602d71-b4d0-11ec-afd0-95f015e98655",
 									"levelIid": "8e600660-b4d0-11ec-afd0-b50211eda528",
-									"worldIid": "8a7677a0-dbe0-11ec-96b4-4d0ee7d15f38"
+									"worldIid": "cc964c90-dbe0-11ec-9cc8-ef10740352ec"
 								}, "__type": "EntityRef", "__tile": null, "defUid": 149, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["aceaae00-b4d0-11ec-8337-7f8461941952"]
@@ -12582,15 +12138,15 @@
 					"gridTiles": [],
 					"entityInstances": [
 						{
-							"__identifier": "Door_Up",
+							"__identifier": "Door",
 							"__grid": [25,46],
-							"__pivot": [0.5,0.5],
+							"__pivot": [0,0],
 							"__tags": ["hitbox"],
 							"__tile": null,
 							"__smartColor": "#00FF73",
 							"iid": "ffb6ce10-b4d0-11ec-8735-e3f39a5b74cb",
 							"width": 24,
-							"height": 35,
+							"height": 24,
 							"defUid": 91,
 							"px": [200,368],
 							"fieldInstances": [
@@ -12599,7 +12155,7 @@
 									"entityIid": "39b55114-b4d0-11ec-8337-5505d76751c3",
 									"layerIid": "39b55113-b4d0-11ec-8337-27cac75c36cd",
 									"levelIid": "39b55110-b4d0-11ec-8337-439345e0a074",
-									"worldIid": "8a7677a0-dbe0-11ec-96b4-4d0ee7d15f38"
+									"worldIid": "cc964c90-dbe0-11ec-9cc8-ef10740352ec"
 								}, "__type": "EntityRef", "__tile": null, "defUid": 106, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["39b55114-b4d0-11ec-8337-5505d76751c3"]
@@ -12615,24 +12171,24 @@
 							]
 						},
 						{
-							"__identifier": "Door_Up",
-							"__grid": [26,3],
-							"__pivot": [0.5,0.5],
+							"__identifier": "Door",
+							"__grid": [26,7],
+							"__pivot": [0,0],
 							"__tags": ["hitbox"],
 							"__tile": null,
 							"__smartColor": "#00FF73",
 							"iid": "01a97650-b4d0-11ec-8735-2fd832a10151",
 							"width": 24,
-							"height": 35,
+							"height": 24,
 							"defUid": 91,
-							"px": [208,24],
+							"px": [208,56],
 							"fieldInstances": [
 								{ "__identifier": "GoToLevel", "__value": 2, "__type": "Int", "__tile": null, "defUid": 93, "realEditorValues": [{ "id": "V_Int", "params": [2] }] },
 								{ "__identifier": "PlayerSpwan", "__value": {
 									"entityIid": "1af1a150-b4d0-11ec-8735-173326542bf9",
 									"layerIid": "8e602d71-b4d0-11ec-afd0-95f015e98655",
 									"levelIid": "8e600660-b4d0-11ec-afd0-b50211eda528",
-									"worldIid": "8a7677a0-dbe0-11ec-96b4-4d0ee7d15f38"
+									"worldIid": "cc964c90-dbe0-11ec-9cc8-ef10740352ec"
 								}, "__type": "EntityRef", "__tile": null, "defUid": 106, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["1af1a150-b4d0-11ec-8735-173326542bf9"]
@@ -12645,24 +12201,24 @@
 							]
 						},
 						{
-							"__identifier": "Door_Up",
-							"__grid": [48,23],
-							"__pivot": [0.5,0.5],
+							"__identifier": "Door",
+							"__grid": [46,19],
+							"__pivot": [0,0],
 							"__tags": ["hitbox"],
 							"__tile": null,
 							"__smartColor": "#00FF73",
 							"iid": "285b29b0-b4d0-11ec-8735-632c3d02238a",
 							"width": 24,
-							"height": 35,
+							"height": 24,
 							"defUid": 91,
-							"px": [384,184],
+							"px": [368,152],
 							"fieldInstances": [
 								{ "__identifier": "GoToLevel", "__value": 4, "__type": "Int", "__tile": null, "defUid": 93, "realEditorValues": [{ "id": "V_Int", "params": [4] }] },
 								{ "__identifier": "PlayerSpwan", "__value": {
 									"entityIid": "bf662103-b4d0-11ec-8337-ebaf30372c63",
 									"layerIid": "bf662102-b4d0-11ec-8337-3bbfda5f7204",
 									"levelIid": "bf65f9f0-b4d0-11ec-8337-b7abf51165c4",
-									"worldIid": "8a7677a0-dbe0-11ec-96b4-4d0ee7d15f38"
+									"worldIid": "cc964c90-dbe0-11ec-9cc8-ef10740352ec"
 								}, "__type": "EntityRef", "__tile": null, "defUid": 106, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["bf662103-b4d0-11ec-8337-ebaf30372c63"]
@@ -12690,7 +12246,7 @@
 						},
 						{
 							"__identifier": "PlayerSpawn",
-							"__grid": [44,24],
+							"__grid": [40,20],
 							"__pivot": [0,0],
 							"__tags": ["spawns"],
 							"__tile": null,
@@ -12699,12 +12255,12 @@
 							"width": 16,
 							"height": 16,
 							"defUid": 105,
-							"px": [352,192],
+							"px": [320,160],
 							"fieldInstances": []
 						},
 						{
 							"__identifier": "PlayerSpawn",
-							"__grid": [27,9],
+							"__grid": [27,13],
 							"__pivot": [0,0],
 							"__tags": ["spawns"],
 							"__tile": null,
@@ -12713,7 +12269,7 @@
 							"width": 16,
 							"height": 16,
 							"defUid": 105,
-							"px": [216,72],
+							"px": [216,104],
 							"fieldInstances": []
 						}
 					]
@@ -12928,25 +12484,25 @@
 										"entityIid": "82aecad0-b4d0-11ec-8337-a74b8049b309",
 										"layerIid": "1c9534a2-b4d0-11ec-8735-9b6a2629f295",
 										"levelIid": "1c950d90-b4d0-11ec-8735-cd2b734279be",
-										"worldIid": "8a7677a0-dbe0-11ec-96b4-4d0ee7d15f38"
+										"worldIid": "cc964c90-dbe0-11ec-9cc8-ef10740352ec"
 									},
 									{
 										"entityIid": "859d1120-b4d0-11ec-8337-490e2c3ec618",
 										"layerIid": "1c9534a2-b4d0-11ec-8735-9b6a2629f295",
 										"levelIid": "1c950d90-b4d0-11ec-8735-cd2b734279be",
-										"worldIid": "8a7677a0-dbe0-11ec-96b4-4d0ee7d15f38"
+										"worldIid": "cc964c90-dbe0-11ec-9cc8-ef10740352ec"
 									},
 									{
 										"entityIid": "1cf0d7f0-b4d0-11ec-8337-2972ec5dc0bb",
 										"layerIid": "1c9534a2-b4d0-11ec-8735-9b6a2629f295",
 										"levelIid": "1c950d90-b4d0-11ec-8735-cd2b734279be",
-										"worldIid": "8a7677a0-dbe0-11ec-96b4-4d0ee7d15f38"
+										"worldIid": "cc964c90-dbe0-11ec-9cc8-ef10740352ec"
 									},
 									{
 										"entityIid": "7cebb9a0-b4d0-11ec-8337-8b3cf5b97635",
 										"layerIid": "1c9534a2-b4d0-11ec-8735-9b6a2629f295",
 										"levelIid": "1c950d90-b4d0-11ec-8735-cd2b734279be",
-										"worldIid": "8a7677a0-dbe0-11ec-96b4-4d0ee7d15f38"
+										"worldIid": "cc964c90-dbe0-11ec-9cc8-ef10740352ec"
 									}
 								], "__type": "Array<EntityRef>", "__tile": null, "defUid": 148, "realEditorValues": [ {
 									"id": "V_String",
@@ -12965,7 +12521,7 @@
 									"entityIid": "ffb6ce10-b4d0-11ec-8735-e3f39a5b74cb",
 									"layerIid": "1c9534a1-b4d0-11ec-8735-41d835809717",
 									"levelIid": "1c950d90-b4d0-11ec-8735-cd2b734279be",
-									"worldIid": "8a7677a0-dbe0-11ec-96b4-4d0ee7d15f38"
+									"worldIid": "cc964c90-dbe0-11ec-9cc8-ef10740352ec"
 								}, "__type": "EntityRef", "__tile": null, "defUid": 149, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["ffb6ce10-b4d0-11ec-8735-e3f39a5b74cb"]
@@ -16431,15 +15987,15 @@
 							"fieldInstances": []
 						},
 						{
-							"__identifier": "Door_Up",
+							"__identifier": "Door",
 							"__grid": [26,3],
-							"__pivot": [0.5,0.5],
+							"__pivot": [0,0],
 							"__tags": ["hitbox"],
 							"__tile": null,
 							"__smartColor": "#00FF73",
 							"iid": "bf662105-b4d0-11ec-8337-c50930dbefc8",
 							"width": 24,
-							"height": 35,
+							"height": 24,
 							"defUid": 91,
 							"px": [208,24],
 							"fieldInstances": [
@@ -16448,7 +16004,7 @@
 									"entityIid": "5ee911d0-b4d0-11ec-b85c-4bcb03487c75",
 									"layerIid": "8e602d71-b4d0-11ec-afd0-95f015e98655",
 									"levelIid": "8e600660-b4d0-11ec-afd0-b50211eda528",
-									"worldIid": "8a7677a0-dbe0-11ec-96b4-4d0ee7d15f38"
+									"worldIid": "cc964c90-dbe0-11ec-9cc8-ef10740352ec"
 								}, "__type": "EntityRef", "__tile": null, "defUid": 106, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["5ee911d0-b4d0-11ec-b85c-4bcb03487c75"]
@@ -16461,15 +16017,15 @@
 							]
 						},
 						{
-							"__identifier": "Door_Up",
+							"__identifier": "Door",
 							"__grid": [5,23],
-							"__pivot": [0.5,0.5],
+							"__pivot": [0,0],
 							"__tags": ["hitbox"],
 							"__tile": null,
 							"__smartColor": "#00FF73",
 							"iid": "e1c7b420-b4d0-11ec-8337-99dec2e4314f",
 							"width": 24,
-							"height": 35,
+							"height": 24,
 							"defUid": 91,
 							"px": [40,184],
 							"fieldInstances": [
@@ -16478,7 +16034,7 @@
 									"entityIid": "120eb660-b4d0-11ec-8337-6322ff634c56",
 									"layerIid": "1c9534a1-b4d0-11ec-8735-41d835809717",
 									"levelIid": "1c950d90-b4d0-11ec-8735-cd2b734279be",
-									"worldIid": "8a7677a0-dbe0-11ec-96b4-4d0ee7d15f38"
+									"worldIid": "cc964c90-dbe0-11ec-9cc8-ef10740352ec"
 								}, "__type": "EntityRef", "__tile": null, "defUid": 106, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["120eb660-b4d0-11ec-8337-6322ff634c56"]
@@ -19971,15 +19527,15 @@
 							"fieldInstances": []
 						},
 						{
-							"__identifier": "Door_Up",
+							"__identifier": "Door",
 							"__grid": [24,3],
-							"__pivot": [0.5,0.5],
+							"__pivot": [0,0],
 							"__tags": ["hitbox"],
 							"__tile": null,
 							"__smartColor": "#00FF73",
 							"iid": "39b57820-b4d0-11ec-8337-754eb27e0313",
 							"width": 24,
-							"height": 35,
+							"height": 24,
 							"defUid": 91,
 							"px": [192,24],
 							"fieldInstances": [
@@ -19988,7 +19544,7 @@
 									"entityIid": "3c8d2550-b4d0-11ec-8735-6354b4f0e834",
 									"layerIid": "1c9534a1-b4d0-11ec-8735-41d835809717",
 									"levelIid": "1c950d90-b4d0-11ec-8735-cd2b734279be",
-									"worldIid": "8a7677a0-dbe0-11ec-96b4-4d0ee7d15f38"
+									"worldIid": "cc964c90-dbe0-11ec-9cc8-ef10740352ec"
 								}, "__type": "EntityRef", "__tile": null, "defUid": 106, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["3c8d2550-b4d0-11ec-8735-6354b4f0e834"]

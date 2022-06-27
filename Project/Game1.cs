@@ -33,10 +33,7 @@ namespace Project
 
             _assetManagement = new AssetManagement();
             _assetManagement.Set<Entities.Player.Player>("Player", "PLAYER");
-            _assetManagement.Set<Entities.Door>("Door_Up", "MIDDLEGROUND");
-            _assetManagement.Set<Entities.Door>("Door_Down", "MIDDLEGROUND");
-            _assetManagement.Set<Entities.Door>("Door_Left", "MIDDLEGROUND");
-            _assetManagement.Set<Entities.Door>("Door_Right", "MIDDLEGROUND");
+            _assetManagement.Set<Entities.Door>("Door", "MIDDLEGROUND");
             _assetManagement.Set<GameObject>("PlayerSpawn", "MIDDLEGROUND");
 
             _assetManagement.Set<Entities.Solids.Box>("Box", "MIDDLEGROUND");

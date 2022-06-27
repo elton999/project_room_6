@@ -99,16 +99,7 @@ namespace UmbrellaToolsKit
         public void DrawSprite(SpriteBatch spriteBatch)
         {
             if (this.Sprite != null)
-            {
-                if (this.Body.IsEmpty)
-                {
-                    spriteBatch.Draw(this.Sprite, this.Position, null, this.SpriteColor * this.Transparent, this.Rotation, this.Origin, this.Scale, this.spriteEffect, 0);
-                }
-                else
-                {
-                    spriteBatch.Draw(this.Sprite, this.Position, this.Body, this.SpriteColor * this.Transparent, this.Rotation, this.Origin, this.Scale, this.spriteEffect, 0);
-                }
-            }
+                spriteBatch.Draw(Sprite, Position, Body.IsEmpty ? null : Body, SpriteColor * Transparent, Rotation, Origin, Scale, spriteEffect, 0);
         }
 
         public void BeginDraw(SpriteBatch spriteBatch, bool hasCamera = true)

@@ -5,6 +5,7 @@ using UmbrellaToolsKit;
 using UmbrellaToolsKit.Collision;
 using UmbrellaToolsKit.BehaviorTrees;
 using Project.Entities.DoorNodes;
+using UmbrellaToolsKit.Sprite;
 
 namespace Project.Entities
 {
@@ -26,18 +27,24 @@ namespace Project.Entities
         public void SetRotationSprite()
         {
             float degToRand = MathF.PI / 180f;
-            Origin = new Vector2(24, 32) * 0.5f;
 
             switch ((string)Values[3].Value)
             {
+                case "Up":
+                    Rotation = 0;
+                    Origin = new Vector2(0, 32f);
+                    break;
                 case "Down":
                     Rotation = 180f * degToRand;
+                    Origin = new Vector2(24f, 32f + 24f);
                     break;
                 case "Right":
                     Rotation = 90f * degToRand;
+                    Origin = new Vector2(0, 32f + 24f);
                     break;
                 case "Left":
                     Rotation = -90f * degToRand;
+                    Origin = new Vector2(24f, 32f);
                     break;
             }
         }
