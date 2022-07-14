@@ -26,8 +26,7 @@ namespace Project.Entities.DoorNodes
 
         public override NodeStatus Tick(GameTime gameTime)
         {
-            if (done)
-                return NodeStatus.SUCCESS;
+            if (done) return NodeStatus.SUCCESS;
 
             OpenDoor();
             done = true;

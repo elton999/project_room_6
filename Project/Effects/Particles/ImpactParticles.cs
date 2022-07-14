@@ -7,6 +7,7 @@ namespace Project.Effects.Particles
 {
     public class ImpactParticles : ParticlesSystem
     {
+        private float _speed = 8f;
         private GameObject _target;
 
         public ImpactParticles(GraphicsDevice graphicsDevice, GameObject target)
@@ -31,14 +32,14 @@ namespace Project.Effects.Particles
             ParticleRadiusSpawn = 14;
 
             EmitsFor = TypeEmitter.FOR_TIME;
-            EmitterTime = 30f * 8;
+            EmitterTime = 30f * _speed;
 
             Restart();
         }
 
         public override void Update(GameTime gameTime)
         {
-            Position = _target.Position + Vector2.One * 8f;
+            Position = _target.Position + Vector2.One * _speed;
             base.Update(gameTime);
         }
     }

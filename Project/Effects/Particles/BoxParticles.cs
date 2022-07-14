@@ -7,6 +7,7 @@ namespace Project.Effects.Particles
 {
     public class BoxParticles : ParticlesSystem
     {
+        private float _speed = 8f;
         private GameObject _target;
 
         public BoxParticles(GraphicsDevice graphicsDevice, GameObject target) : base()
@@ -32,7 +33,7 @@ namespace Project.Effects.Particles
 
         public override void Update(GameTime gameTime)
         {
-            Position = _target.Position + Vector2.One * 8f;
+            Position = _target.Position + Vector2.One * _speed;
             base.Update(gameTime);
         }
     }

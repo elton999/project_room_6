@@ -22,7 +22,6 @@ namespace UmbrellaToolsKit.Sprite
             this.Sprite.SetData(data);
         }
 
-
         public override void Draw(SpriteBatch spriteBatch)
         {
             BeginDraw(spriteBatch);

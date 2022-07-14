@@ -5,7 +5,6 @@ using UmbrellaToolsKit;
 using UmbrellaToolsKit.Collision;
 using UmbrellaToolsKit.BehaviorTrees;
 using Project.Entities.DoorNodes;
-using UmbrellaToolsKit.Sprite;
 
 namespace Project.Entities
 {
