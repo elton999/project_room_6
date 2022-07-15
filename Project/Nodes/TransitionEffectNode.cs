@@ -21,6 +21,7 @@ namespace Project.Nodes
             _speed = close ? _speed : -_speed;
             _pixelValue = close ? _pixelValue : 1.5f;
         }
+
         public override NodeStatus Tick(GameTime gameTime)
         {
             if (_pixelValue <= 1 || _pixelValue > 100)

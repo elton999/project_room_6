@@ -21,8 +21,7 @@ namespace Project.Nodes
 
         public override NodeStatus Tick(GameTime gameTime)
         {
-            if (done)
-                return NodeStatus.SUCCESS;
+            if (done) return NodeStatus.SUCCESS;
 
             _setNewLevel();
             _setPlayerOnNewPosition();
@@ -35,6 +34,7 @@ namespace Project.Nodes
         {
             _sceneManagement.MainScene.LevelReady = false;
             _sceneManagement.SetScene(_level);
+            _setTransitionObject(_sceneManagement.MainScene);
         }
 
         private void _setPlayerOnNewPosition()
@@ -47,6 +47,14 @@ namespace Project.Nodes
                     break;
                 }
             }
+        }
+
+        private void _setTransitionObject(Scene scene)
+        {
+            var transitionObject = new GameObject();
+            transitionObject.Node = new TransitionEffectNode(scene, false);
+            transitionObject.Scene = scene;
+            scene.Middleground.Add(transitionObject);
         }
     }
 }
