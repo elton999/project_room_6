@@ -18,6 +18,7 @@ namespace UmbrellaToolsKit
 
         #region Layers
         public List<List<GameObject>> SortLayers = new List<List<GameObject>>();
+        public Effect Effect = null;
 
         // UI
         public List<GameObject> UI = new List<GameObject>();
@@ -286,7 +287,7 @@ namespace UmbrellaToolsKit
 
             ScreenGraphicsDevice.SetRenderTarget(null);
             ScreenGraphicsDevice.Clear(ClearColorScene);
-            spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.PointClamp, null, null, null, null);
+            spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.PointClamp, null, null, Effect, null);
             spriteBatch.Draw(
                 (Texture2D)_BackBuffer,
                 new Vector2(_BackBuffer_Position_x, _BackBuffer_Position_y),

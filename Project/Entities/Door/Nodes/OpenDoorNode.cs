@@ -17,6 +17,7 @@ namespace Project.Entities.DoorNodes
         {
             _door.Node.Add(new SwitchSpriteNode(_door, _door.Sprite, new Rectangle(144, 24, 24, 47)));
             _door.Node.Add(new CheckingActorOverActorNode(_door, _door.Scene.AllActors[0]));
+            _door.Node.Add(new TransitionEffectNode(_door.Scene));
             _door.Node.Add(new SwitchLevelNode(
                 _door.Scene.GameManagement.SceneManagement,
                 (int)_door.Values[0].Value,

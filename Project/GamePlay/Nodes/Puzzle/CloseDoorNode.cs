@@ -12,6 +12,7 @@ namespace Project.GamePlay.Nodes.Puzzle
 
         public override NodeStatus Tick(GameTime gameTime)
         {
+            AddData("wasOpened", false);
             var door = _puzzleButtons.Door;
             door.Node = new SequenceNode();
             door.Node.Add(new Entities.DoorNodes.CloseDoorNode(door));

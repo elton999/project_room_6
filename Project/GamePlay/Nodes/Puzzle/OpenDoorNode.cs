@@ -11,12 +11,16 @@ namespace Project.GamePlay.Nodes.Puzzle
 
         public override NodeStatus Tick(GameTime gameTime)
         {
-            var door = _puzzleButtons.Door;
-            door.Node = new SequenceNode();
-            door.Node.Add(new Entities.DoorNodes.OpenDoorNode(door));
+            if (!(bool)GetData("wasOpened"))
+            {
+                var door = _puzzleButtons.Door;
+                door.Node = new SequenceNode();
+                door.Node.Add(new Entities.DoorNodes.OpenDoorNode(door));
 
-            var player = door.Scene.AllActors[0];
-            AddData("target", player);
+                var player = door.Scene.AllActors[0];
+                AddData("target", player);
+                AddData("wasOpened", true);
+            }
 
             return NodeStatus.SUCCESS;
         }

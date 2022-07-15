@@ -8,8 +8,7 @@
 #endif
 
 Texture2D SpriteTexture;
-//int BlurFactor = 8;
-float pixel = 0.01;
+float pixel = 100;
 
 sampler2D SpriteTextureSampler = sampler_state
 {

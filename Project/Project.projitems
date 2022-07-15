@@ -56,5 +56,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Nodes\ResetShakeSpriteNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Actors\Items\KeyParticles.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Nodes\SwitchCameraTargetNode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Nodes\TransitionEffectNode.cs" />
   </ItemGroup>
 </Project>
