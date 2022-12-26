@@ -187,62 +187,26 @@
     "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 64 },
     "sourceSize": { "w": 64, "h": 64 },
     "duration": 100
-   },
-   {
-    "filename": "player 21.aseprite",
-    "frame": { "x": 1344, "y": 0, "w": 64, "h": 64 },
-    "rotated": false,
-    "trimmed": false,
-    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 64 },
-    "sourceSize": { "w": 64, "h": 64 },
-    "duration": 100
-   },
-   {
-    "filename": "player 22.aseprite",
-    "frame": { "x": 1408, "y": 0, "w": 64, "h": 64 },
-    "rotated": false,
-    "trimmed": false,
-    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 64 },
-    "sourceSize": { "w": 64, "h": 64 },
-    "duration": 100
-   },
-   {
-    "filename": "player 23.aseprite",
-    "frame": { "x": 1472, "y": 0, "w": 64, "h": 64 },
-    "rotated": false,
-    "trimmed": false,
-    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 64 },
-    "sourceSize": { "w": 64, "h": 64 },
-    "duration": 100
-   },
-   {
-    "filename": "player 24.aseprite",
-    "frame": { "x": 1536, "y": 0, "w": 64, "h": 64 },
-    "rotated": false,
-    "trimmed": false,
-    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 64 },
-    "sourceSize": { "w": 64, "h": 64 },
-    "duration": 100
    }
  ],
  "meta": {
   "app": "https://www.aseprite.org/",
-  "version": "1.2.35-x64",
+  "version": "1.2.40-x64",
   "image": "player.png",
   "format": "RGBA8888",
-  "size": { "w": 1600, "h": 64 },
+  "size": { "w": 1344, "h": 64 },
   "scale": "1",
   "frameTags": [
    { "name": "side-idle", "from": 0, "to": 0, "direction": "forward" },
-   { "name": "front-run", "from": 1, "to": 8, "direction": "forward" },
-   { "name": "front-idle", "from": 9, "to": 9, "direction": "forward" },
-   { "name": "back-run", "from": 10, "to": 17, "direction": "forward" },
-   { "name": "back-idle", "from": 18, "to": 18, "direction": "forward" },
-   { "name": "side-run", "from": 19, "to": 24, "direction": "forward" }
+   { "name": "front-run", "from": 1, "to": 6, "direction": "forward" },
+   { "name": "front-idle", "from": 7, "to": 7, "direction": "forward" },
+   { "name": "back-run", "from": 8, "to": 13, "direction": "forward" },
+   { "name": "back-idle", "from": 14, "to": 14, "direction": "forward" },
+   { "name": "side-run", "from": 15, "to": 20, "direction": "forward" }
   ],
   "layers": [
-   { "name": "shadow", "opacity": 255, "blendMode": "normal" },
-   { "name": "player", "opacity": 255, "blendMode": "normal" }
+   { "name": "new shadow", "opacity": 255, "blendMode": "normal" },
+   { "name": "Layer 1", "opacity": 255, "blendMode": "normal" }
   ],
   "slices": [
   ]
