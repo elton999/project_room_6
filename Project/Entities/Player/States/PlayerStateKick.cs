@@ -17,10 +17,13 @@ namespace Project.Entities.Player.State
             var boxCollision = new Actor() { size = _player.size, Position = _player.Position + _directionIdle };
             foreach (var solid in _player.Scene.AllSolids)
             {
-                if (!solid.overlapCheck(boxCollision) || solid.tag != "Box")
-                    continue;
-                _setMoveBehavior(solid);
-                break;
+                bool isOverlaping = solid.overlapCheck(boxCollision);
+                bool isABox = solid.tag == "Box";
+                if (isOverlaping && isABox)
+                {
+                    _setMoveBehavior(solid);
+                    break;
+                }
             }
             _player.SwitchState(new PlayerStateRun(_player));
         }
