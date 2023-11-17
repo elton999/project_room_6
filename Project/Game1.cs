@@ -44,7 +44,7 @@ namespace Project
             _assetManagement.Set<GamePlay.PuzzleButtons>("PuzzleButtons", "BACKGROUND");
 
             _gameManagement.SceneManagement.Start();
-            _gameManagement.SceneManagement.MainScene.SetBackgroundColor = new Color((new Vector3(139, 147, 175)) / 255.0f);
+            _gameManagement.SceneManagement.MainScene.SetBackgroundColor = Color.Black;
 
             base.Initialize();
         }

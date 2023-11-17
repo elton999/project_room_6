@@ -34,6 +34,7 @@ namespace Project.Nodes
         {
             _sceneManagement.MainScene.LevelReady = false;
             _sceneManagement.SetScene(_level);
+            _sceneManagement.MainScene.SetBackgroundColor = Color.Black;
             _setTransitionObject(_sceneManagement.MainScene);
         }
 
