@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace UmbrellaToolsKit.Sprite
@@ -23,100 +18,98 @@ namespace UmbrellaToolsKit.Sprite
         public Rectangle ContentBoxSprite;
         public Vector2 ContentSize;
 
+        public override void Draw(SpriteBatch spriteBatch)
+        {
+            BeginDraw(spriteBatch, false);
+            DrawRectangle(spriteBatch);
+            EndDraw(spriteBatch);
+        }
 
-        private void DrawRectanglePart(SpriteBatch spriteBatch, Vector2 _Position, Rectangle _Rectangle)
+        private void DrawRectanglePart(SpriteBatch spriteBatch, Vector2 _Position, Rectangle _Rectangle, Vector2 _scale)
         {
             spriteBatch.Draw(
-                        this.Sprite,
+                        Sprite,
                         _Position,
                         _Rectangle,
-                        this.SpriteColor * this.Transparent,
-                        this.Rotation,
-                        this.Origin,
-                        this.Scale,
-                        this.spriteEffect,
+                        SpriteColor * Transparent,
+                        Rotation,
+                        Origin,
+                        _scale,
+                        spriteEffect,
                         1f
                         );
         }
 
         public void DrawRectangle(SpriteBatch spriteBatch)
         {
-            float xx = ContentSize.X / ContentBoxSprite.Size.X;
-            float yy = ContentSize.Y / ContentBoxSprite.Size.Y;
-            // content
-            for (int x = 0; x < xx; x++)
-            {
-
-                // Top Line
-                this.DrawRectanglePart(
+            DrawRectanglePart(
                        spriteBatch,
-                       new Vector2(this.Position.X + this.LeftTopBoxSprite.Size.X + (x * this.TopBoxSprite.Size.X), this.Position.Y),
-                       this.TopBoxSprite
+                       Position + LeftTopBoxSprite.Size.ToVector2() * Vector2.UnitX,
+                       TopBoxSprite,
+                       Vector2.UnitX * ContentSize.X + Vector2.UnitY
                        );
 
-                // Bottom Line
-                this.DrawRectanglePart(
+            DrawRectanglePart(
                        spriteBatch,
-                       new Vector2(this.Position.X + this.ContentBoxSprite.Size.X + (x * this.BottomBoxSprite.Size.X), this.Position.Y + this.ContentBoxSprite.Size.Y + (yy * this.ContentBoxSprite.Size.Y)),
-                       this.BottomBoxSprite
+                       Position + LeftTopBoxSprite.Size.ToVector2() * Vector2.UnitX + Vector2.UnitY * (ContentSize.Y + LeftTopBoxSprite.Height),
+                       BottomBoxSprite,
+                       Vector2.UnitX * ContentSize.X + Vector2.UnitY
                        );
 
+            DrawRectanglePart(
+                       spriteBatch,
+                       Position + LeftTopBoxSprite.Size.ToVector2() * Vector2.UnitY,
+                       LeftBoxSprite,
+                       Vector2.UnitY * ContentSize.Y + Vector2.UnitX
+                       );
 
-                for (int y = 0; y < yy; y++)
-                {
-                    this.DrawRectanglePart(
-                        spriteBatch,
-                        new Vector2(this.Position.X + this.LeftTopBoxSprite.Size.X + (x * this.ContentBoxSprite.Size.X), this.Position.Y + this.LeftTopBoxSprite.Size.Y + (y * this.ContentBoxSprite.Size.Y)),
-                        this.ContentBoxSprite
-                        );
+            DrawRectanglePart(
+                       spriteBatch,
+                       Position + Vector2.UnitX * (LeftTopBoxSprite.Size.ToVector2() + ContentSize) + Vector2.UnitY * RightTopBoxSprite.Height,
+                       RightBoxSprite,
+                       Vector2.UnitY * ContentSize.Y + Vector2.UnitX
+                       );
 
-                    if (x == 0)
-                    {
-                        // Left Line
-                        this.DrawRectanglePart(
-                               spriteBatch,
-                               new Vector2(this.Position.X, this.Position.Y + this.LeftTopBoxSprite.Size.Y + (y * this.ContentBoxSprite.Size.Y)),
-                               this.LeftBoxSprite
-                               );
+            DrawRectanglePart(
+                       spriteBatch,
+                       Position + Vector2.UnitY * LeftTopBoxSprite.Size.ToVector2() + Vector2.UnitX * LeftTopBoxSprite.Width,
+                       ContentBoxSprite,
+                       ContentSize / ContentBoxSprite.Size.ToVector2()
+                       );
 
-                        // Right Line
-                        this.DrawRectanglePart(
-                               spriteBatch,
-                               new Vector2(this.Position.X + this.LeftTopBoxSprite.Size.X + (xx * this.ContentBoxSprite.Size.X), this.Position.Y + this.RightTopBoxSprite.Size.Y + (y * this.ContentBoxSprite.Size.Y)),
-                               this.RightBoxSprite
-                               );
-                    }
-                }
-            }
 
             // left Top
-            this.DrawRectanglePart(
+            DrawRectanglePart(
                        spriteBatch,
-                       new Vector2(this.Position.X, this.Position.Y),
-                       this.LeftTopBoxSprite
+                       Position,
+                       LeftTopBoxSprite,
+                       Vector2.One
                        );
 
             // right Top
-            this.DrawRectanglePart(
+            DrawRectanglePart(
                        spriteBatch,
-                       new Vector2(this.Position.X + this.ContentBoxSprite.Size.X + (xx * this.ContentBoxSprite.Size.X), this.Position.Y),
-                       this.RightTopBoxSprite
+                       new Vector2(Position.X + ContentSize.X + LeftTopBoxSprite.Width, Position.Y),
+                       RightTopBoxSprite,
+                       Vector2.One
                        );
 
             // left Bottom
-            this.DrawRectanglePart(
+            DrawRectanglePart(
                        spriteBatch,
-                       new Vector2(this.Position.X, this.Position.Y + this.ContentBoxSprite.Size.Y + (yy * this.ContentBoxSprite.Size.Y)),
-                       this.LeftBottomBoxSprite
+                       new Vector2(Position.X, Position.Y + ContentSize.Y + LeftTopBoxSprite.Height),
+                       LeftBottomBoxSprite,
+                       Vector2.One
                        );
 
             // right Bottom
-            this.DrawRectanglePart(
+            DrawRectanglePart(
                        spriteBatch,
-                       new Vector2(this.Position.X + this.ContentBoxSprite.Size.X + (xx * this.ContentBoxSprite.Size.X), this.Position.Y + this.ContentBoxSprite.Size.Y + (yy * this.ContentBoxSprite.Size.Y)),
-                       this.RightBottomBoxSprite
+                        new Vector2(Position.X + ContentSize.X + LeftBottomBoxSprite.Width, Position.Y + ContentSize.Y + RightTopBoxSprite.Height),
+                       RightBottomBoxSprite,
+                       Vector2.One
                        );
         }
 
-       }
+    }
 }
