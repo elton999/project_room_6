@@ -9,8 +9,8 @@ namespace Project.Entities.Solids
     {
         public override void Start()
         {
-            size = new Point(32, 16);
-            Body = new Rectangle(0, 72, 32, 16);
+            size = new Point(24, 32);
+            Body = new Rectangle(0, 72, 24, 32);
 
             Sprite = Scene.Content.Load<Texture2D>("Sprites/Tilemap/tilemap");
 
