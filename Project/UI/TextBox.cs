@@ -6,6 +6,9 @@ namespace Project.UI
 {
     public class TextBox : BoxSprite
     {
+        public string Text;
+        public SpriteFont Font;
+
         public override void Start()
         {
             var cornerSize = new Point(8, 8);   
@@ -25,8 +28,17 @@ namespace Project.UI
             ContentBoxSprite = new Rectangle(128, 0, 8,8);
 
             Sprite = Scene.Content.Load<Texture2D>("Sprites/Tilemap/tilemap");
+            Font = Scene.Content.Load<SpriteFont>("Kenney Mini");
 
             base.Start();
+        }
+
+        public override void Draw(SpriteBatch spriteBatch)
+        {
+            BeginDraw(spriteBatch, false);
+            DrawRectangle(spriteBatch);
+            spriteBatch.DrawString(Font, Text, Position + LeftTopBoxSprite.Size.ToVector2(), Color.White);
+            EndDraw(spriteBatch);
         }
     }
 }
