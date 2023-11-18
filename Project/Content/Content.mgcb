@@ -15,6 +15,16 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin Kenney Mini.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Kenney Mini.spritefont
+
+#begin Kenney Mini.ttf
+/copy:Kenney Mini.ttf
+
 #begin Maps/Tilemap.ldtk
 /importer:LdtkImporter
 /processor:LdtkProcessor
