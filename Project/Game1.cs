@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using UmbrellaToolsKit.Input;
 
 namespace Project
 {
@@ -46,6 +47,9 @@ namespace Project
             _gameManagement.SceneManagement.Start();
             _gameManagement.SceneManagement.MainScene.SetBackgroundColor = Color.Black;
 
+            KeyBoardHandler.AddInput(Keys.Enter);
+            KeyBoardHandler.AddInput(Keys.Escape);
+
             base.Initialize();
         }
 
@@ -53,7 +57,7 @@ namespace Project
 
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            if (KeyBoardHandler.KeyPressed(Keys.Escape))
                 Exit();
 
             _gameManagement.Update(gameTime);
