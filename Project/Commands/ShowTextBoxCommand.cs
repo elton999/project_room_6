@@ -2,6 +2,7 @@
 using UmbrellaToolsKit;
 using Microsoft.Xna.Framework;
 using Project.UI;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Project.Commands
 {
@@ -15,14 +16,14 @@ namespace Project.Commands
         public ShowTextBoxCommand(string text, Scene scene)
         {
             _scene = scene;
-
-            _textBox = new TextBox();
-            _textBox.Scene = scene;
-            SetText(text);
+            _text = text;
         }
 
         public void Execute()
         {
+            _textBox = new TextBox();
+            _textBox.Scene = _scene;
+
             SetText(_text);
             _textBox.Start();
             _scene.UI.Add(_textBox);
