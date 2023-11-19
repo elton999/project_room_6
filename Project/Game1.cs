@@ -47,8 +47,14 @@ namespace Project
             _gameManagement.SceneManagement.Start();
             _gameManagement.SceneManagement.MainScene.SetBackgroundColor = Color.Black;
 
-            KeyBoardHandler.AddInput("interect", Keys.Enter);
+            // inputs
+            KeyBoardHandler.AddInput("interect", new Keys[]{ Keys.Enter, Keys.X, Keys.Space});
             KeyBoardHandler.AddInput("exit", Keys.Escape);
+
+            KeyBoardHandler.AddInput("up", new Keys[] { Keys.W, Keys.Up });
+            KeyBoardHandler.AddInput("down", new Keys[] { Keys.S, Keys.Down });
+            KeyBoardHandler.AddInput("left", new Keys[] { Keys.A, Keys.Left });
+            KeyBoardHandler.AddInput("right", new Keys[] { Keys.D, Keys.Right });
 
             base.Initialize();
         }
