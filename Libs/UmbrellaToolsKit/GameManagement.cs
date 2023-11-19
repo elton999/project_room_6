@@ -7,6 +7,8 @@ namespace UmbrellaToolsKit
 {
     public class GameManagement : GameObject
     {
+        public static event Action OnGameUpdateData;
+
         public Dictionary<string, object> Values = new Dictionary<string, object>();
 
         public enum Status { LOADING, CREDITS, MENU, PAUSE, STOP, PLAYING };
@@ -34,6 +36,7 @@ namespace UmbrellaToolsKit
         public override void Draw(SpriteBatch spriteBatch)
         {
             SceneManagement.Draw(spriteBatch);
+            OnGameUpdateData?.Invoke();
         }
     }
 }
