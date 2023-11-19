@@ -47,8 +47,8 @@ namespace Project
             _gameManagement.SceneManagement.Start();
             _gameManagement.SceneManagement.MainScene.SetBackgroundColor = Color.Black;
 
-            KeyBoardHandler.AddInput(Keys.Enter);
-            KeyBoardHandler.AddInput(Keys.Escape);
+            KeyBoardHandler.AddInput("interect", Keys.Enter);
+            KeyBoardHandler.AddInput("exit", Keys.Escape);
 
             base.Initialize();
         }
@@ -57,7 +57,7 @@ namespace Project
 
         protected override void Update(GameTime gameTime)
         {
-            if (KeyBoardHandler.KeyPressed(Keys.Escape))
+            if (KeyBoardHandler.KeyPressed("exit"))
                 Exit();
 
             _gameManagement.Update(gameTime);

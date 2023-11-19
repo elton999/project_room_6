@@ -17,7 +17,7 @@ namespace Project.Entities
 
         public override void Update(GameTime gameTime)
         {
-            if (KeyBoardHandler.KeyPressed(Keys.Enter) && !_isIterecting && _isPlayerInterecting)
+            if (KeyBoardHandler.KeyPressed("interect") && !_isIterecting && _isPlayerInterecting)
             {
                 _isIterecting = true;
                 if (OnInterectiveCommands == null) return;
@@ -25,7 +25,7 @@ namespace Project.Entities
                     command.Execute();
             }
 
-            if(KeyBoardHandler.KeyPressed(Keys.Enter) && _isIterecting)
+            if(KeyBoardHandler.KeyPressed("interect") && _isIterecting)
             {
                 _isIterecting = false;
                 if (OnInterectiveCommands == null) return;
