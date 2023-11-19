@@ -2,7 +2,6 @@
 using UmbrellaToolsKit;
 using Microsoft.Xna.Framework;
 using Project.UI;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace Project.Commands
 {
