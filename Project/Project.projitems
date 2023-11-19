@@ -11,7 +11,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Commands\ClearAllTextBoxCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\MoveBoxCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\ShowTextBoxCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\CharacterRender.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\HitBox.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\MessageHitBox.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GamePlay\Nodes\Puzzle\CloseDoorNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ICommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\TextBox.cs" />

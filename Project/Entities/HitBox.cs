@@ -12,8 +12,8 @@ namespace Project.Entities
         private bool _isPlayerInterecting = false;
         private bool _isIterecting = false;
 
-        public List<ICommand> OnInterectiveCommands;
-        public List<ICommand> OnFinishInterectiveCommands;
+        public List<ICommand> OnInterectiveCommands = new List<ICommand>();
+        public List<ICommand> OnFinishInterectiveCommands = new List<ICommand>();
 
         public override void Update(GameTime gameTime)
         {
@@ -23,6 +23,7 @@ namespace Project.Entities
                 if (OnInterectiveCommands == null) return;
                 foreach(var command in OnInterectiveCommands)
                     command.Execute();
+                return;
             }
 
             if(KeyBoardHandler.KeyPressed("interect") && _isIterecting)

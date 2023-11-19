@@ -42,10 +42,14 @@ namespace Project
             _assetManagement.Set<Entities.Actors.GroundButton>("GroundButton", "BACKGROUND");
             _assetManagement.Set<Entities.Actors.Items.Key>("Key", "FOREGROUND");
 
+            _assetManagement.Set<Entities.CharacterRender>("Character", "MIDDLEGROUND");
+            _assetManagement.Set<Entities.MessageHitBox>("Message", "MIDDLEGROUND");
+
             _assetManagement.Set<GamePlay.PuzzleButtons>("PuzzleButtons", "BACKGROUND");
 
             _gameManagement.SceneManagement.Start();
             _gameManagement.SceneManagement.MainScene.SetBackgroundColor = Color.Black;
+            _gameManagement.SceneManagement.MainScene.Camera.UseLevelLimits = false;
 
             // inputs
             KeyBoardHandler.AddInput("interect", new Keys[]{ Keys.Enter, Keys.X, Keys.Space});
