@@ -37,7 +37,7 @@ namespace Project.Commands
             _textBox.Text = text;
         }
 
-        private Vector2 GetStringSize() =>  _textBox.Font.MeasureString(_text);
+        private Vector2 GetStringSize() => _textBox.Font.MeasureString(_text);
 
     }
 }
