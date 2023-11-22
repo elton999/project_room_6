@@ -15,6 +15,9 @@ namespace Project.Entities
                 case "OldMan":
                     Body = new Rectangle(39,18, 14, 30);
                     break;
+                case "AsianGuy":
+                    Body = new Rectangle(103, 16, 15, 32);
+                break;
             }
             base.Start();
         }

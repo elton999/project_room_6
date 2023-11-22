@@ -1536,7 +1536,7 @@
 			{ "id": "Left", "tileRect": { "tilesetUid": 109, "x": 48, "y": 64, "w": 16, "h": 16 }, "color": 10066329 },
 			{ "id": "Right", "tileRect": { "tilesetUid": 109, "x": 32, "y": 64, "w": 16, "h": 16 }, "color": 10066329 }
 		], "iconTilesetUid": 109, "externalRelPath": null, "externalFileChecksum": null, "tags": [] },
-		{ "identifier": "CharacterSprite", "uid": 205, "values": [{ "id": "OldMan", "tileRect": null, "color": 12470831 }], "iconTilesetUid": null, "externalRelPath": null, "externalFileChecksum": null, "tags": [] },
+		{ "identifier": "CharacterSprite", "uid": 205, "values": [ { "id": "OldMan", "tileRect": null, "color": 12470831 }, { "id": "AsianGuy", "tileRect": null, "color": 14120515 } ], "iconTilesetUid": null, "externalRelPath": null, "externalFileChecksum": null, "tags": [] },
 		{ "identifier": "Item", "uid": 209, "values": [{ "id": "Key", "tileRect": { "tilesetUid": 109, "x": 80, "y": 352, "w": 16, "h": 16 }, "color": 12470831 }], "iconTilesetUid": 109, "externalRelPath": null, "externalFileChecksum": null, "tags": [] }
 	], "externalEnums": [], "levelFields": [] },
 	"levels": [
@@ -2648,10 +2648,50 @@
 							"height": 43,
 							"defUid": 207,
 							"px": [425,508],
-							"fieldInstances": [{ "__identifier": "Message", "__type": "String", "__value": "Vejo que os mestres trouxeram mais um jogador.\n\nEm toda a sua benignidade os mestres dão a você a \n\noportunidade de ser salvo!\n\nEncontre todas as cinco estrelas e a grande porta abrirá para \n\nvocê como aconteceu com o jogador número 1! Mas se não coletar as \n\nestrelas sua vida será de condenação eterna!\n", "__tile": null, "defUid": 208, "realEditorValues": [{
+							"fieldInstances": [{ "__identifier": "Message", "__type": "String", "__value": "Vejo que os mestres trouxeram mais um jogador.\nEm toda a sua benignidade os mestres dão a você a \noportunidade de ser salvo!\nEncontre todas as cinco estrelas e a grande porta abrirá para \nvocê como aconteceu com o jogador número 1! Mas se não coletar as \nestrelas sua vida será de condenação eterna!", "__tile": null, "defUid": 208, "realEditorValues": [{
 								"id": "V_String",
 								"params": [
-									"Vejo que os mestres trouxeram mais um jogador.\\n\\nEm toda a sua benignidade os mestres dão a você a \\n\\noportunidade de ser salvo!\\n\\nEncontre todas as cinco estrelas e a grande porta abrirá para \\n\\nvocê como aconteceu com o jogador número 1! Mas se não coletar as \\n\\nestrelas sua vida será de condenação eterna!\\n"
+									"Vejo que os mestres trouxeram mais um jogador.\\nEm toda a sua benignidade os mestres dão a você a \\noportunidade de ser salvo!\\nEncontre todas as cinco estrelas e a grande porta abrirá para \\nvocê como aconteceu com o jogador número 1! Mas se não coletar as \\nestrelas sua vida será de condenação eterna!"
+								]
+							}] }]
+						},
+						{
+							"__identifier": "Character",
+							"__grid": [81,48],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#D77643",
+							"__worldX": 807,
+							"__worldY": 390,
+							"iid": "9b5ba660-6280-11ee-8617-ada937eb77a0",
+							"width": 16,
+							"height": 16,
+							"defUid": 204,
+							"px": [655,390],
+							"fieldInstances": [{ "__identifier": "CharacterSprite", "__type": "LocalEnum.CharacterSprite", "__value": "AsianGuy", "__tile": null, "defUid": 206, "realEditorValues": [{
+								"id": "V_String",
+								"params": ["AsianGuy"]
+							}] }]
+						},
+						{
+							"__identifier": "Message",
+							"__grid": [80,47],
+							"__pivot": [0,0],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#47D743",
+							"__worldX": 797,
+							"__worldY": 379,
+							"iid": "9e4fe020-6280-11ee-8617-691ef9030464",
+							"width": 36,
+							"height": 38,
+							"defUid": 207,
+							"px": [645,379],
+							"fieldInstances": [{ "__identifier": "Message", "__type": "String", "__value": "Meus ancestrais não sabiam que deviam encontrar \nas cinco estrelas e por isso foram condenados a\nviver aqui até seus últimos dias.", "__tile": null, "defUid": 208, "realEditorValues": [{
+								"id": "V_String",
+								"params": [
+									"Meus ancestrais não sabiam que deviam encontrar \\nas cinco estrelas e por isso foram condenados a\\nviver aqui até seus últimos dias."
 								]
 							}] }]
 						}
