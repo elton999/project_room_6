@@ -34,6 +34,7 @@ namespace Project
 
             _assetManagement = new AssetManagement();
             _assetManagement.Set<Entities.Player.Player>("Player", "PLAYER");
+            _assetManagement.Set<Entities.Actors.Items.SpawnItemInventory>("Player", "FOREGROUND");
             _assetManagement.Set<Entities.Door>("Door", "MIDDLEGROUND");
             _assetManagement.Set<GameObject>("PlayerSpawn", "MIDDLEGROUND");
 

@@ -13,14 +13,7 @@ namespace Project.Entities.Actors.Items.Nodes
 
         public override NodeStatus Tick(GameTime gameTime)
         {
-            if (!PlayerInventory.CanSpawnItem(_actor.tag))
-            {
-                foreach (var item in _actor.Scene.Foreground)
-                    if(item.tag == _actor.tag)
-                        return NodeStatus.SUCCESS;
-            }
-
-            return NodeStatus.FAILURE;
+            return PlayerInventory.CanUseItem(_actor.tag) ? NodeStatus.SUCCESS : NodeStatus.FAILURE;
         }
     }
 }

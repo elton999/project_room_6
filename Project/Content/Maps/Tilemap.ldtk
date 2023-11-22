@@ -1661,25 +1661,6 @@
 									"params": ["Up"]
 								}] }
 							]
-						},
-						{
-							"__identifier": "Item",
-							"__grid": [4,8],
-							"__pivot": [0,0],
-							"__tags": ["item"],
-							"__tile": { "tilesetUid": 109, "x": 48, "y": 256, "w": 16, "h": 16 },
-							"__smartColor": "#FFE000",
-							"__worldX": 34,
-							"__worldY": 70,
-							"iid": "4e5d4640-6280-11ee-b2d0-033953be8771",
-							"width": 16,
-							"height": 16,
-							"defUid": 145,
-							"px": [34,70],
-							"fieldInstances": [{ "__identifier": "Item", "__type": "LocalEnum.Item", "__value": "Key", "__tile": null, "defUid": 210, "realEditorValues": [{
-								"id": "V_String",
-								"params": ["Key"]
-							}] }]
 						}
 					]
 				},
@@ -2514,18 +2495,18 @@
 					"entityInstances": [
 						{
 							"__identifier": "Player",
-							"__grid": [46,19],
+							"__grid": [46,63],
 							"__pivot": [0,0],
 							"__tags": ["player"],
 							"__tile": { "tilesetUid": 109, "x": 0, "y": 240, "w": 16, "h": 16 },
 							"__smartColor": "#FF0000",
 							"__worldX": 527,
-							"__worldY": 153,
+							"__worldY": 505,
 							"iid": "46190740-6280-11ee-b93c-01dbe4cfb867",
 							"width": 16,
 							"height": 16,
 							"defUid": 43,
-							"px": [375,153],
+							"px": [375,505],
 							"fieldInstances": []
 						}
 					]
@@ -2672,25 +2653,6 @@
 								"params": [
 									"Vejo que os mestres trouxeram mais um jogador.\\n\\nEm toda a sua benignidade os mestres dão a você a \\n\\noportunidade de ser salvo!\\n\\nEncontre todas as cinco estrelas e a grande porta abrirá para \\n\\nvocê como aconteceu com o jogador número 1! Mas se não coletar as \\n\\nestrelas sua vida será de condenação eterna!\\n"
 								]
-							}] }]
-						},
-						{
-							"__identifier": "Item",
-							"__grid": [8,15],
-							"__pivot": [0,0],
-							"__tags": ["item"],
-							"__tile": { "tilesetUid": 109, "x": 48, "y": 256, "w": 16, "h": 16 },
-							"__smartColor": "#FFE000",
-							"__worldX": 220,
-							"__worldY": 120,
-							"iid": "3a985260-6280-11ee-8189-6f7270a17b60",
-							"width": 16,
-							"height": 16,
-							"defUid": 145,
-							"px": [68,120],
-							"fieldInstances": [{ "__identifier": "Item", "__type": "LocalEnum.Item", "__value": "Key", "__tile": null, "defUid": 210, "realEditorValues": [{
-								"id": "V_String",
-								"params": ["Key"]
 							}] }]
 						}
 					]

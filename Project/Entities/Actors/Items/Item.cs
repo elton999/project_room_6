@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
-using System.Drawing;
 using UmbrellaToolsKit.BehaviorTrees;
 using UmbrellaToolsKit;
 using UmbrellaToolsKit.Collision;
@@ -19,19 +18,20 @@ namespace Project.Entities.Actors.Items
             Sprite = Scene.Content.Load<Texture2D>("Sprites/Tilemap/tilemap");
             Gravity2D = Vector2.Zero;
 
-            var nodeSelectCollect = new SelectorNode();
-            var nodeSelectSpawn = new SelectorNode();
+            var nodeSequenceCollect = new SequenceNode();
+            var nodeSequenceSpawn = new SequenceNode();
 
             Node = new SequenceNode();
             Node.Add(new FloatingAnimationNode(this));
-            
-            nodeSelectCollect.Add(new CheckingActorOverActorNode(Scene.AllActors[0], this));
-            nodeSelectCollect.Add(new StartFollowPlayerNode(this));
-            Node.Add(nodeSelectCollect);
 
-            nodeSelectSpawn.Add(new CheckingItemInventory(this));
-            nodeSelectSpawn.Add(new StartFollowPlayerNode(this));
-            Node.Add(nodeSelectSpawn);
+            nodeSequenceSpawn.Add(new CheckingItemInventory(this));
+            nodeSequenceSpawn.Add(new StartFollowPlayerNode(this));
+            Node.Add(new InverterNode(nodeSequenceSpawn));
+
+            nodeSequenceCollect.Add(new CheckingActorOverActorNode(Scene.AllActors[0], this));
+            nodeSequenceCollect.Add(new AddItemToInventory(this));
+            nodeSequenceCollect.Add(new StartFollowPlayerNode(this));
+            Node.Add(nodeSequenceCollect);
 
             ParticlesSystem = new KeyParticles(Scene.ScreenGraphicsDevice);
         }

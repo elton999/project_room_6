@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Project.Entities.Player.State;
+using Project.Entities.Actors.Items;
 
 namespace Project.Entities.Player
 {

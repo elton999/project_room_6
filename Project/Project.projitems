@@ -12,8 +12,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Commands\MoveBoxCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Commands\ShowTextBoxCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Actors\Items\Item.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Actors\Items\Nodes\AddItemToInventory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Actors\Items\Nodes\CheckingItemInventory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Actors\Items\SpawnItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Actors\Items\SpawnItemInventory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\CharacterRender.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\HitBox.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\MessageHitBox.cs" />

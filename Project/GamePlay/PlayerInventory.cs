@@ -26,7 +26,7 @@ namespace Project.GamePlay
 
         public static bool CanSpawnItem(string value)
         {
-            return !_activeInventory.Contains(value) || !_usedItems.Contains(value);
+            return !_activeInventory.Contains(value) && !_usedItems.Contains(value);
         }
     }
 }
