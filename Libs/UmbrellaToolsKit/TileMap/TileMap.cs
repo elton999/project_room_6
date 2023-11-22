@@ -70,7 +70,7 @@ namespace UmbrellaToolsKit.TileMap
                 Console.Write(".");
                 // TODO: values and nodes
                 var entity = layer.EntityInstances[i];
-                var gameObject = AssetManagement.Instance.addEntityOnScene(
+                AssetManagement.Instance.addEntityOnScene(
                         entity.Identifier,
                         entity.Iid,
                         new Vector2(entity.Px[0] + scene.ScreenOffset.X, entity.Px[1] + scene.ScreenOffset.Y),
