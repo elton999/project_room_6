@@ -43,7 +43,7 @@ namespace Project
             _assetManagement.Set<Entities.Actors.GroundButton>("GroundButton", "BACKGROUND");
             _assetManagement.Set<Entities.Actors.Items.SpawnItem>("Item", "FOREGROUND");
 
-            _assetManagement.Set<Entities.CharacterRender>("Character", "MIDDLEGROUND");
+            _assetManagement.Set<Entities.CharacterInstance>("Character", "MIDDLEGROUND");
             _assetManagement.Set<Entities.MessageHitBox>("Message", "MIDDLEGROUND");
 
             _assetManagement.Set<GamePlay.PuzzleButtons>("PuzzleButtons", "BACKGROUND");

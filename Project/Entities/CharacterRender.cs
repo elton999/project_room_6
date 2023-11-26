@@ -1,24 +1,16 @@
 ﻿using UmbrellaToolsKit;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
 
 namespace Project.Entities
 {
     public class CharacterRender : GameObject
     {
+        public CharacterRender(Rectangle rectangle) => Body = rectangle;
+
         public override void Start()
         {
             Sprite = Scene.Content.Load<Texture2D>("Sprites/characters");
-            switch((string)Values[0].Value)
-            {
-                case "OldMan":
-                    Body = new Rectangle(39,18, 14, 30);
-                    break;
-                case "AsianGuy":
-                    Body = new Rectangle(103, 16, 15, 32);
-                break;
-            }
             base.Start();
         }
 
