@@ -14,11 +14,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Actors\Items\Item.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Actors\Items\Nodes\AddItemToInventory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Actors\Items\Nodes\CheckingItemInventory.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Entities\Actors\Items\SpawnItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Actors\Items\ItemInstance.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Actors\Items\SpawnItemInventory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\CharacterInstance.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\CharacterRender.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Factory\CharacterFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Factory\ItemsFactory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\HitBox.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\MessageHitBox.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GamePlay\Nodes\Puzzle\CloseDoorNode.cs" />

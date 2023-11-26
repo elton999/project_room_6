@@ -1,6 +1,4 @@
 using Microsoft.Xna.Framework;
-using Project.GamePlay;
-using System;
 
 namespace Project.Entities.Actors.Items
 {
