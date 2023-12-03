@@ -37,6 +37,24 @@ namespace UmbrellaToolsKit.Sprite
                 AsepriteDefinitions.Duration.Add(duration);
             }
 
+            int slicesCount = input.ReadInt32();
+            for(int i = 0; i < slicesCount; i++)
+            {
+                string name = input.ReadString();
+                AsepriteDefinitions.Slices.Add(name, new List<Rectangle>());
+                
+                int keysCount = input.ReadInt32();
+                for(int j = 0; j < keysCount; j++)
+                {
+                    int frame = input.ReadInt32();
+                    int x = input.ReadInt32();
+                    int y = input.ReadInt32();
+                    int w = input.ReadInt32();
+                    int h = input.ReadInt32();
+                    AsepriteDefinitions.Slices[name].Add(new Rectangle(x, y, w, h));
+                }
+            }
+
             return AsepriteDefinitions;
         }
     }
