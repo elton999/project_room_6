@@ -18,6 +18,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Actors\Items\SpawnItemInventory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\CharacterInstance.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\CharacterRender.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Document.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Factory\CharacterFactory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Factory\ItemsFactory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\HitBox.cs" />

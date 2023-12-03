@@ -42,6 +42,7 @@ namespace Project
             _assetManagement.Set<Entities.Solids.SolidBox>("SolidBlock", "MIDDLEGROUND");
             _assetManagement.Set<Entities.Actors.GroundButton>("GroundButton", "BACKGROUND");
             _assetManagement.Set<Entities.Actors.Items.ItemInstance>("Item", "FOREGROUND");
+            _assetManagement.Set<Entities.Document>("Document", "MIDDLEGROUND");
 
             _assetManagement.Set<Entities.CharacterInstance>("Character", "MIDDLEGROUND");
             _assetManagement.Set<Entities.MessageHitBox>("Message", "MIDDLEGROUND");
