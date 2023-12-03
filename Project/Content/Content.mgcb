@@ -68,6 +68,11 @@
 /processor:AsepriteProcessor
 /build:Sprites/Player/player_animation.json
 
+#begin Sprites/Tilemap/atlas.json
+/importer:AsepriteImporter
+/processor:AsepriteProcessor
+/build:Sprites/Tilemap/atlas.json
+
 #begin Sprites/Tilemap/tilemap.png
 /importer:TextureImporter
 /processor:TextureProcessor

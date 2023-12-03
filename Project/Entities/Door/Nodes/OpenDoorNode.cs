@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using UmbrellaToolsKit.BehaviorTrees;
-using UmbrellaToolsKit.Collision;
 using Project.Nodes;
 
 namespace Project.Entities.DoorNodes
@@ -9,13 +8,13 @@ namespace Project.Entities.DoorNodes
     {
         private bool done = false;
 
-        public Actor _door;
+        public Door _door;
 
-        public OpenDoorNode(Actor door) => _door = door;
+        public OpenDoorNode(Door door) => _door = door;
 
         public void OpenDoor()
         {
-            _door.Node.Add(new SwitchSpriteNode(_door, _door.Sprite, new Rectangle(144, 24, 24, 47)));
+            _door.Node.Add(new SwitchSpriteNode(_door, _door.Sprite, _door.DoorOpenSettings.Rectangle));
             _door.Node.Add(new CheckingActorOverActorNode(_door, _door.Scene.AllActors[0]));
             _door.Node.Add(new TransitionEffectNode(_door.Scene));
             _door.Node.Add(new SwitchLevelNode(

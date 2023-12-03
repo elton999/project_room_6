@@ -5,13 +5,14 @@ using UmbrellaToolsKit.Collision;
 using Microsoft.Xna.Framework.Graphics;
 using Project.Nodes;
 using Project.GamePlay.Nodes.Puzzle;
+using Project.Entities;
 
 namespace Project.GamePlay
 {
     public class PuzzleButtons : GameObject
     {
         public List<Actor> Buttons = new List<Actor>();
-        public Actor Door;
+        public Door Door;
 
         public override void Start()
         {

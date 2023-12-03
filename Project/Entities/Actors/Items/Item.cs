@@ -6,16 +6,19 @@ using UmbrellaToolsKit.Collision;
 using UmbrellaToolsKit.ParticlesSystem;
 using Project.Nodes;
 using Project.Entities.Actors.Items.Nodes;
+using UmbrellaToolsKit.Sprite;
 
 namespace Project.Entities.Actors.Items
 {
     public class Item : Actor
     {
         public ParticlesSystem ParticlesSystem;
+        public AsepriteDefinitions Atlas;
 
         public override void Start()
         {
             Sprite = Scene.Content.Load<Texture2D>("Sprites/Tilemap/tilemap");
+            Atlas = Scene.Content.Load<AsepriteDefinitions>("Sprites/Tilemap/atlas");
             Gravity2D = Vector2.Zero;
 
             var nodeSequenceCollect = new SequenceNode();

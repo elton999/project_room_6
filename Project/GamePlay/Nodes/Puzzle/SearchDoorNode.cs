@@ -1,5 +1,5 @@
 using Microsoft.Xna.Framework;
-using System.Collections.Generic;
+using Project.Entities;
 using UmbrellaToolsKit.BehaviorTrees;
 
 namespace Project.GamePlay.Nodes.Puzzle
@@ -27,8 +27,8 @@ namespace Project.GamePlay.Nodes.Puzzle
         private void _setDoor(string _doorTag)
         {
             foreach (var actor in _puzzleButtons.Scene.AllActors)
-                if (_doorTag.Equals(actor.tag))
-                    _puzzleButtons.Door = actor;
+                if (_doorTag.Equals(actor.tag) && actor is Door)
+                    _puzzleButtons.Door = (Door)actor;
 
             AddData("targetDoor", _puzzleButtons.Door);
         }
