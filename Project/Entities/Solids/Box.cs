@@ -16,8 +16,8 @@ namespace Project.Entities.Solids
             Sprite = Scene.Content.Load<Texture2D>("Sprites/Tilemap/tilemap");
             _atlas = Scene.Content.Load<AsepriteDefinitions>("Sprites/Tilemap/atlas");
 
-            size = _atlas.Slices["box_puzzle"][0].Size;
-            Body = _atlas.Slices["box_puzzle"][0];
+            size = _atlas.Slices["box_puzzle"].Item1.Size;
+            Body = _atlas.Slices["box_puzzle"].Item1;
 
             Scene.AllSolids.Add(this);
         }

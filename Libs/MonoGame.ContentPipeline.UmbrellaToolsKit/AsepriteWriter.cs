@@ -50,6 +50,14 @@ namespace MonoGame.ContentPipeline.UmbrellaToolsKit
                     output.Write((int)value["meta"]["slices"][i]["keys"][j]["bounds"]["y"] + (int)value["frames"][frame]["frame"]["y"]);
                     output.Write((int)value["meta"]["slices"][i]["keys"][j]["bounds"]["w"]);
                     output.Write((int)value["meta"]["slices"][i]["keys"][j]["bounds"]["h"]);
+
+                    bool hasPivot = (value["meta"]["slices"][i]["keys"][j]["pivot"] != null);
+                    output.Write(hasPivot);
+                    if(hasPivot)
+                    {
+                        output.Write((int)value["meta"]["slices"][i]["keys"][j]["pivot"]["x"]);
+                        output.Write((int)value["meta"]["slices"][i]["keys"][j]["pivot"]["y"]);
+                    }
                 }
             }
         }

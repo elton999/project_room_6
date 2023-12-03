@@ -16,8 +16,8 @@ namespace Project.Entities.Actors
             _atlas = Scene.Content.Load<AsepriteDefinitions>("Sprites/Tilemap/atlas");
             Sprite = Scene.Content.Load<Texture2D>("Sprites/Tilemap/tilemap");
 
-            size = _atlas.Slices["puzzle_slot"][0].Size;
-            Body = _atlas.Slices["puzzle_slot"][0];
+            size = _atlas.Slices["puzzle_slot"].Item1.Size;
+            Body = _atlas.Slices["puzzle_slot"].Item1;
 
             Gravity2D = Vector2.Zero;
 

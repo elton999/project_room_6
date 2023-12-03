@@ -41,20 +41,21 @@ namespace Project.Entities
         {
             string orientation = (string)Values[3].Value;
             SetSpriteSettings(orientation.ToLower());
+            Origin = _doorOpenSettings.Origin;
         }
 
         public void SetSpriteSettings(string orientation)
         {
             _doorClosedSettings = new DoorSpriteSettings
             {
-                Rectangle = _atlas.Slices[$"closed_door_{orientation}"][0],
-                Origin = new Vector2(0, 32f),
+                Rectangle = _atlas.Slices[$"closed_door_{orientation}"].Item1,
+                Origin = _atlas.Slices[$"closed_door_{orientation}"].Item2,
                 SpriteEffects = SpriteEffects.None
             };
             _doorOpenSettings = new DoorSpriteSettings
             {
-                Rectangle = _atlas.Slices[$"opened_door_{orientation}"][0],
-                Origin = new Vector2(0, 32f),
+                Rectangle = _atlas.Slices[$"opened_door_{orientation}"].Item1,
+                Origin = _atlas.Slices[$"opened_door_{orientation}"].Item2,
                 SpriteEffects = SpriteEffects.None
             };
         }

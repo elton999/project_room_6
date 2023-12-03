@@ -23,20 +23,20 @@
   ],
   "slices": [
    { "name": "box", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 0, "y": 72, "w": 24, "h": 32 } }] },
-   { "name": "opened_door_up", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 144, "y": 24, "w": 24, "h": 48 } }] },
-   { "name": "closed_door_up", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 168, "y": 24, "w": 24, "h": 32 } }] },
-   { "name": "opened_door_right", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 64, "y": 64, "w": 32, "h": 32 } }] },
-   { "name": "closed_door_right", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 96, "y": 64, "w": 16, "h": 32 } }] },
-   { "name": "opened_door_down", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 64, "y": 96, "w": 24, "h": 24 } }] },
-   { "name": "closed_door_down", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 88, "y": 96, "w": 24, "h": 24 } }] },
+   { "name": "opened_door_up", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 144, "y": 24, "w": 24, "h": 48 }, "pivot": {"x": 0, "y": 32 } }] },
+   { "name": "closed_door_up", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 168, "y": 24, "w": 24, "h": 32 }, "pivot": {"x": 0, "y": 32 } }] },
+   { "name": "opened_door_right", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 64, "y": 64, "w": 32, "h": 32 }, "pivot": {"x": 0, "y": -8 } }] },
+   { "name": "closed_door_right", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 96, "y": 64, "w": 16, "h": 32 }, "pivot": {"x": 0, "y": -8 } }] },
+   { "name": "opened_door_down", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 64, "y": 96, "w": 24, "h": 24 }, "pivot": {"x": 0, "y": -8 } }] },
+   { "name": "closed_door_down", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 88, "y": 96, "w": 24, "h": 24 }, "pivot": {"x": 0, "y": -8 } }] },
    { "name": "key", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 192, "y": 32, "w": 16, "h": 16 } }] },
    { "name": "stone_document", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 56, "y": 8, "w": 8, "h": 16 } }] },
    { "name": "document", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 56, "y": 0, "w": 8, "h": 8 } }] },
    { "name": "puzzle_slot", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 0, "y": 56, "w": 16, "h": 16 } }] },
    { "name": "bed", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 0, "y": 104, "w": 32, "h": 32 } }] },
    { "name": "box_puzzle", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 144, "y": 8, "w": 16, "h": 16 } }] },
-   { "name": "opened_door_left", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 112, "y": 16, "w": 32, "h": 32 } }] },
-   { "name": "closed_door_left", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 112, "y": 48, "w": 17, "h": 32 } }] }
+   { "name": "opened_door_left", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 112, "y": 16, "w": 32, "h": 32 }, "pivot": {"x": 16, "y": 8 } }] },
+   { "name": "closed_door_left", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 112, "y": 48, "w": 17, "h": 32 }, "pivot": {"x": 16, "y": 8 } }] }
   ]
  }
 }

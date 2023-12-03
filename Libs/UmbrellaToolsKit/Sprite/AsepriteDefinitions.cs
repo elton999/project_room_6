@@ -8,7 +8,7 @@ namespace UmbrellaToolsKit.Sprite
         public List<Rectangle> Bodys { get; set; }
         public List<int> Duration { get; set; }
         public List<AsepriteTags> Tags { get; set; }
-        public Dictionary<string, List<Rectangle>> Slices { get; set; }
+        public Dictionary<string, (Rectangle, Vector2)> Slices { get; set; }
 
         public Rectangle Rectangle;
 
@@ -17,7 +17,7 @@ namespace UmbrellaToolsKit.Sprite
             Bodys = new List<Rectangle>();
             Duration = new List<int>();
             Tags = new List<AsepriteTags>();
-            Slices = new Dictionary<string, List<Rectangle>>();
+            Slices = new Dictionary<string, (Rectangle, Vector2)>();
         }
 
         public void BodyAdd(Rectangle body)

@@ -6,8 +6,8 @@ namespace Project.Entities.Actors.Items
         {
             base.Start();
             tag = "Key";
-            size = Atlas.Slices["key"][0].Size;
-            Body = Atlas.Slices["key"][0];
+            size = Atlas.Slices["key"].Item1.Size;
+            Body = Atlas.Slices["key"].Item1;
         }
     }
 }

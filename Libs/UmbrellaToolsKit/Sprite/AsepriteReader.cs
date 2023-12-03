@@ -41,7 +41,7 @@ namespace UmbrellaToolsKit.Sprite
             for(int i = 0; i < slicesCount; i++)
             {
                 string name = input.ReadString();
-                AsepriteDefinitions.Slices.Add(name, new List<Rectangle>());
+                AsepriteDefinitions.Slices.Add(name, (new Rectangle(0,0,0,0), new Vector2(0,0)));
                 
                 int keysCount = input.ReadInt32();
                 for(int j = 0; j < keysCount; j++)
@@ -51,7 +51,19 @@ namespace UmbrellaToolsKit.Sprite
                     int y = input.ReadInt32();
                     int w = input.ReadInt32();
                     int h = input.ReadInt32();
-                    AsepriteDefinitions.Slices[name].Add(new Rectangle(x, y, w, h));
+
+                    Vector2 origin = new Vector2(0,0);
+                    bool hasPivot = input.ReadBoolean();
+                    if(hasPivot)
+                    {
+                        int pivotX = input.ReadInt32();
+                        int pivotY = input.ReadInt32();
+                        origin = new Vector2(pivotX, pivotY);
+                    }
+
+                    Rectangle body = new Rectangle(x, y, w, h);
+                    (Rectangle, Vector2) data = (body, origin);
+                    AsepriteDefinitions.Slices[name] = data;
                 }
             }
 
