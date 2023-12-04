@@ -19,6 +19,7 @@ namespace UmbrellaToolsKit.Collision
         public Grid()
         {
             this.Collides.Add("2");
+            this.Collides.Add("4");
             this.Transparent = 0.5f;
         }
 
