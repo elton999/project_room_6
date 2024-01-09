@@ -16,6 +16,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Actors\Items\Nodes\CheckingItemInventory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Actors\Items\ItemInstance.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Actors\Items\SpawnItemInventory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Camera.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\CharacterInstance.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\CharacterRender.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Document.cs" />

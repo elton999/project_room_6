@@ -48,13 +48,13 @@ namespace Project
             _assetManagement.Set<Entities.MessageHitBox>("Message", "MIDDLEGROUND");
 
             _assetManagement.Set<GamePlay.PuzzleButtons>("PuzzleButtons", "BACKGROUND");
+            _assetManagement.Set<Entities.Camera>("Camera", "FOREGROUND");
 
             _gameManagement.SceneManagement.Start();
             _gameManagement.SceneManagement.MainScene.SetBackgroundColor = Color.Black;
-            _gameManagement.SceneManagement.MainScene.Camera.UseLevelLimits = false;
 
             // inputs
-            KeyBoardHandler.AddInput("interect", new Keys[]{ Keys.Enter, Keys.X, Keys.Space});
+            KeyBoardHandler.AddInput("interect", new Keys[] { Keys.Enter, Keys.X, Keys.Space });
             KeyBoardHandler.AddInput("exit", Keys.Escape);
 
             KeyBoardHandler.AddInput("up", new Keys[] { Keys.W, Keys.Up });
