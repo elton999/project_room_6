@@ -1,12 +1,12 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
-using UmbrellaToolsKit.BehaviorTrees;
 using UmbrellaToolsKit;
+using UmbrellaToolsKit.Sprite;
 using UmbrellaToolsKit.Collision;
+using UmbrellaToolsKit.BehaviorTrees;
 using UmbrellaToolsKit.ParticlesSystem;
 using Project.Nodes;
 using Project.Entities.Actors.Items.Nodes;
-using UmbrellaToolsKit.Sprite;
 
 namespace Project.Entities.Actors.Items
 {
