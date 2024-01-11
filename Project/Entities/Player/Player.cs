@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Project.Entities.Player.State;
-using Project.Entities.Actors.Items;
+using Project.Nodes;
 
 namespace Project.Entities.Player
 {
@@ -13,6 +13,7 @@ namespace Project.Entities.Player
 
         public float Speed = 0.25f;
         public float SpeedDash = 4.5f;
+        public static bool CanMove = true;
 
         public override void Start()
         {
@@ -31,7 +32,20 @@ namespace Project.Entities.Player
             Scene.Camera.Target = this;
             if (!Scene.GameManagement.Values.ContainsKey("canPlay"))
                 Scene.GameManagement.Values.Add("canPlay", true);
+
+            LockPlayerMovementsNode.OnLockPlayerMovements += LockPlayerMovements;
+            UnlockPlayerMovementsNode.OnUnlockPlayerMovements += UnlockPlayerMovements;
         }
+
+        public override void Destroy()
+        {
+            LockPlayerMovementsNode.OnLockPlayerMovements -= LockPlayerMovements;
+            UnlockPlayerMovementsNode.OnUnlockPlayerMovements -= UnlockPlayerMovements;
+            base.Destroy();
+        }
+
+        public void LockPlayerMovements() => CanMove = false;
+        public void UnlockPlayerMovements() => CanMove = true;
 
         public void SwitchState(PlayerState state)
         {
@@ -42,6 +56,7 @@ namespace Project.Entities.Player
 
         public override void Update(GameTime gameTime)
         {
+            if (!CanMove) return;
             Body = Animation.Body;
 
             if (!(bool)Scene.GameManagement.Values["canPlay"])
@@ -52,6 +67,7 @@ namespace Project.Entities.Player
 
         public override void UpdateData(GameTime gameTime)
         {
+            if (!CanMove) return;
             CurrentState.PhysicsUpdate(gameTime);
             base.UpdateData(gameTime);
         }

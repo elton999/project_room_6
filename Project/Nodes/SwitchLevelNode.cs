@@ -53,7 +53,9 @@ namespace Project.Nodes
         private void _setTransitionObject(Scene scene)
         {
             var transitionObject = new GameObject();
-            transitionObject.Node = new TransitionEffectNode(scene, false);
+            transitionObject.Node = new SelectorNode();
+            transitionObject.Node.Add(new TransitionEffectNode(scene, false));
+            transitionObject.Node.Add(new UnlockPlayerMovementsNode());
             transitionObject.Scene = scene;
             scene.Middleground.Add(transitionObject);
         }
