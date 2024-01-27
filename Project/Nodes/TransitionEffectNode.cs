@@ -1,4 +1,3 @@
-using System;
 using UmbrellaToolsKit;
 using UmbrellaToolsKit.BehaviorTrees;
 using Microsoft.Xna.Framework;
