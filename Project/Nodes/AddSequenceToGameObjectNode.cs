@@ -1,8 +1,6 @@
 using UmbrellaToolsKit;
-using UmbrellaToolsKit.ParticlesSystem;
 using UmbrellaToolsKit.BehaviorTrees;
 using Microsoft.Xna.Framework;
-using Project.Nodes;
 
 namespace Project.Nodes
 {
