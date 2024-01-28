@@ -8,8 +8,8 @@ namespace Project.Entities
         {
             base.Start();
 
-            OnInterectiveCommands.Add(new ShowTextBoxCommand((string)Values[0].Value, Scene));
-            OnFinishInterectiveCommands.Add(new ClearAllTextBoxCommand(Scene));
+            OnInteractiveCommands.Add(new ShowTextBoxCommand((string)Values[0].Value, Scene));
+            OnFinishInteractiveCommands.Add(new ClearAllTextBoxCommand(Scene));
         }
     }
 }

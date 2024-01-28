@@ -8,35 +8,35 @@ namespace Project.Entities
 {
     public class HitBox : Actor
     {
-        private bool _isPlayerInterecting = false;
-        private bool _isIterecting = false;
+        private bool _isPlayerInteracting = false;
+        private bool _isIterating = false;
 
-        public List<ICommand> OnInterectiveCommands = new List<ICommand>();
-        public List<ICommand> OnFinishInterectiveCommands = new List<ICommand>();
+        public List<ICommand> OnInteractiveCommands = new List<ICommand>();
+        public List<ICommand> OnFinishInteractiveCommands = new List<ICommand>();
 
         public override void Update(GameTime gameTime)
         {
-            if (KeyBoardHandler.KeyPressed("interect") && !_isIterecting && _isPlayerInterecting)
+            if (KeyBoardHandler.KeyPressed("interact") && !_isIterating && _isPlayerInteracting)
             {
-                _isIterecting = true;
-                if (OnInterectiveCommands == null) return;
-                foreach(var command in OnInterectiveCommands)
+                _isIterating = true;
+                if (OnInteractiveCommands == null) return;
+                foreach (var command in OnInteractiveCommands)
                     command.Execute();
                 return;
             }
 
-            if(KeyBoardHandler.KeyPressed("interect") && _isIterecting)
+            if (KeyBoardHandler.KeyPressed("interact") && _isIterating)
             {
-                _isIterecting = false;
-                if (OnInterectiveCommands == null) return;
-                foreach (var command in OnFinishInterectiveCommands)
+                _isIterating = false;
+                if (OnInteractiveCommands == null) return;
+                foreach (var command in OnFinishInteractiveCommands)
                     command.Execute();
             }
         }
 
         public override void UpdateData(GameTime gameTime)
         {
-            _isPlayerInterecting = overlapCheck(Scene.AllActors[0]);
+            _isPlayerInteracting = overlapCheck(Scene.AllActors[0]);
         }
     }
 }

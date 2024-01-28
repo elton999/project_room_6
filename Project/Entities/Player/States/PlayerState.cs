@@ -12,7 +12,7 @@ namespace Project.Entities.Player.State
         protected Vector2 _directionIdle = new Vector2(1, 0);
 
         protected bool _dashButtonDown { get => Keyboard.GetState().IsKeyDown(Keys.Z); }
-        protected bool _kickButtonDown { get => KeyBoardHandler.KeyDown("interect"); }
+        protected bool _kickButtonDown { get => KeyBoardHandler.KeyDown("interact"); }
         protected Vector2 _direction = Vector2.Zero;
 
         public PlayerState(Player player)

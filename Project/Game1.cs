@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using UmbrellaToolsKit.Input;
+using Project.CutScenes;
 
 namespace Project
 {
@@ -52,6 +53,10 @@ namespace Project
 
             _gameManagement.SceneManagement.Start();
             _gameManagement.SceneManagement.MainScene.SetBackgroundColor = Color.Black;
+
+            var initialScene = new InitialSentence() { Scene = _gameManagement.SceneManagement.MainScene };
+            _gameManagement.SceneManagement.MainScene.UI.Add(initialScene);
+            initialScene.Start();
 
             // inputs
             KeyBoardHandler.AddInput("interect", new Keys[] { Keys.Enter, Keys.X, Keys.Space });
