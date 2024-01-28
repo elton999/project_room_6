@@ -29,6 +29,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ICommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Nodes\BlockPlayerControlNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Nodes\LockPlayerMovementsNode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Nodes\UnblockPlayerControlNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Nodes\UnlockPlayerMovementsNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\TextBox.cs" />
     <Compile Include="..\Project\GamePlay\Nodes\Puzzle\OpenDoorNode.cs" />
