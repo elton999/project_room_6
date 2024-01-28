@@ -8,6 +8,8 @@ namespace Project.Entities.Player
 {
     public class Player : UmbrellaToolsKit.Collision.Actor
     {
+        private bool _canUseInput = true;
+
         public AsepriteAnimation Animation;
         public PlayerState CurrentState;
 
@@ -62,7 +64,8 @@ namespace Project.Entities.Player
             if (!(bool)Scene.GameManagement.Values["canPlay"])
                 return;
             CurrentState.InputUpdate(gameTime);
-            CurrentState.LogicUpdate(gameTime);
+            if (_canUseInput)
+                CurrentState.LogicUpdate(gameTime);
         }
 
         public override void UpdateData(GameTime gameTime)
@@ -71,5 +74,7 @@ namespace Project.Entities.Player
             CurrentState.PhysicsUpdate(gameTime);
             base.UpdateData(gameTime);
         }
+
+        public void SetInputStatus(bool status) => _canUseInput = status;
     }
 }
