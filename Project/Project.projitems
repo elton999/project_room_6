@@ -27,6 +27,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)GamePlay\Nodes\Puzzle\CloseDoorNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GamePlay\PlayerInventory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ICommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Nodes\BlockPlayerControlNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Nodes\LockPlayerMovementsNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Nodes\UnlockPlayerMovementsNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\TextBox.cs" />
@@ -41,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Content\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Cutscenes\" />
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
