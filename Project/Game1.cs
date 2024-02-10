@@ -59,7 +59,7 @@ namespace Project
             initialScene.Start();
 
             // inputs
-            KeyBoardHandler.AddInput("interect", new Keys[] { Keys.Enter, Keys.X, Keys.Space });
+            KeyBoardHandler.AddInput("interact", new Keys[] { Keys.Enter, Keys.X, Keys.Space });
             KeyBoardHandler.AddInput("exit", Keys.Escape);
 
             KeyBoardHandler.AddInput("up", new Keys[] { Keys.W, Keys.Up });
