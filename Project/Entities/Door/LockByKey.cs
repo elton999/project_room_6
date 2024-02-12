@@ -11,13 +11,17 @@ namespace Project
 {
     public class LockByKey : Actor, IDoor
     {
-        private string _itemToOpenDoor = "key";
+        private string _itemToOpenDoor;
 
         public Door Door { get; set; }
 
         public override void Start()
         {
             base.Start();
+
+            _itemToOpenDoor = GetKeyName();
+
+            System.Console.WriteLine($"item name: {_itemToOpenDoor}");
 
             Node = new SequenceNode();
             Node.CreateData();
@@ -35,6 +39,15 @@ namespace Project
             Node.Add(new InverterNode(OpenDoorSequence));
 
             Node.Add(new CloseDoorNode(this));
+        }
+
+        private string GetKeyName()
+        {
+            ldtk.FieldInstance[] fields = Values;
+            for (int i = 0; i < fields.Length; i++)
+                if (fields[i].Identifier.ToLower() == "key")
+                    return (string)fields[i].Value;
+            return "";
         }
     }
 }

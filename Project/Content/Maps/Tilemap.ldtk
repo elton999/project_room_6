@@ -11,7 +11,7 @@
 	"iid": "208a1ff0-9f30-11ed-b6af-21751e929972",
 	"jsonVersion": "1.5.3",
 	"appBuildId": 473703,
-	"nextUid": 244,
+	"nextUid": 245,
 	"identifierStyle": "Capitalize",
 	"toc": [],
 	"worldLayout": "Free",
@@ -2307,6 +2307,46 @@
 					"autoChainRef": true,
 					"allowOutOfLevelRef": true,
 					"allowedRefs": "Any",
+					"allowedRefsEntityUid": null,
+					"allowedRefTags": [],
+					"tilesetUid": null
+				},
+				{
+					"identifier": "key",
+					"doc": null,
+					"__type": "LocalEnum.Item",
+					"uid": 244,
+					"type": "F_Enum(209)",
+					"isArray": false,
+					"canBeNull": false,
+					"arrayMinLength": null,
+					"arrayMaxLength": null,
+					"editorDisplayMode": "Hidden",
+					"editorDisplayScale": 1,
+					"editorDisplayPos": "Above",
+					"editorLinkStyle": "StraightArrow",
+					"editorDisplayColor": null,
+					"editorAlwaysShow": false,
+					"editorShowInWorld": true,
+					"editorCutLongValues": true,
+					"editorTextSuffix": null,
+					"editorTextPrefix": null,
+					"useForSmartColor": false,
+					"exportToToc": false,
+					"searchable": false,
+					"min": null,
+					"max": null,
+					"regex": null,
+					"acceptFileTypes": null,
+					"defaultOverride": {
+						"id": "V_String",
+						"params": ["Key"]
+					},
+					"textLanguageMode": null,
+					"symmetricalRef": false,
+					"autoChainRef": true,
+					"allowOutOfLevelRef": true,
+					"allowedRefs": "OnlySame",
 					"allowedRefsEntityUid": null,
 					"allowedRefTags": [],
 					"tilesetUid": null
@@ -4677,15 +4717,18 @@
 							"height": 45,
 							"defUid": 242,
 							"px": [613,604],
-							"fieldInstances": [{ "__identifier": "door", "__type": "EntityRef", "__value": {
-								"entityIid": "3a66e9a0-b0a0-11ee-bb9a-47affa3ff329",
-								"layerIid": "8e602d71-b4d0-11ec-afd0-95f015e98655",
-								"levelIid": "8e600660-b4d0-11ec-afd0-b50211eda528",
-								"worldIid": "d87c7030-6280-11ee-a622-2dc71098b3c6"
-							}, "__tile": null, "defUid": 243, "realEditorValues": [{
-								"id": "V_String",
-								"params": ["3a66e9a0-b0a0-11ee-bb9a-47affa3ff329"]
-							}] }],
+							"fieldInstances": [
+								{ "__identifier": "door", "__type": "EntityRef", "__value": {
+									"entityIid": "3a66e9a0-b0a0-11ee-bb9a-47affa3ff329",
+									"layerIid": "8e602d71-b4d0-11ec-afd0-95f015e98655",
+									"levelIid": "8e600660-b4d0-11ec-afd0-b50211eda528",
+									"worldIid": "d87c7030-6280-11ee-a622-2dc71098b3c6"
+								}, "__tile": null, "defUid": 243, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["3a66e9a0-b0a0-11ee-bb9a-47affa3ff329"]
+								}] },
+								{ "__identifier": "key", "__type": "LocalEnum.Item", "__value": "Key", "__tile": null, "defUid": 244, "realEditorValues": [] }
+							],
 							"__worldX": 765,
 							"__worldY": 604
 						}
