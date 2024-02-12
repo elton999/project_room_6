@@ -5,13 +5,13 @@
 		"doc": "https://ldtk.io/json",
 		"schema": "https://ldtk.io/files/JSON_SCHEMA.json",
 		"appAuthor": "Sebastien 'deepnight' Benard",
-		"appVersion": "1.5.2",
+		"appVersion": "1.5.3",
 		"url": "https://ldtk.io"
 	},
 	"iid": "208a1ff0-9f30-11ed-b6af-21751e929972",
-	"jsonVersion": "1.5.2",
-	"appBuildId": 473624,
-	"nextUid": 242,
+	"jsonVersion": "1.5.3",
+	"appBuildId": 473703,
+	"nextUid": 244,
 	"identifierStyle": "Capitalize",
 	"toc": [],
 	"worldLayout": "Free",
@@ -1535,10 +1535,10 @@
 			"renderMode": "Tile",
 			"showName": false,
 			"tilesetId": 109,
-			"tileRenderMode": "Cover",
+			"tileRenderMode": "NineSlice",
 			"tileRect": { "tilesetUid": 109, "x": 256, "y": 64, "w": 16, "h": 16 },
 			"uiTileRect": null,
-			"nineSliceBorders": [],
+			"nineSliceBorders": [5,5,5,5],
 			"maxCount": 0,
 			"limitScope": "PerLevel",
 			"limitBehavior": "MoveLastOne",
@@ -2039,14 +2039,14 @@
 			"keepAspectRatio": false,
 			"tileOpacity": 1,
 			"fillOpacity": 1,
-			"lineOpacity": 1,
+			"lineOpacity": 0,
 			"hollow": false,
 			"color": "#BE4A2F",
-			"renderMode": "Rectangle",
+			"renderMode": "Tile",
 			"showName": true,
-			"tilesetId": null,
+			"tilesetId": 109,
 			"tileRenderMode": "FitInside",
-			"tileRect": null,
+			"tileRect": { "tilesetUid": 109, "x": 0, "y": 240, "w": 16, "h": 16 },
 			"uiTileRect": { "tilesetUid": 109, "x": 0, "y": 240, "w": 16, "h": 16 },
 			"nineSliceBorders": [],
 			"maxCount": 0,
@@ -2114,17 +2114,17 @@
 			"maxHeight": null,
 			"keepAspectRatio": false,
 			"tileOpacity": 1,
-			"fillOpacity": 0,
-			"lineOpacity": 1,
+			"fillOpacity": 0.24,
+			"lineOpacity": 0,
 			"hollow": false,
-			"color": "#47D743",
-			"renderMode": "Rectangle",
+			"color": "#0099DB",
+			"renderMode": "Tile",
 			"showName": true,
-			"tilesetId": null,
-			"tileRenderMode": "Cover",
-			"tileRect": null,
+			"tilesetId": 109,
+			"tileRenderMode": "NineSlice",
+			"tileRect": { "tilesetUid": 109, "x": 288, "y": 64, "w": 16, "h": 16 },
 			"uiTileRect": { "tilesetUid": 109, "x": 160, "y": 16, "w": 16, "h": 16 },
-			"nineSliceBorders": [],
+			"nineSliceBorders": [5,5,5,5],
 			"maxCount": 0,
 			"limitScope": "PerLevel",
 			"limitBehavior": "MoveLastOne",
@@ -2239,6 +2239,79 @@
 			"pivotX": 0,
 			"pivotY": 0,
 			"fieldDefs": []
+		},
+		{
+			"identifier": "LockDoor",
+			"uid": 242,
+			"tags": ["puzzle"],
+			"exportToToc": false,
+			"allowOutOfBounds": true,
+			"doc": null,
+			"width": 16,
+			"height": 16,
+			"resizableX": true,
+			"resizableY": true,
+			"minWidth": 8,
+			"maxWidth": null,
+			"minHeight": 8,
+			"maxHeight": null,
+			"keepAspectRatio": false,
+			"tileOpacity": 1,
+			"fillOpacity": 0.31,
+			"lineOpacity": 0,
+			"hollow": false,
+			"color": "#FEE761",
+			"renderMode": "Tile",
+			"showName": true,
+			"tilesetId": 109,
+			"tileRenderMode": "NineSlice",
+			"tileRect": { "tilesetUid": 109, "x": 336, "y": 48, "w": 16, "h": 16 },
+			"uiTileRect": { "tilesetUid": 109, "x": 384, "y": 128, "w": 16, "h": 16 },
+			"nineSliceBorders": [5,5,5,5],
+			"maxCount": 0,
+			"limitScope": "PerLevel",
+			"limitBehavior": "MoveLastOne",
+			"pivotX": 0,
+			"pivotY": 0,
+			"fieldDefs": [
+				{
+					"identifier": "door",
+					"doc": null,
+					"__type": "EntityRef",
+					"uid": 243,
+					"type": "F_EntityRef",
+					"isArray": false,
+					"canBeNull": false,
+					"arrayMinLength": null,
+					"arrayMaxLength": null,
+					"editorDisplayMode": "NameAndValue",
+					"editorDisplayScale": 1,
+					"editorDisplayPos": "Above",
+					"editorLinkStyle": "CurvedArrow",
+					"editorDisplayColor": "#000000",
+					"editorAlwaysShow": true,
+					"editorShowInWorld": true,
+					"editorCutLongValues": true,
+					"editorTextSuffix": null,
+					"editorTextPrefix": null,
+					"useForSmartColor": false,
+					"exportToToc": false,
+					"searchable": false,
+					"min": null,
+					"max": null,
+					"regex": null,
+					"acceptFileTypes": null,
+					"defaultOverride": null,
+					"textLanguageMode": null,
+					"symmetricalRef": false,
+					"autoChainRef": true,
+					"allowOutOfLevelRef": true,
+					"allowedRefs": "Any",
+					"allowedRefsEntityUid": null,
+					"allowedRefTags": [],
+					"tilesetUid": null
+				}
+			]
 		}
 	], "tilesets": [
 		{
@@ -3417,8 +3490,8 @@
 							"__grid": [2,5],
 							"__pivot": [0,0],
 							"__tags": [],
-							"__tile": null,
-							"__smartColor": "#47D743",
+							"__tile": { "tilesetUid": 109, "x": 288, "y": 64, "w": 16, "h": 16 },
+							"__smartColor": "#0099DB",
 							"iid": "55170730-8990-11ee-9c42-13b1804fc096",
 							"width": 23,
 							"height": 21,
@@ -3427,7 +3500,7 @@
 							"fieldInstances": [{ "__identifier": "Message", "__type": "String", "__value": "8.\nQuando cheguei próximo da multidão avistei um homem. \nEle ainda se mexia, mas estava desesperado.\nGritava dizendo não sentir as pernas. \nAo menos não sentia dor. Não sentia nada.", "__tile": null, "defUid": 208, "realEditorValues": [{
 								"id": "V_String",
 								"params": [
-									"8.\nQuando cheguei próximo da multidão avistei um homem. \nEle ainda se mexia, mas estava desesperado.\nGritava dizendo não sentir as pernas. \nAo menos não sentia dor. Não sentia nada."
+									"8.\\nQuando cheguei próximo da multidão avistei um homem. \\nEle ainda se mexia, mas estava desesperado.\\nGritava dizendo não sentir as pernas. \\nAo menos não sentia dor. Não sentia nada."
 								]
 							}] }],
 							"__worldX": 21,
@@ -4240,7 +4313,7 @@
 							"__grid": [54,65],
 							"__pivot": [0,0],
 							"__tags": [],
-							"__tile": null,
+							"__tile": { "tilesetUid": 109, "x": 0, "y": 240, "w": 16, "h": 16 },
 							"__smartColor": "#BE4A2F",
 							"iid": "402b9630-6280-11ee-94be-c1bb475b8f12",
 							"width": 16,
@@ -4256,20 +4329,20 @@
 							"__grid": [50,60],
 							"__pivot": [0,0],
 							"__tags": [],
-							"__tile": null,
-							"__smartColor": "#47D743",
+							"__tile": { "tilesetUid": 109, "x": 288, "y": 64, "w": 16, "h": 16 },
+							"__smartColor": "#0099DB",
 							"iid": "09001af0-6280-11ee-94be-abc3c5f50b06",
-							"width": 87,
+							"width": 93,
 							"height": 84,
 							"defUid": 207,
-							"px": [406,485],
+							"px": [400,485],
 							"fieldInstances": [{ "__identifier": "Message", "__type": "String", "__value": "Vejo que os mestres trouxeram mais um jogador.\nEm toda a sua benignidade os mestres dão a você a \noportunidade de ser salvo!\nEncontre todas as cinco estrelas e a grande porta abrirá para \nvocê como aconteceu com o jogador número 1! Mas se não coletar as \nestrelas sua vida será de condenação eterna!", "__tile": null, "defUid": 208, "realEditorValues": [{
 								"id": "V_String",
 								"params": [
-									"Vejo que os mestres trouxeram mais um jogador.\nEm toda a sua benignidade os mestres dão a você a \noportunidade de ser salvo!\nEncontre todas as cinco estrelas e a grande porta abrirá para \nvocê como aconteceu com o jogador número 1! Mas se não coletar as \nestrelas sua vida será de condenação eterna!"
+									"Vejo que os mestres trouxeram mais um jogador.\\nEm toda a sua benignidade os mestres dão a você a \\noportunidade de ser salvo!\\nEncontre todas as cinco estrelas e a grande porta abrirá para \\nvocê como aconteceu com o jogador número 1! Mas se não coletar as \\nestrelas sua vida será de condenação eterna!"
 								]
 							}] }],
-							"__worldX": 558,
+							"__worldX": 552,
 							"__worldY": 485
 						},
 						{
@@ -4277,7 +4350,7 @@
 							"__grid": [81,48],
 							"__pivot": [0,0],
 							"__tags": [],
-							"__tile": null,
+							"__tile": { "tilesetUid": 109, "x": 0, "y": 240, "w": 16, "h": 16 },
 							"__smartColor": "#D77643",
 							"iid": "9b5ba660-6280-11ee-8617-ada937eb77a0",
 							"width": 16,
@@ -4293,23 +4366,23 @@
 						},
 						{
 							"__identifier": "Message",
-							"__grid": [77,43],
+							"__grid": [76,43],
 							"__pivot": [0,0],
 							"__tags": [],
-							"__tile": null,
-							"__smartColor": "#47D743",
+							"__tile": { "tilesetUid": 109, "x": 288, "y": 64, "w": 16, "h": 16 },
+							"__smartColor": "#0099DB",
 							"iid": "9e4fe020-6280-11ee-8617-691ef9030464",
-							"width": 92,
+							"width": 107,
 							"height": 99,
 							"defUid": 207,
-							"px": [621,346],
+							"px": [611,346],
 							"fieldInstances": [{ "__identifier": "Message", "__type": "String", "__value": "Meus ancestrais não sabiam que deviam encontrar \nas cinco estrelas e por isso foram condenados a\nviver aqui até seus últimos dias.", "__tile": null, "defUid": 208, "realEditorValues": [{
 								"id": "V_String",
 								"params": [
-									"Meus ancestrais não sabiam que deviam encontrar \nas cinco estrelas e por isso foram condenados a\nviver aqui até seus últimos dias."
+									"Meus ancestrais não sabiam que deviam encontrar \\nas cinco estrelas e por isso foram condenados a\\nviver aqui até seus últimos dias."
 								]
 							}] }],
-							"__worldX": 773,
+							"__worldX": 763,
 							"__worldY": 346
 						},
 						{
@@ -4487,7 +4560,7 @@
 						},
 						{
 							"__identifier": "PuzzleButtons",
-							"__grid": [53,70],
+							"__grid": [54,73],
 							"__pivot": [0,0],
 							"__tags": ["puzzle"],
 							"__tile": { "tilesetUid": 109, "x": 144, "y": 32, "w": 16, "h": 16 },
@@ -4496,7 +4569,7 @@
 							"width": 16,
 							"height": 16,
 							"defUid": 147,
-							"px": [424,560],
+							"px": [432,584],
 							"fieldInstances": [
 								{ "__identifier": "buttons", "__type": "Array<EntityRef>", "__value": [ {
 									"entityIid": "105cdd20-b4d0-11ec-8337-5fcec3ee2209",
@@ -4525,8 +4598,8 @@
 									"params": ["aceaae00-b4d0-11ec-8337-7f8461941952"]
 								}] }
 							],
-							"__worldX": 576,
-							"__worldY": 560
+							"__worldX": 584,
+							"__worldY": 584
 						},
 						{
 							"__identifier": "SolidBlock",
@@ -4591,6 +4664,30 @@
 							"fieldInstances": [],
 							"__worldX": 664,
 							"__worldY": 616
+						},
+						{
+							"__identifier": "LockDoor",
+							"__grid": [76,75],
+							"__pivot": [0,0],
+							"__tags": ["puzzle"],
+							"__tile": { "tilesetUid": 109, "x": 336, "y": 48, "w": 16, "h": 16 },
+							"__smartColor": "#FEE761",
+							"iid": "c6959800-b0a0-11ee-9707-d3077a1cf54b",
+							"width": 64,
+							"height": 45,
+							"defUid": 242,
+							"px": [613,604],
+							"fieldInstances": [{ "__identifier": "door", "__type": "EntityRef", "__value": {
+								"entityIid": "3a66e9a0-b0a0-11ee-bb9a-47affa3ff329",
+								"layerIid": "8e602d71-b4d0-11ec-afd0-95f015e98655",
+								"levelIid": "8e600660-b4d0-11ec-afd0-b50211eda528",
+								"worldIid": "d87c7030-6280-11ee-a622-2dc71098b3c6"
+							}, "__tile": null, "defUid": 243, "realEditorValues": [{
+								"id": "V_String",
+								"params": ["3a66e9a0-b0a0-11ee-bb9a-47affa3ff329"]
+							}] }],
+							"__worldX": 765,
+							"__worldY": 604
 						}
 					]
 				},
@@ -22983,7 +23080,7 @@
 							"__grid": [16,9],
 							"__pivot": [0,0],
 							"__tags": [],
-							"__tile": null,
+							"__tile": { "tilesetUid": 109, "x": 0, "y": 240, "w": 16, "h": 16 },
 							"__smartColor": "#D77643",
 							"iid": "da4a7630-b0a0-11ee-bb9a-abe734ccfa0b",
 							"width": 16,
@@ -23002,8 +23099,8 @@
 							"__grid": [12,6],
 							"__pivot": [0,0],
 							"__tags": [],
-							"__tile": null,
-							"__smartColor": "#47D743",
+							"__tile": { "tilesetUid": 109, "x": 288, "y": 64, "w": 16, "h": 16 },
+							"__smartColor": "#0099DB",
 							"iid": "df196360-b0a0-11ee-bb9a-a7a0a922d056",
 							"width": 68,
 							"height": 63,
@@ -23012,7 +23109,7 @@
 							"fieldInstances": [{ "__identifier": "Message", "__type": "String", "__value": "Não posso acreditar que alguém me colocaria aqui e \ndeixaria uma maneira de escapar. \nEssas estrelas nem existem, \nesses mestres são uns sádicos.", "__tile": null, "defUid": 208, "realEditorValues": [{
 								"id": "V_String",
 								"params": [
-									"Não posso acreditar que alguém me colocaria aqui e \ndeixaria uma maneira de escapar. \nEssas estrelas nem existem, \nesses mestres são uns sádicos."
+									"Não posso acreditar que alguém me colocaria aqui e \\ndeixaria uma maneira de escapar. \\nEssas estrelas nem existem, \\nesses mestres são uns sádicos."
 								]
 							}] }],
 							"__worldX": 853,
@@ -25285,9 +25382,9 @@
 							"width": 24,
 							"height": 32,
 							"defUid": 151,
-							"px": [197,37],
+							"px": [196,37],
 							"fieldInstances": [],
-							"__worldX": 635,
+							"__worldX": 634,
 							"__worldY": 693
 						}
 					]
@@ -32035,8 +32132,8 @@
 							"__grid": [2,5],
 							"__pivot": [0,0],
 							"__tags": [],
-							"__tile": null,
-							"__smartColor": "#47D743",
+							"__tile": { "tilesetUid": 109, "x": 288, "y": 64, "w": 16, "h": 16 },
+							"__smartColor": "#0099DB",
 							"iid": "0f9b9910-8990-11ee-aa85-91e7ae5d6b3a",
 							"width": 29,
 							"height": 28,
@@ -32045,7 +32142,7 @@
 							"fieldInstances": [{ "__identifier": "Message", "__type": "String", "__value": "1.\nSim! Sim! Já estive lá uma vez. Estava escuro, por isso não vi muita coisa. \nEu não sei se normalmente é assim, mas estava escuro. \nNão que houvesse algo para ver, é claro.", "__tile": null, "defUid": 208, "realEditorValues": [{
 								"id": "V_String",
 								"params": [
-									"1.\nSim! Sim! Já estive lá uma vez. Estava escuro, por isso não vi muita coisa. \nEu não sei se normalmente é assim, mas estava escuro. \nNão que houvesse algo para ver, é claro."
+									"1.\\nSim! Sim! Já estive lá uma vez. Estava escuro, por isso não vi muita coisa. \\nEu não sei se normalmente é assim, mas estava escuro. \\nNão que houvesse algo para ver, é claro."
 								]
 							}] }],
 							"__worldX": 162,
@@ -32056,7 +32153,7 @@
 							"__grid": [23,6],
 							"__pivot": [0,0],
 							"__tags": [],
-							"__tile": null,
+							"__tile": { "tilesetUid": 109, "x": 0, "y": 240, "w": 16, "h": 16 },
 							"__smartColor": "#D77643",
 							"iid": "9b0568e0-b0a0-11ee-bb9a-2b24b0574a68",
 							"width": 16,
@@ -32075,8 +32172,8 @@
 							"__grid": [21,4],
 							"__pivot": [0,0],
 							"__tags": [],
-							"__tile": null,
-							"__smartColor": "#47D743",
+							"__tile": { "tilesetUid": 109, "x": 288, "y": 64, "w": 16, "h": 16 },
+							"__smartColor": "#0099DB",
 							"iid": "aabc8ac0-b0a0-11ee-bb9a-c9ee0abc412f",
 							"width": 56,
 							"height": 55,
@@ -32084,7 +32181,7 @@
 							"px": [169,39],
 							"fieldInstances": [{ "__identifier": "Message", "__type": "String", "__value": "Se a justiça não está nas mãos dos mestres, \nentão onde estará?", "__tile": null, "defUid": 208, "realEditorValues": [{
 								"id": "V_String",
-								"params": ["Se a justiça não está nas mãos dos mestres, \nentão onde estará?"]
+								"params": ["Se a justiça não está nas mãos dos mestres, \\nentão onde estará?"]
 							}] }],
 							"__worldX": 311,
 							"__worldY": 1135

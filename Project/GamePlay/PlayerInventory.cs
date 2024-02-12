@@ -11,7 +11,6 @@ namespace Project.GamePlay
         {
             if (_activeInventory.Contains(value.ToLower())) return;
             _activeInventory.Add(value.ToLower());
-
         }
 
         public static bool CanUseItem(string value)
@@ -19,10 +18,14 @@ namespace Project.GamePlay
             return _activeInventory.Contains(value.ToLower()) && !_usedItems.Contains(value.ToLower());
         }
 
-        public static void UseItem(string value)
+        public static bool UseItem(string value)
         {
             if (CanUseItem(value.ToLower()))
+            {
                 _usedItems.Add(value.ToLower());
+                return true;
+            }
+            return false;
         }
 
         public static bool CanSpawnItem(string value)

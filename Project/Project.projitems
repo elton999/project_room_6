@@ -16,11 +16,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Actors\Items\Nodes\AddItemToInventory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Actors\Items\Nodes\CheckingItemInventory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Actors\Items\ItemInstance.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Actors\Items\Nodes\UseItemFromInventoryNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Actors\Items\SpawnItemInventory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Camera.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\CharacterInstance.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\CharacterRender.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Document.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Door\LockByKey.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Factory\CharacterFactory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\Factory\ItemsFactory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Entities\HitBox.cs" />
@@ -29,6 +31,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)GamePlay\PlayerInventory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ICommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IDoor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Nodes\CheckingIfHasItemNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Nodes\LockPlayerMovementsNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Nodes\PressAnyKeyToNextNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Nodes\UnlockPlayerMovementsNode.cs" />
