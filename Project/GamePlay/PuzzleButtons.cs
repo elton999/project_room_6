@@ -6,13 +6,14 @@ using Microsoft.Xna.Framework.Graphics;
 using Project.Nodes;
 using Project.GamePlay.Nodes.Puzzle;
 using Project.Entities;
+using Project.Interfaces;
 
 namespace Project.GamePlay
 {
-    public class PuzzleButtons : GameObject
+    public class PuzzleButtons : GameObject, IDoor
     {
         public List<Actor> Buttons = new List<Actor>();
-        public Door Door;
+        public Door Door { get; set; }
 
         public override void Start()
         {
@@ -23,7 +24,7 @@ namespace Project.GamePlay
             Node.AddData("targetPlayer", Scene.Players[0]);
 
             Node.Add(new SearchButtonsNode(this));
-            Node.Add(new SearchDoorNode(this));
+            Node.Add(new SearchDoorNode(this, this));
 
             var OpenDoorSequence = new SequenceNode();
             OpenDoorSequence.Add(new AllButtonsAreActiveNode(this));

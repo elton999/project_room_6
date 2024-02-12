@@ -1,15 +1,22 @@
 using Microsoft.Xna.Framework;
 using Project.Entities;
+using Project.Interfaces;
+using UmbrellaToolsKit;
 using UmbrellaToolsKit.BehaviorTrees;
 
 namespace Project.GamePlay.Nodes.Puzzle
 {
     public class SearchDoorNode : Node
     {
-        private PuzzleButtons _puzzleButtons;
+        private IDoor _doorController;
+        private GameObject _doorControllerGameObject;
         private NodeStatus _status = NodeStatus.RUNNING;
 
-        public SearchDoorNode(PuzzleButtons puzzleButtons) => _puzzleButtons = puzzleButtons;
+        public SearchDoorNode(IDoor doorController, GameObject doorControllerGameObject)
+        {
+            _doorController = doorController;
+            _doorControllerGameObject = doorControllerGameObject;
+        }
 
         public override NodeStatus Tick(GameTime gameTime)
         {
@@ -18,25 +25,27 @@ namespace Project.GamePlay.Nodes.Puzzle
                 string _doorTag = _getDoorTag();
                 _setDoor(_doorTag);
 
-                return _status = _puzzleButtons.Door != null ? NodeStatus.SUCCESS : NodeStatus.RUNNING;
+                return _status = _doorController.Door != null ? NodeStatus.SUCCESS : NodeStatus.RUNNING;
             }
 
-            return _puzzleButtons.Door != null ? NodeStatus.SUCCESS : NodeStatus.FAILURE;
+            return _doorController.Door != null ? NodeStatus.SUCCESS : NodeStatus.FAILURE;
         }
 
         private void _setDoor(string _doorTag)
         {
-            foreach (var actor in _puzzleButtons.Scene.AllActors)
-                if (_doorTag.Equals(actor.tag) && actor is Door)
-                    _puzzleButtons.Door = (Door)actor;
+            var scene = _doorControllerGameObject.Scene;
 
-            AddData("targetDoor", _puzzleButtons.Door);
+            foreach (var actor in scene.AllActors)
+                if (_doorTag.Equals(actor.tag) && actor is Door)
+                    _doorController.Door = (Door)actor;
+
+            AddData("targetDoor", _doorController.Door);
         }
 
         private string _getDoorTag()
         {
             string _doorTag = "tag";
-            ldtk.FieldInstance[] fields = _puzzleButtons.Values;
+            ldtk.FieldInstance[] fields = _doorControllerGameObject.Values;
 
             for (int i = 0; i < fields.Length; i++)
                 if (fields[i].Identifier == "door")

@@ -28,6 +28,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)GamePlay\Nodes\Puzzle\CloseDoorNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GamePlay\PlayerInventory.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ICommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IDoor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Nodes\LockPlayerMovementsNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Nodes\PressAnyKeyToNextNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Nodes\UnlockPlayerMovementsNode.cs" />
