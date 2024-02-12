@@ -5,7 +5,7 @@ using UmbrellaToolsKit.BehaviorTrees;
 
 namespace Project.Entities.Actors.Items.Nodes
 {
-    public  class AddItemToInventory : Node
+    public class AddItemToInventory : Node
     {
         private GameObject _gameObject;
 
@@ -13,7 +13,7 @@ namespace Project.Entities.Actors.Items.Nodes
 
         public override NodeStatus Tick(GameTime gameTime)
         {
-            PlayerInventory.AddItemToInvetory(_gameObject.tag);
+            PlayerInventory.AddItemToInventory(_gameObject.tag);
             return NodeStatus.SUCCESS;
         }
     }
