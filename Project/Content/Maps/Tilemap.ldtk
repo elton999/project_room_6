@@ -11,7 +11,7 @@
 	"iid": "208a1ff0-9f30-11ed-b6af-21751e929972",
 	"jsonVersion": "1.5.3",
 	"appBuildId": 473703,
-	"nextUid": 245,
+	"nextUid": 248,
 	"identifierStyle": "Capitalize",
 	"toc": [],
 	"worldLayout": "Free",
@@ -2352,6 +2352,41 @@
 					"tilesetUid": null
 				}
 			]
+		},
+		{
+			"identifier": "BlockArea",
+			"uid": 247,
+			"tags": ["hitbox"],
+			"exportToToc": false,
+			"allowOutOfBounds": false,
+			"doc": null,
+			"width": 16,
+			"height": 16,
+			"resizableX": true,
+			"resizableY": true,
+			"minWidth": 8,
+			"maxWidth": null,
+			"minHeight": 8,
+			"maxHeight": null,
+			"keepAspectRatio": false,
+			"tileOpacity": 1,
+			"fillOpacity": 1,
+			"lineOpacity": 0,
+			"hollow": false,
+			"color": "#000000",
+			"renderMode": "Tile",
+			"showName": true,
+			"tilesetId": 109,
+			"tileRenderMode": "NineSlice",
+			"tileRect": { "tilesetUid": 109, "x": 384, "y": 272, "w": 16, "h": 16 },
+			"uiTileRect": null,
+			"nineSliceBorders": [5,5,5,5],
+			"maxCount": 0,
+			"limitScope": "PerLevel",
+			"limitBehavior": "MoveLastOne",
+			"pivotX": 0,
+			"pivotY": 0,
+			"fieldDefs": []
 		}
 	], "tilesets": [
 		{
@@ -2425,7 +2460,13 @@
 			{ "id": "Right", "tileRect": { "tilesetUid": 109, "x": 32, "y": 64, "w": 16, "h": 16 }, "color": 10066329 }
 		], "iconTilesetUid": 109, "externalRelPath": null, "externalFileChecksum": null, "tags": [] },
 		{ "identifier": "CharacterSprite", "uid": 205, "values": [ { "id": "OldMan", "tileRect": null, "color": 12470831 }, { "id": "AsianGuy", "tileRect": null, "color": 14120515 } ], "iconTilesetUid": null, "externalRelPath": null, "externalFileChecksum": null, "tags": [] },
-		{ "identifier": "Item", "uid": 209, "values": [{ "id": "Key", "tileRect": { "tilesetUid": 109, "x": 80, "y": 352, "w": 16, "h": 16 }, "color": 12470831 }], "iconTilesetUid": 109, "externalRelPath": null, "externalFileChecksum": null, "tags": [] }
+		{ "identifier": "Item", "uid": 209, "values": [
+			{ "id": "Key", "tileRect": { "tilesetUid": 109, "x": 80, "y": 352, "w": 16, "h": 16 }, "color": 12470831 },
+			{ "id": "Wood", "tileRect": { "tilesetUid": 109, "x": 208, "y": 944, "w": 16, "h": 16 }, "color": 14120515 },
+			{ "id": "Bomb", "tileRect": { "tilesetUid": 109, "x": 208, "y": 544, "w": 16, "h": 16 }, "color": 15389866 },
+			{ "id": "Humer", "tileRect": { "tilesetUid": 109, "x": 96, "y": 928, "w": 16, "h": 16 }, "color": 14984818 }
+		], "iconTilesetUid": 109, "externalRelPath": null, "externalFileChecksum": null, "tags": [] },
+		{ "identifier": "TypeOfDoor", "uid": 246, "values": [ { "id": "Door", "tileRect": { "tilesetUid": 109, "x": 0, "y": 0, "w": 16, "h": 16 }, "color": 12470831 }, { "id": "Bridge", "tileRect": null, "color": 14120515 } ], "iconTilesetUid": 109, "externalRelPath": null, "externalFileChecksum": null, "tags": [] }
 	], "externalEnums": [], "levelFields": [] },
 	"levels": [
 		{
@@ -3540,7 +3581,7 @@
 							"fieldInstances": [{ "__identifier": "Message", "__type": "String", "__value": "8.\nQuando cheguei próximo da multidão avistei um homem. \nEle ainda se mexia, mas estava desesperado.\nGritava dizendo não sentir as pernas. \nAo menos não sentia dor. Não sentia nada.", "__tile": null, "defUid": 208, "realEditorValues": [{
 								"id": "V_String",
 								"params": [
-									"8.\nQuando cheguei próximo da multidão avistei um homem. \nEle ainda se mexia, mas estava desesperado.\nGritava dizendo não sentir as pernas. \nAo menos não sentia dor. Não sentia nada."
+									"8.\\nQuando cheguei próximo da multidão avistei um homem. \\nEle ainda se mexia, mas estava desesperado.\\nGritava dizendo não sentir as pernas. \\nAo menos não sentia dor. Não sentia nada."
 								]
 							}] }],
 							"__worldX": 21,
@@ -23152,7 +23193,7 @@
 							"fieldInstances": [{ "__identifier": "Message", "__type": "String", "__value": "Não posso acreditar que alguém me colocaria aqui e \ndeixaria uma maneira de escapar. \nEssas estrelas nem existem, \nesses mestres são uns sádicos.", "__tile": null, "defUid": 208, "realEditorValues": [{
 								"id": "V_String",
 								"params": [
-									"Não posso acreditar que alguém me colocaria aqui e \ndeixaria uma maneira de escapar. \nEssas estrelas nem existem, \nesses mestres são uns sádicos."
+									"Não posso acreditar que alguém me colocaria aqui e \\ndeixaria uma maneira de escapar. \\nEssas estrelas nem existem, \\nesses mestres são uns sádicos."
 								]
 							}] }],
 							"__worldX": 853,
@@ -27412,6 +27453,22 @@
 							],
 							"__worldX": 782,
 							"__worldY": 696
+						},
+						{
+							"__identifier": "BlockArea",
+							"__grid": [69,20],
+							"__pivot": [0,0],
+							"__tags": ["hitbox"],
+							"__tile": { "tilesetUid": 109, "x": 384, "y": 272, "w": 16, "h": 16 },
+							"__smartColor": "#000000",
+							"iid": "ccc270b0-b0a0-11ee-8f38-4f113ef90ea4",
+							"width": 8,
+							"height": 30,
+							"defUid": 247,
+							"px": [553,161],
+							"fieldInstances": [],
+							"__worldX": 1271,
+							"__worldY": 817
 						}
 					]
 				},
@@ -32185,7 +32242,7 @@
 							"fieldInstances": [{ "__identifier": "Message", "__type": "String", "__value": "1.\nSim! Sim! Já estive lá uma vez. Estava escuro, por isso não vi muita coisa. \nEu não sei se normalmente é assim, mas estava escuro. \nNão que houvesse algo para ver, é claro.", "__tile": null, "defUid": 208, "realEditorValues": [{
 								"id": "V_String",
 								"params": [
-									"1.\nSim! Sim! Já estive lá uma vez. Estava escuro, por isso não vi muita coisa. \nEu não sei se normalmente é assim, mas estava escuro. \nNão que houvesse algo para ver, é claro."
+									"1.\\nSim! Sim! Já estive lá uma vez. Estava escuro, por isso não vi muita coisa. \\nEu não sei se normalmente é assim, mas estava escuro. \\nNão que houvesse algo para ver, é claro."
 								]
 							}] }],
 							"__worldX": 162,
@@ -32224,7 +32281,7 @@
 							"px": [169,39],
 							"fieldInstances": [{ "__identifier": "Message", "__type": "String", "__value": "Se a justiça não está nas mãos dos mestres, \nentão onde estará?", "__tile": null, "defUid": 208, "realEditorValues": [{
 								"id": "V_String",
-								"params": ["Se a justiça não está nas mãos dos mestres, \nentão onde estará?"]
+								"params": ["Se a justiça não está nas mãos dos mestres, \\nentão onde estará?"]
 							}] }],
 							"__worldX": 311,
 							"__worldY": 1135
