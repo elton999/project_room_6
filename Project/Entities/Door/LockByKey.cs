@@ -6,12 +6,15 @@ using UmbrellaToolsKit;
 using UmbrellaToolsKit.BehaviorTrees;
 using UmbrellaToolsKit.Collision;
 using Project.Entities.Actors.Items.Nodes;
+using Microsoft.Xna.Framework.Graphics;
+using UmbrellaToolsKit.Sprite;
 
 namespace Project
 {
     public class LockByKey : Actor, IDoor
     {
         private string _itemToOpenDoor;
+        private GameObject _lockSpriteGameObject;
 
         public Door Door { get; set; }
 
@@ -19,9 +22,30 @@ namespace Project
         {
             base.Start();
 
-            _itemToOpenDoor = GetKeyName();
+            AddSprite();
+            AddAiLogic();
+        }
 
-            System.Console.WriteLine($"item name: {_itemToOpenDoor}");
+        private void AddSprite()
+        {
+            _lockSpriteGameObject = new GameObject();
+
+            _lockSpriteGameObject.Sprite = Scene.Content.Load<Texture2D>("Sprites/Tilemap/tilemap");
+            AsepriteDefinitions atlas = Scene.Content.Load<AsepriteDefinitions>("Sprites/Tilemap/atlas");
+
+            _lockSpriteGameObject.size = atlas.Slices["key"].Item1.Size;
+            _lockSpriteGameObject.Body = atlas.Slices["lock_key"].Item1;
+
+            _lockSpriteGameObject.Position = Position + size.ToVector2() / 2f;
+            _lockSpriteGameObject.Origin = _lockSpriteGameObject.size.ToVector2() / 2f;
+
+            _lockSpriteGameObject.Scene = Scene;
+            Scene.Middleground.Add(_lockSpriteGameObject);
+        }
+
+        private void AddAiLogic()
+        {
+            _itemToOpenDoor = GetKeyName();
 
             Node = new SequenceNode();
             Node.CreateData();
@@ -33,6 +57,7 @@ namespace Project
             OpenDoorSequence.Add(new CheckingActorOverActorNode(this, Scene.AllActors[0]));
             OpenDoorSequence.Add(new CheckingIfHasItemNode(_itemToOpenDoor));
             OpenDoorSequence.Add(new UseItemFromInventoryNode(_itemToOpenDoor));
+            OpenDoorSequence.Add(new RemoveGameObjectFromScene(_lockSpriteGameObject));
             OpenDoorSequence.Add(new SwitchCameraTargetNode("targetDoor"));
             OpenDoorSequence.Add(new DelayNode(new OpenDoorNode(this), 0.5f));
             OpenDoorSequence.Add(new DelayNode(new SwitchCameraTargetNode("targetPlayer"), 0.5f));

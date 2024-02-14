@@ -36,7 +36,9 @@
    { "name": "bed", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 0, "y": 104, "w": 32, "h": 32 } }] },
    { "name": "box_puzzle", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 144, "y": 8, "w": 16, "h": 16 } }] },
    { "name": "opened_door_left", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 112, "y": 16, "w": 32, "h": 32 }, "pivot": {"x": 16, "y": 8 } }] },
-   { "name": "closed_door_left", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 112, "y": 48, "w": 17, "h": 32 }, "pivot": {"x": 16, "y": 8 } }] }
+   { "name": "closed_door_left", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 112, "y": 48, "w": 17, "h": 32 }, "pivot": {"x": 16, "y": 8 } }] },
+   { "name": "lock_key", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 192, "y": 48, "w": 10, "h": 14 } }] },
+   { "name": "wood_item", "color": "#0000ffff", "keys": [{ "frame": 0, "bounds": {"x": 203, "y": 48, "w": 11, "h": 16 } }] }
   ]
  }
 }
