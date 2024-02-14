@@ -3540,7 +3540,7 @@
 							"fieldInstances": [{ "__identifier": "Message", "__type": "String", "__value": "8.\nQuando cheguei próximo da multidão avistei um homem. \nEle ainda se mexia, mas estava desesperado.\nGritava dizendo não sentir as pernas. \nAo menos não sentia dor. Não sentia nada.", "__tile": null, "defUid": 208, "realEditorValues": [{
 								"id": "V_String",
 								"params": [
-									"8.\\nQuando cheguei próximo da multidão avistei um homem. \\nEle ainda se mexia, mas estava desesperado.\\nGritava dizendo não sentir as pernas. \\nAo menos não sentia dor. Não sentia nada."
+									"8.\nQuando cheguei próximo da multidão avistei um homem. \nEle ainda se mexia, mas estava desesperado.\nGritava dizendo não sentir as pernas. \nAo menos não sentia dor. Não sentia nada."
 								]
 							}] }],
 							"__worldX": 21,
@@ -4707,16 +4707,16 @@
 						},
 						{
 							"__identifier": "LockDoor",
-							"__grid": [76,75],
+							"__grid": [76,77],
 							"__pivot": [0,0],
 							"__tags": ["puzzle"],
 							"__tile": { "tilesetUid": 109, "x": 336, "y": 48, "w": 16, "h": 16 },
 							"__smartColor": "#FEE761",
 							"iid": "c6959800-b0a0-11ee-9707-d3077a1cf54b",
-							"width": 64,
-							"height": 45,
+							"width": 62,
+							"height": 28,
 							"defUid": 242,
-							"px": [613,604],
+							"px": [613,621],
 							"fieldInstances": [
 								{ "__identifier": "door", "__type": "EntityRef", "__value": {
 									"entityIid": "3a66e9a0-b0a0-11ee-bb9a-47affa3ff329",
@@ -4730,7 +4730,7 @@
 								{ "__identifier": "key", "__type": "LocalEnum.Item", "__value": "Key", "__tile": null, "defUid": 244, "realEditorValues": [] }
 							],
 							"__worldX": 765,
-							"__worldY": 604
+							"__worldY": 621
 						}
 					]
 				},
@@ -23152,7 +23152,7 @@
 							"fieldInstances": [{ "__identifier": "Message", "__type": "String", "__value": "Não posso acreditar que alguém me colocaria aqui e \ndeixaria uma maneira de escapar. \nEssas estrelas nem existem, \nesses mestres são uns sádicos.", "__tile": null, "defUid": 208, "realEditorValues": [{
 								"id": "V_String",
 								"params": [
-									"Não posso acreditar que alguém me colocaria aqui e \\ndeixaria uma maneira de escapar. \\nEssas estrelas nem existem, \\nesses mestres são uns sádicos."
+									"Não posso acreditar que alguém me colocaria aqui e \ndeixaria uma maneira de escapar. \nEssas estrelas nem existem, \nesses mestres são uns sádicos."
 								]
 							}] }],
 							"__worldX": 853,
@@ -32185,7 +32185,7 @@
 							"fieldInstances": [{ "__identifier": "Message", "__type": "String", "__value": "1.\nSim! Sim! Já estive lá uma vez. Estava escuro, por isso não vi muita coisa. \nEu não sei se normalmente é assim, mas estava escuro. \nNão que houvesse algo para ver, é claro.", "__tile": null, "defUid": 208, "realEditorValues": [{
 								"id": "V_String",
 								"params": [
-									"1.\\nSim! Sim! Já estive lá uma vez. Estava escuro, por isso não vi muita coisa. \\nEu não sei se normalmente é assim, mas estava escuro. \\nNão que houvesse algo para ver, é claro."
+									"1.\nSim! Sim! Já estive lá uma vez. Estava escuro, por isso não vi muita coisa. \nEu não sei se normalmente é assim, mas estava escuro. \nNão que houvesse algo para ver, é claro."
 								]
 							}] }],
 							"__worldX": 162,
@@ -32224,7 +32224,7 @@
 							"px": [169,39],
 							"fieldInstances": [{ "__identifier": "Message", "__type": "String", "__value": "Se a justiça não está nas mãos dos mestres, \nentão onde estará?", "__tile": null, "defUid": 208, "realEditorValues": [{
 								"id": "V_String",
-								"params": ["Se a justiça não está nas mãos dos mestres, \\nentão onde estará?"]
+								"params": ["Se a justiça não está nas mãos dos mestres, \nentão onde estará?"]
 							}] }],
 							"__worldX": 311,
 							"__worldY": 1135
