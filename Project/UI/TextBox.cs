@@ -11,7 +11,7 @@ namespace Project.UI
 
         public override void Start()
         {
-            var cornerSize = new Point(8, 8);   
+            var cornerSize = new Point(8, 8);
             LeftTopBoxSprite = new Rectangle(new Point(112, 0), cornerSize);
             RightTopBoxSprite = new Rectangle(new Point(120, 0), cornerSize);
             LeftBottomBoxSprite = new Rectangle(new Point(112, 8), cornerSize);
@@ -25,10 +25,10 @@ namespace Project.UI
             LeftBoxSprite = new Rectangle(new Point(112, 8), boxMiddleHorizontalSize);
             RightBoxSprite = new Rectangle(new Point(120, 8), boxMiddleHorizontalSize);
 
-            ContentBoxSprite = new Rectangle(128, 0, 8,8);
+            ContentBoxSprite = new Rectangle(128, 0, 8, 8);
 
-            Sprite = Scene.Content.Load<Texture2D>("Sprites/Tilemap/tilemap");
-            Font = Scene.Content.Load<SpriteFont>("Kenney Mini");
+            Sprite = Scene.Content.Load<Texture2D>(FilePath.SPRITE_PATH);
+            Font = Scene.Content.Load<SpriteFont>(FilePath.BASIC_FONT_PATH);
 
             base.Start();
         }

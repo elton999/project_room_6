@@ -17,8 +17,8 @@ namespace Project.Entities.Actors.Items
 
         public override void Start()
         {
-            Sprite = Scene.Content.Load<Texture2D>("Sprites/Tilemap/tilemap");
-            Atlas = Scene.Content.Load<AsepriteDefinitions>("Sprites/Tilemap/atlas");
+            Sprite = Scene.Content.Load<Texture2D>(FilePath.SPRITE_PATH);
+            Atlas = Scene.Content.Load<AsepriteDefinitions>(FilePath.SPRITE_ATLAS_PATH);
             Gravity2D = Vector2.Zero;
 
             var nodeSequenceCollect = new SequenceNode();

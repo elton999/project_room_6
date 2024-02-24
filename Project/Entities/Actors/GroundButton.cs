@@ -13,8 +13,8 @@ namespace Project.Entities.Actors
         public override void Start()
         {
             base.Start();
-            _atlas = Scene.Content.Load<AsepriteDefinitions>("Sprites/Tilemap/atlas");
-            Sprite = Scene.Content.Load<Texture2D>("Sprites/Tilemap/tilemap");
+            Sprite = Scene.Content.Load<Texture2D>(FilePath.SPRITE_PATH);
+            _atlas = Scene.Content.Load<AsepriteDefinitions>(FilePath.SPRITE_ATLAS_PATH);
 
             size = _atlas.Slices["puzzle_slot"].Item1.Size;
             Body = _atlas.Slices["puzzle_slot"].Item1;

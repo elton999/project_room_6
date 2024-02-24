@@ -1,6 +1,6 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Project.Nodes;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Project.Nodes;
 using UmbrellaToolsKit;
 using UmbrellaToolsKit.BehaviorTrees;
 
@@ -15,7 +15,7 @@ namespace Project.CutScenes
         public override void Start()
         {
             _text = "Eis que em iniquidade fui formado, e em pecado me aconcebeu minha mãe.\n Salmos 51, 5";
-            _font = Scene.Content.Load<SpriteFont>("Kenney Mini");
+            _font = Scene.Content.Load<SpriteFont>(FilePath.BASIC_FONT_PATH);
             _textSize = _font.MeasureString(_text);
             base.Start();
 

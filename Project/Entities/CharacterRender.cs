@@ -10,7 +10,7 @@ namespace Project.Entities
 
         public override void Start()
         {
-            Sprite = Scene.Content.Load<Texture2D>("Sprites/characters");
+            Sprite = Scene.Content.Load<Texture2D>(FilePath.CHARACTERS_SPRITE_PATH);
             base.Start();
         }
 

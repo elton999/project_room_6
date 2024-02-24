@@ -21,8 +21,8 @@ namespace Project.Entities.Player
         {
             Gravity2D = Vector2.Zero;
 
-            Animation = new AsepriteAnimation(Content.Load<AsepriteDefinitions>("Sprites/Player/player_animation"));
-            Sprite = Content.Load<Texture2D>("Sprites/Player/player");
+            Animation = new AsepriteAnimation(Content.Load<AsepriteDefinitions>(FilePath.PLAYER_ANIMATION_PATH));
+            Sprite = Content.Load<Texture2D>(FilePath.PLAYER_SPRITE_PATH);
             size = new Point(16, 16);
             Origin = new Vector2(24, 35);
 

@@ -13,8 +13,8 @@ namespace Project.Entities.Solids
             base.Start();
 
             tag = "Box";
-            Sprite = Scene.Content.Load<Texture2D>("Sprites/Tilemap/tilemap");
-            _atlas = Scene.Content.Load<AsepriteDefinitions>("Sprites/Tilemap/atlas");
+            Sprite = Scene.Content.Load<Texture2D>(FilePath.SPRITE_PATH);
+            _atlas = Scene.Content.Load<AsepriteDefinitions>(FilePath.SPRITE_ATLAS_PATH);
 
             size = _atlas.Slices["box_puzzle"].Item1.Size;
             Body = _atlas.Slices["box_puzzle"].Item1;

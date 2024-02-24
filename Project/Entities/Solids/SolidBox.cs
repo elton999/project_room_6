@@ -12,7 +12,7 @@ namespace Project.Entities.Solids
             size = new Point(24, 32);
             Body = new Rectangle(0, 72, 24, 32);
 
-            Sprite = Scene.Content.Load<Texture2D>("Sprites/Tilemap/tilemap");
+            Sprite = Scene.Content.Load<Texture2D>(FilePath.SPRITE_PATH);
 
             Scene.AllSolids.Add(this);
         }

@@ -30,8 +30,8 @@ namespace Project
         {
             _lockSpriteGameObject = new GameObject();
 
-            _lockSpriteGameObject.Sprite = Scene.Content.Load<Texture2D>("Sprites/Tilemap/tilemap");
-            AsepriteDefinitions atlas = Scene.Content.Load<AsepriteDefinitions>("Sprites/Tilemap/atlas");
+            _lockSpriteGameObject.Sprite = Scene.Content.Load<Texture2D>(FilePath.SPRITE_PATH);
+            AsepriteDefinitions atlas = Scene.Content.Load<AsepriteDefinitions>(FilePath.SPRITE_ATLAS_PATH);
 
             _lockSpriteGameObject.size = atlas.Slices["key"].Item1.Size;
             _lockSpriteGameObject.Body = atlas.Slices["lock_key"].Item1;
