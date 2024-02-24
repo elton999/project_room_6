@@ -12,7 +12,7 @@ namespace Project.Entities.Player.State
         protected Vector2 _directionIdle = new Vector2(1, 0);
 
         protected bool _dashButtonDown { get => Keyboard.GetState().IsKeyDown(Keys.Z); }
-        protected bool _kickButtonDown { get => KeyBoardHandler.KeyDown("interact"); }
+        protected bool _kickButtonDown { get => KeyBoardHandler.KeyDown(Input.INTERACT); }
         protected Vector2 _direction = Vector2.Zero;
 
         public PlayerState(Player player)
@@ -27,11 +27,11 @@ namespace Project.Entities.Player.State
         {
             _direction = Vector2.Zero;
 
-            if (KeyBoardHandler.KeyDown("left")) _direction.X = -1;
-            if (KeyBoardHandler.KeyDown("right")) _direction.X = 1;
+            if (KeyBoardHandler.KeyDown(Input.LEFT)) _direction.X = -1;
+            if (KeyBoardHandler.KeyDown(Input.RIGHT)) _direction.X = 1;
 
-            if (KeyBoardHandler.KeyDown("up")) _direction.Y = -1;
-            if (KeyBoardHandler.KeyDown("down")) _direction.Y = 1;
+            if (KeyBoardHandler.KeyDown(Input.UP)) _direction.Y = -1;
+            if (KeyBoardHandler.KeyDown(Input.DOWN)) _direction.Y = 1;
         }
     }
 }

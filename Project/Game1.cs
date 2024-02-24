@@ -62,13 +62,13 @@ namespace Project
             initialScene.Start();
 
             // inputs
-            KeyBoardHandler.AddInput("interact", new Keys[] { Keys.Enter, Keys.X, Keys.Space });
-            KeyBoardHandler.AddInput("exit", Keys.Escape);
+            KeyBoardHandler.AddInput(Input.INTERACT, new Keys[] { Keys.Enter, Keys.X, Keys.Space });
+            KeyBoardHandler.AddInput(Input.EXIT, Keys.Escape);
 
-            KeyBoardHandler.AddInput("up", new Keys[] { Keys.W, Keys.Up });
-            KeyBoardHandler.AddInput("down", new Keys[] { Keys.S, Keys.Down });
-            KeyBoardHandler.AddInput("left", new Keys[] { Keys.A, Keys.Left });
-            KeyBoardHandler.AddInput("right", new Keys[] { Keys.D, Keys.Right });
+            KeyBoardHandler.AddInput(Input.UP, new Keys[] { Keys.W, Keys.Up });
+            KeyBoardHandler.AddInput(Input.DOWN, new Keys[] { Keys.S, Keys.Down });
+            KeyBoardHandler.AddInput(Input.LEFT, new Keys[] { Keys.A, Keys.Left });
+            KeyBoardHandler.AddInput(Input.RIGHT, new Keys[] { Keys.D, Keys.Right });
 
             base.Initialize();
         }
@@ -77,7 +77,7 @@ namespace Project
 
         protected override void Update(GameTime gameTime)
         {
-            if (KeyBoardHandler.KeyPressed("exit"))
+            if (KeyBoardHandler.KeyPressed(Input.EXIT))
                 Exit();
 
             _gameManagement.Update(gameTime);

@@ -20,7 +20,7 @@ namespace Project.Entities
 
         public override void Update(GameTime gameTime)
         {
-            if (KeyBoardHandler.KeyPressed("interact") && !_isIterating && _isPlayerInteracting)
+            if (KeyBoardHandler.KeyPressed(Input.INTERACT) && !_isIterating && _isPlayerInteracting)
             {
                 _isIterating = true;
                 if (OnInteractiveCommands == null) return;
@@ -32,7 +32,7 @@ namespace Project.Entities
                 return;
             }
 
-            if (KeyBoardHandler.KeyPressed("interact") && _isIterating)
+            if (KeyBoardHandler.KeyPressed(Input.INTERACT) && _isIterating)
             {
                 _isIterating = false;
                 if (OnInteractiveCommands == null) return;
