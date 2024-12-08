@@ -4367,7 +4367,7 @@
 							"defUid": 91,
 							"px": [424,624],
 							"fieldInstances": [
-								{ "__identifier": "GoToLevel", "__type": "Int", "__value": 5, "__tile": null, "defUid": 93, "realEditorValues": [{ "id": "V_Int", "params": [5] }] },
+								{ "__identifier": "GoToLevel", "__type": "Int", "__value": 14, "__tile": null, "defUid": 93, "realEditorValues": [{ "id": "V_Int", "params": [14] }] },
 								{ "__identifier": "PlayerSpwan", "__type": "EntityRef", "__value": {
 									"entityIid": "6da1afa4-8990-11ee-aa85-a18c0836e444",
 									"layerIid": "6da1afa3-8990-11ee-aa85-ed7ebb6c5cb3",
@@ -4514,7 +4514,7 @@
 							"defUid": 91,
 							"px": [631,627],
 							"fieldInstances": [
-								{ "__identifier": "GoToLevel", "__type": "Int", "__value": 7, "__tile": null, "defUid": 93, "realEditorValues": [{ "id": "V_Int", "params": [7] }] },
+								{ "__identifier": "GoToLevel", "__type": "Int", "__value": 15, "__tile": null, "defUid": 93, "realEditorValues": [{ "id": "V_Int", "params": [15] }] },
 								{ "__identifier": "PlayerSpwan", "__type": "EntityRef", "__value": {
 									"entityIid": "93a27b74-8990-11ee-bb9a-59711a8d9213",
 									"layerIid": "93a27b73-8990-11ee-bb9a-771d965d3beb",
@@ -4524,7 +4524,7 @@
 									"id": "V_String",
 									"params": ["93a27b74-8990-11ee-bb9a-59711a8d9213"]
 								}] },
-								{ "__identifier": "IsOpened", "__type": "Bool", "__value": true, "__tile": null, "defUid": 150, "realEditorValues": [] },
+								{ "__identifier": "IsOpened", "__type": "Bool", "__value": true, "__tile": null, "defUid": 150, "realEditorValues": [null] },
 								{ "__identifier": "Rotation", "__type": "LocalEnum.Rotation", "__value": "Down", "__tile": null, "defUid": 181, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["Down"]
@@ -19830,7 +19830,7 @@
 							"defUid": 91,
 							"px": [13,294],
 							"fieldInstances": [
-								{ "__identifier": "GoToLevel", "__type": "Int", "__value": 9, "__tile": null, "defUid": 93, "realEditorValues": [{ "id": "V_Int", "params": [9] }] },
+								{ "__identifier": "GoToLevel", "__type": "Int", "__value": 17, "__tile": null, "defUid": 93, "realEditorValues": [{ "id": "V_Int", "params": [17] }] },
 								{ "__identifier": "PlayerSpwan", "__type": "EntityRef", "__value": {
 									"entityIid": "8ef32d14-8990-11ee-9799-e3365f039bfc",
 									"layerIid": "8ef32d13-8990-11ee-9799-17c89f6972fc",
