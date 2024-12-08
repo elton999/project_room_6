@@ -23206,7 +23206,7 @@
 							"fieldInstances": [{ "__identifier": "Message", "__type": "String", "__value": "Não posso acreditar que alguém me colocaria aqui e \ndeixaria uma maneira de escapar. \nEssas estrelas nem existem, \nesses mestres são uns sádicos.", "__tile": null, "defUid": 208, "realEditorValues": [{
 								"id": "V_String",
 								"params": [
-									"Não posso acreditar que alguém me colocaria aqui e \\ndeixaria uma maneira de escapar. \\nEssas estrelas nem existem, \\nesses mestres são uns sádicos."
+									"Não posso acreditar que alguém me colocaria aqui e \ndeixaria uma maneira de escapar. \nEssas estrelas nem existem, \nesses mestres são uns sádicos."
 								]
 							}] }],
 							"__worldX": 853,
@@ -25392,6 +25392,54 @@
 							],
 							"__worldX": 1150,
 							"__worldY": 912
+						},
+						{
+							"__identifier": "Door",
+							"__grid": [15,15],
+							"__pivot": [0,0],
+							"__tags": ["hitbox"],
+							"__tile": { "tilesetUid": 109, "x": 256, "y": 64, "w": 16, "h": 16 },
+							"__smartColor": "#00FF73",
+							"iid": "6809ea20-9b00-11ef-9a37-8341db26f92f",
+							"width": 24,
+							"height": 24,
+							"defUid": 91,
+							"px": [120,120],
+							"fieldInstances": [
+								{ "__identifier": "GoToLevel", "__type": "Int", "__value": 1, "__tile": null, "defUid": 93, "realEditorValues": [] },
+								{ "__identifier": "PlayerSpwan", "__type": "EntityRef", "__value": {
+									"entityIid": "d70df040-9b00-11ef-b886-bdabfbb7665f",
+									"layerIid": "d70dc932-9b00-11ef-b886-3d6913c05450",
+									"levelIid": "d70da220-9b00-11ef-b886-c9f26f3cf1bf",
+									"worldIid": "d87c7030-6280-11ee-a622-2dc71098b3c6"
+								}, "__tile": null, "defUid": 106, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["d70df040-9b00-11ef-b886-bdabfbb7665f"]
+								}] },
+								{ "__identifier": "IsOpened", "__type": "Bool", "__value": true, "__tile": null, "defUid": 150, "realEditorValues": [] },
+								{ "__identifier": "Rotation", "__type": "LocalEnum.Rotation", "__value": "Down", "__tile": null, "defUid": 181, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Down"]
+								}] }
+							],
+							"__worldX": 1150,
+							"__worldY": 992
+						},
+						{
+							"__identifier": "PlayerSpawn",
+							"__grid": [16,13],
+							"__pivot": [0,0],
+							"__tags": ["spawns"],
+							"__tile": { "tilesetUid": 109, "x": 176, "y": 240, "w": 16, "h": 16 },
+							"__smartColor": "#FF0000",
+							"iid": "88886560-9b00-11ef-9a37-03d7f71c9510",
+							"width": 16,
+							"height": 16,
+							"defUid": 105,
+							"px": [128,104],
+							"fieldInstances": [],
+							"__worldX": 1158,
+							"__worldY": 976
 						}
 					]
 				},
@@ -31384,7 +31432,7 @@
 					"entityInstances": [
 						{
 							"__identifier": "PlayerSpawn",
-							"__grid": [16,9],
+							"__grid": [8,8],
 							"__pivot": [0,0],
 							"__tags": ["spawns"],
 							"__tile": { "tilesetUid": 109, "x": 176, "y": 240, "w": 16, "h": 16 },
@@ -31393,14 +31441,14 @@
 							"width": 16,
 							"height": 16,
 							"defUid": 105,
-							"px": [128,72],
+							"px": [64,64],
 							"fieldInstances": [],
-							"__worldX": 1158,
-							"__worldY": 1272
+							"__worldX": 1094,
+							"__worldY": 1264
 						},
 						{
 							"__identifier": "Door",
-							"__grid": [15,5],
+							"__grid": [8,5],
 							"__pivot": [0,0],
 							"__tags": ["hitbox"],
 							"__tile": { "tilesetUid": 109, "x": 256, "y": 64, "w": 16, "h": 16 },
@@ -31409,17 +31457,17 @@
 							"width": 24,
 							"height": 24,
 							"defUid": 91,
-							"px": [120,40],
+							"px": [64,40],
 							"fieldInstances": [
 								{ "__identifier": "GoToLevel", "__type": "Int", "__value": 8, "__tile": null, "defUid": 93, "realEditorValues": [{ "id": "V_Int", "params": [8] }] },
 								{ "__identifier": "PlayerSpwan", "__type": "EntityRef", "__value": {
-									"entityIid": "48360f74-9b00-11ef-afc9-43b2f9cafea9",
-									"layerIid": "48360f73-9b00-11ef-afc9-a7dbaaebc2fd",
-									"levelIid": "48360f70-9b00-11ef-afc9-4bf596993d78",
+									"entityIid": "d84329a0-9b00-11ef-9a37-f9da5eb39920",
+									"layerIid": "d70dc932-9b00-11ef-b886-3d6913c05450",
+									"levelIid": "d70da220-9b00-11ef-b886-c9f26f3cf1bf",
 									"worldIid": "d87c7030-6280-11ee-a622-2dc71098b3c6"
 								}, "__tile": null, "defUid": 106, "realEditorValues": [{
 									"id": "V_String",
-									"params": ["48360f74-9b00-11ef-afc9-43b2f9cafea9"]
+									"params": ["d84329a0-9b00-11ef-9a37-f9da5eb39920"]
 								}] },
 								{ "__identifier": "IsOpened", "__type": "Bool", "__value": true, "__tile": null, "defUid": 150, "realEditorValues": [] },
 								{ "__identifier": "Rotation", "__type": "LocalEnum.Rotation", "__value": "Up", "__tile": null, "defUid": 181, "realEditorValues": [{
@@ -31427,7 +31475,7 @@
 									"params": ["Up"]
 								}] }
 							],
-							"__worldX": 1150,
+							"__worldX": 1094,
 							"__worldY": 1240
 						}
 					]
@@ -33471,13 +33519,13 @@
 							"fieldInstances": [
 								{ "__identifier": "GoToLevel", "__type": "Int", "__value": 8, "__tile": null, "defUid": 93, "realEditorValues": [{ "id": "V_Int", "params": [8] }] },
 								{ "__identifier": "PlayerSpwan", "__type": "EntityRef", "__value": {
-									"entityIid": "d70df040-9b00-11ef-b886-bdabfbb7665f",
-									"layerIid": "d70dc932-9b00-11ef-b886-3d6913c05450",
-									"levelIid": "d70da220-9b00-11ef-b886-c9f26f3cf1bf",
+									"entityIid": "88886560-9b00-11ef-9a37-03d7f71c9510",
+									"layerIid": "d6c7b4f3-9b00-11ef-b886-1fa57d5a6bf2",
+									"levelIid": "d6c7b4f0-9b00-11ef-b886-777972f3d8c2",
 									"worldIid": "d87c7030-6280-11ee-a622-2dc71098b3c6"
 								}, "__tile": null, "defUid": 106, "realEditorValues": [{
 									"id": "V_String",
-									"params": ["d70df040-9b00-11ef-b886-bdabfbb7665f"]
+									"params": ["88886560-9b00-11ef-9a37-03d7f71c9510"]
 								}] },
 								{ "__identifier": "IsOpened", "__type": "Bool", "__value": true, "__tile": null, "defUid": 150, "realEditorValues": [] },
 								{ "__identifier": "Rotation", "__type": "LocalEnum.Rotation", "__value": "Up", "__tile": null, "defUid": 181, "realEditorValues": [{
@@ -33487,6 +33535,54 @@
 							],
 							"__worldX": 1150,
 							"__worldY": 1056
+						},
+						{
+							"__identifier": "Door",
+							"__grid": [8,19],
+							"__pivot": [0,0],
+							"__tags": ["hitbox"],
+							"__tile": { "tilesetUid": 109, "x": 256, "y": 64, "w": 16, "h": 16 },
+							"__smartColor": "#00FF73",
+							"iid": "cc855570-9b00-11ef-9a37-5143120b0cdc",
+							"width": 24,
+							"height": 24,
+							"defUid": 91,
+							"px": [64,152],
+							"fieldInstances": [
+								{ "__identifier": "GoToLevel", "__type": "Int", "__value": 1, "__tile": null, "defUid": 93, "realEditorValues": [] },
+								{ "__identifier": "PlayerSpwan", "__type": "EntityRef", "__value": {
+									"entityIid": "48360f74-9b00-11ef-afc9-43b2f9cafea9",
+									"layerIid": "48360f73-9b00-11ef-afc9-a7dbaaebc2fd",
+									"levelIid": "48360f70-9b00-11ef-afc9-4bf596993d78",
+									"worldIid": "d87c7030-6280-11ee-a622-2dc71098b3c6"
+								}, "__tile": null, "defUid": 106, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["48360f74-9b00-11ef-afc9-43b2f9cafea9"]
+								}] },
+								{ "__identifier": "IsOpened", "__type": "Bool", "__value": true, "__tile": null, "defUid": 150, "realEditorValues": [] },
+								{ "__identifier": "Rotation", "__type": "LocalEnum.Rotation", "__value": "Down", "__tile": null, "defUid": 181, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["Down"]
+								}] }
+							],
+							"__worldX": 1094,
+							"__worldY": 1168
+						},
+						{
+							"__identifier": "PlayerSpawn",
+							"__grid": [8,16],
+							"__pivot": [0,0],
+							"__tags": ["spawns"],
+							"__tile": { "tilesetUid": 109, "x": 176, "y": 240, "w": 16, "h": 16 },
+							"__smartColor": "#FF0000",
+							"iid": "d84329a0-9b00-11ef-9a37-f9da5eb39920",
+							"width": 16,
+							"height": 16,
+							"defUid": 105,
+							"px": [64,128],
+							"fieldInstances": [],
+							"__worldX": 1094,
+							"__worldY": 1144
 						}
 					]
 				},
@@ -42813,7 +42909,7 @@
 							"fieldInstances": [{ "__identifier": "Message", "__type": "String", "__value": "1.\nSim! Sim! Já estive lá uma vez. Estava escuro, por isso não vi muita coisa. \nEu não sei se normalmente é assim, mas estava escuro. \nNão que houvesse algo para ver, é claro.", "__tile": null, "defUid": 208, "realEditorValues": [{
 								"id": "V_String",
 								"params": [
-									"1.\\nSim! Sim! Já estive lá uma vez. Estava escuro, por isso não vi muita coisa. \\nEu não sei se normalmente é assim, mas estava escuro. \\nNão que houvesse algo para ver, é claro."
+									"1.\nSim! Sim! Já estive lá uma vez. Estava escuro, por isso não vi muita coisa. \nEu não sei se normalmente é assim, mas estava escuro. \nNão que houvesse algo para ver, é claro."
 								]
 							}] }],
 							"__worldX": 162,
@@ -42852,7 +42948,7 @@
 							"px": [169,39],
 							"fieldInstances": [{ "__identifier": "Message", "__type": "String", "__value": "Se a justiça não está nas mãos dos mestres, \nentão onde estará?", "__tile": null, "defUid": 208, "realEditorValues": [{
 								"id": "V_String",
-								"params": ["Se a justiça não está nas mãos dos mestres, \\nentão onde estará?"]
+								"params": ["Se a justiça não está nas mãos dos mestres, \nentão onde estará?"]
 							}] }],
 							"__worldX": 311,
 							"__worldY": 1135
