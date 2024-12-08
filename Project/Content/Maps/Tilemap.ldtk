@@ -19718,7 +19718,7 @@
 							"defUid": 91,
 							"px": [168,40],
 							"fieldInstances": [
-								{ "__identifier": "GoToLevel", "__type": "Int", "__value": 5, "__tile": null, "defUid": 93, "realEditorValues": [{ "id": "V_Int", "params": [5] }] },
+								{ "__identifier": "GoToLevel", "__type": "Int", "__value": 14, "__tile": null, "defUid": 93, "realEditorValues": [{ "id": "V_Int", "params": [14] }] },
 								{ "__identifier": "PlayerSpwan", "__type": "EntityRef", "__value": {
 									"entityIid": "ae33af50-8990-11ee-aa85-459b54b663c1",
 									"layerIid": "6da1afa3-8990-11ee-aa85-ed7ebb6c5cb3",
